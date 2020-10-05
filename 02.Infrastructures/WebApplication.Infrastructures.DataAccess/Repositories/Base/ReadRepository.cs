@@ -22,7 +22,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         {
             var entity = _dbSet.Find(id);
             return entity;
-        }
+        } 
 
         public async Task<TEntity> FindAsync(int id)
         {
