@@ -1,0 +1,13 @@
+﻿@model ViewModels.Areas.Administrator.Culture.CreateViewModel
+
+<panel panel-title="@shareLocalizer.Get("Title").Value">
+    <form asp-action="Create" method="post">
+        <div class="row">
+            <form-control-checkbox asp-for="IsActive" class="col-md-12"></form-control-checkbox>
+            <form-control-textbox asp-for="DisplayName" class="col-md-6"></form-control-textbox>
+            <div class="col-md-12">
+                <form-control-submit cancel-url="/Administrator/Culture"></form-control-submit>
+            </div>
+        </div>
+    </form>
+</panel>
