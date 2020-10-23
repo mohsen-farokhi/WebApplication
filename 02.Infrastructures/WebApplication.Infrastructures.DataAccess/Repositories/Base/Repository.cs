@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories.Base;
 using WebApplication.Domain.Entities.Base;
@@ -10,104 +9,78 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
     public class Repository<TEntity> :
         IRepository<TEntity> where TEntity : BaseEntity, new()
     {
-        private readonly DbContext _context;
-        private readonly DbSet<TEntity> _dbSet;
-        public Repository(DbContext context)
+        private readonly IWriteRepository<TEntity> _writeRepository;
+        private readonly IReadRepository<TEntity> _readRepository;
+
+        public Repository
+            (IWriteRepository<TEntity> writeRepository,
+            IReadRepository<TEntity> readRepository)
         {
-            _context = context;
-            _dbSet = _context.Set<TEntity>();
-        }
-
-        public void Delete(int id)
-        {
-            var entity = _dbSet.Find(id);
-            _dbSet.Remove(entity);
-            _context.SaveChanges();
-        }
-
-        public async Task DeleteAsync(int id)
-        {
-            var entity = await _dbSet.FindAsync(id);
-            _dbSet.Remove(entity);
-            _context.SaveChanges();
-        }
-
-        public int Insert(TEntity entity)
-        {
-            _dbSet.Add(entity);
-            _context.SaveChanges();
-
-            return entity.Id;
-        }
-
-        public async Task<int> InsertAsync(TEntity entity)
-        {
-            await _dbSet.AddAsync(entity);
-            _context.SaveChanges();
-
-            return entity.Id;
-        }
-
-        public void Update(TEntity entity)
-        {
-            _dbSet.Update(entity);
-            _context.SaveChanges();
-        }
-
-        public async Task UpdateAsync(TEntity entity)
-        {
-            _dbSet.Update(entity);
-            await _context.SaveChangesAsync();
+            _writeRepository = writeRepository;
+            _readRepository = readRepository;
         }
 
         public TEntity Find(int id)
         {
-            var entity = _dbSet.Find(id);
+            var entity = _readRepository.Find(id);
             return entity;
         }
 
-        public async Task<TEntity> FindAsync(int id)
+        public Task<TEntity> FindAsync(int id)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = _readRepository.FindAsync(id);
             return entity;
         }
 
         public IQueryable<TEntity> Get()
         {
-            return _dbSet.AsNoTracking();
+            return 
+                _readRepository.Get();
         }
 
         public async Task<IQueryable<TEntity>> GetAsync()
         {
             return 
-                await Task.Run(() => _dbSet.AsNoTracking());
+                await _readRepository.GetAsync();
         }
 
-        public SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters)
+        public SearchResult<TEntity, BaseSearchParameter> GetList
+            (BaseSearchParameter searchParameters)
         {
-            var result = new SearchResult<TEntity, BaseSearchParameter>
-            {
-                SearchParameter = searchParameters
-            };
-            var query =
-                _dbSet.AsNoTracking()
-                .OrderByDescending(c => c.Id)
-                .AsQueryable();
+            return 
+                _readRepository.GetList(searchParameters);
+        }
 
-            if (searchParameters.SearchParameter != default)
-                query = query.Where(c => c.Id <= searchParameters.SearchParameter);
+        public int Insert(TEntity entity)
+        {
+            return
+                _writeRepository.Insert(entity);
+        }
 
-            if (searchParameters.NeedTotalCount)
-                result.TotalCount = query.Count();
+        public async Task<int> InsertAsync(TEntity entity)
+        {
+            return
+                await _writeRepository.InsertAsync(entity);
+        }
 
-            if (searchParameters.LastLoadedId.HasValue)
-                query = query.Where(c => c.Id < searchParameters.LastLoadedId);
+        public void Update(TEntity entity)
+        {
+            _writeRepository.Update(entity);
+        }
 
-            result.Result =
-                query.Take(searchParameters.PageSize)
-                .ToList();
+        public async Task UpdateAsync(TEntity entity)
+        {
+            await _writeRepository.UpdateAsync(entity);
+        }
 
-            return result;
+        public void Delete(int id)
+        {
+            _writeRepository.Delete(id);
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            await _writeRepository.DeleteAsync(id);
         }
     }
 }
