@@ -20,67 +20,38 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             _readRepository = readRepository;
         }
 
-        public TEntity Find(int id)
-        {
-            var entity = _readRepository.Find(id);
-            return entity;
-        }
+        public TEntity Find(int id) =>
+            _readRepository.Find(id);
 
-        public Task<TEntity> FindAsync(int id)
-        {
-            var entity = _readRepository.FindAsync(id);
-            return entity;
-        }
+        public Task<TEntity> FindAsync(int id) =>
+            _readRepository.FindAsync(id);
 
-        public IQueryable<TEntity> Get()
-        {
-            return 
-                _readRepository.Get();
-        }
+        public IQueryable<TEntity> Get() =>
+            _readRepository.Get();
 
-        public async Task<IQueryable<TEntity>> GetAsync()
-        {
-            return 
-                await _readRepository.GetAsync();
-        }
+        public async Task<IQueryable<TEntity>> GetAsync() => 
+            await _readRepository.GetAsync();
 
         public SearchResult<TEntity, BaseSearchParameter> GetList
-            (BaseSearchParameter searchParameters)
-        {
-            return 
-                _readRepository.GetList(searchParameters);
-        }
+            (BaseSearchParameter searchParameters) =>
+            _readRepository.GetList(searchParameters);
 
-        public int Insert(TEntity entity)
-        {
-            return
-                _writeRepository.Insert(entity);
-        }
+        public int Insert(TEntity entity) =>
+            _writeRepository.Insert(entity);
 
-        public async Task<int> InsertAsync(TEntity entity)
-        {
-            return
-                await _writeRepository.InsertAsync(entity);
-        }
+        public async Task<int> InsertAsync(TEntity entity) =>
+            await _writeRepository.InsertAsync(entity);
 
-        public void Update(TEntity entity)
-        {
+        public void Update(TEntity entity) =>
             _writeRepository.Update(entity);
-        }
 
-        public async Task UpdateAsync(TEntity entity)
-        {
+        public async Task UpdateAsync(TEntity entity) =>
             await _writeRepository.UpdateAsync(entity);
-        }
 
-        public void Delete(int id)
-        {
+        public void Delete(int id) =>
             _writeRepository.Delete(id);
-        }
 
-        public async Task DeleteAsync(int id)
-        {
+        public async Task DeleteAsync(int id) =>
             await _writeRepository.DeleteAsync(id);
-        }
     }
 }

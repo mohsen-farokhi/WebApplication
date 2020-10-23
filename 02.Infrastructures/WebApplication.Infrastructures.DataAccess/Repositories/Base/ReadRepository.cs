@@ -8,7 +8,8 @@ using WebApplication.Infrastructures.DataAccess.DbContexts;
 
 namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
 {
-    public class ReadRepository<TEntity> : IReadRepository<TEntity> where TEntity : BaseEntity, new()
+    public class ReadRepository<TEntity> :
+        IReadRepository<TEntity> where TEntity : BaseEntity, new()
     {
         private readonly WebApplicationContext _context;
         private readonly DbSet<TEntity> _dbSet;
@@ -18,19 +19,14 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             _dbSet = _context.Set<TEntity>();
         }
 
-        public TEntity Find(int id)
-        {
-            var entity = _dbSet.Find(id);
-            return entity;
-        } 
+        public TEntity Find(int id) =>
+            _dbSet.Find(id);
 
-        public async Task<TEntity> FindAsync(int id)
-        {
-            var entity = await _dbSet.FindAsync(id);
-            return entity;
-        }
+        public async Task<TEntity> FindAsync(int id) =>
+            await _dbSet.FindAsync(id);
 
-        public SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters)
+        public SearchResult<TEntity, BaseSearchParameter> GetList
+            (BaseSearchParameter searchParameters)
         {
             var result = new SearchResult<TEntity, BaseSearchParameter>
             {
@@ -50,22 +46,18 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             if (searchParameters.LastLoadedId.HasValue)
                 query = query.Where(c => c.Id < searchParameters.LastLoadedId);
 
-            result.Result = 
+            result.Result =
                 query.Take(searchParameters.PageSize)
                 .ToList();
 
             return result;
         }
-        public IQueryable<TEntity> Get()
-        {
-            return _dbSet.AsNoTracking();
-        }
 
-        public async Task<IQueryable<TEntity>> GetAsync()
-        {
-            return
-                await Task.Run(() => _dbSet.AsNoTracking());
-        }
+        public IQueryable<TEntity> Get() =>
+            _dbSet.AsNoTracking();
+
+        public async Task<IQueryable<TEntity>> GetAsync() =>
+            await Task.Run(() => _dbSet.AsNoTracking());
 
     }
 }
