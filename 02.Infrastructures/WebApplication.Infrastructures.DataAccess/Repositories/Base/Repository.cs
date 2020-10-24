@@ -1,57 +1,119 @@
-﻿using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories.Base;
 using WebApplication.Domain.Entities.Base;
 using WebApplication.Domain.Entities.Dtos;
+using WebApplication.Infrastructures.DataAccess.DbContexts;
 
 namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
 {
     public class Repository<TEntity> :
         IRepository<TEntity> where TEntity : BaseEntity, new()
     {
-        private readonly IWriteRepository<TEntity> _writeRepository;
-        private readonly IReadRepository<TEntity> _readRepository;
+        private readonly WebApplicationContext _context;
 
         public Repository
-            (IWriteRepository<TEntity> writeRepository,
-            IReadRepository<TEntity> readRepository)
+            (WebApplicationContext context)
         {
-            _writeRepository = writeRepository;
-            _readRepository = readRepository;
+            _context = context;
+            DbSet = _context.Set<TEntity>();
         }
 
+        internal DbSet<TEntity> DbSet { get; }
+
         public TEntity Find(int id) =>
-            _readRepository.Find(id);
+            DbSet.Find(id);
 
-        public Task<TEntity> FindAsync(int id) =>
-            _readRepository.FindAsync(id);
-
-        public IQueryable<TEntity> Get() =>
-            _readRepository.Get();
-
-        public async Task<IQueryable<TEntity>> GetAsync() => 
-            await _readRepository.GetAsync();
+        public async Task<TEntity> FindAsync(int id) =>
+            await DbSet.FindAsync(id);
 
         public SearchResult<TEntity, BaseSearchParameter> GetList
-            (BaseSearchParameter searchParameters) =>
-            _readRepository.GetList(searchParameters);
+            (BaseSearchParameter searchParameters)
+        {
+            var result = new SearchResult<TEntity, BaseSearchParameter>
+            {
+                SearchParameter = searchParameters
+            };
 
-        public int Insert(TEntity entity) =>
-            _writeRepository.Insert(entity);
+            var query =
+                DbSet.AsNoTracking()
+                .OrderByDescending(c => c.Id)
+                .AsQueryable();
 
-        public async Task<int> InsertAsync(TEntity entity) =>
-            await _writeRepository.InsertAsync(entity);
+            if (searchParameters.SearchParameter != default)
+                query = query.Where(c => c.Id <= searchParameters.SearchParameter);
 
-        public void Update(TEntity entity) =>
-            _writeRepository.Update(entity);
+            if (searchParameters.NeedTotalCount)
+                result.TotalCount = query.Count();
 
-        public async Task UpdateAsync(TEntity entity) =>
-            await _writeRepository.UpdateAsync(entity);
+            if (searchParameters.LastLoadedId.HasValue)
+                query = query.Where(c => c.Id < searchParameters.LastLoadedId);
 
-        public void Delete(int id) =>
-            _writeRepository.Delete(id);
+            result.Result =
+                query.Take(searchParameters.PageSize)
+                .ToList();
 
-        public async Task DeleteAsync(int id) =>
-            await _writeRepository.DeleteAsync(id);
+            return result;
+        }
+
+        public void Delete(int id)
+        {
+            var entity = DbSet.Find(id);
+            DbSet.Remove(entity);
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var entity = await DbSet.FindAsync(id);
+            DbSet.Remove(entity);
+        }
+
+        public int Insert(TEntity entity)
+        {
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            DbSet.Add(entity);
+
+            return entity.Id;
+        }
+
+        public async Task<int> InsertAsync(TEntity entity)
+        {
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            await DbSet.AddAsync(entity);
+
+            return entity.Id;
+        }
+
+        public void Update(TEntity entity)
+        {
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            DbSet.Update(entity);
+        }
+
+        public async Task UpdateAsync(TEntity entity)
+        {
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            await Task.Run(() =>
+            {
+                DbSet.Update(entity);
+            });
+        }
     }
 }

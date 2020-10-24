@@ -12,18 +12,19 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         IReadRepository<TEntity> where TEntity : BaseEntity, new()
     {
         private readonly WebApplicationContext _context;
-        private readonly DbSet<TEntity> _dbSet;
         public ReadRepository(WebApplicationContext context)
         {
             _context = context;
-            _dbSet = _context.Set<TEntity>();
+            DbSet = _context.Set<TEntity>();
         }
 
+        internal DbSet<TEntity> DbSet { get; }
+
         public TEntity Find(int id) =>
-            _dbSet.Find(id);
+            DbSet.Find(id);
 
         public async Task<TEntity> FindAsync(int id) =>
-            await _dbSet.FindAsync(id);
+            await DbSet.FindAsync(id);
 
         public SearchResult<TEntity, BaseSearchParameter> GetList
             (BaseSearchParameter searchParameters)
@@ -32,8 +33,9 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             {
                 SearchParameter = searchParameters
             };
+
             var query =
-                _dbSet.AsNoTracking()
+                DbSet.AsNoTracking()
                 .OrderByDescending(c => c.Id)
                 .AsQueryable();
 
@@ -54,10 +56,10 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         }
 
         public IQueryable<TEntity> Get() =>
-            _dbSet.AsNoTracking();
+            DbSet.AsNoTracking();
 
         public async Task<IQueryable<TEntity>> GetAsync() =>
-            await Task.Run(() => _dbSet.AsNoTracking());
+            await Task.Run(() => DbSet.AsNoTracking());
 
     }
 }

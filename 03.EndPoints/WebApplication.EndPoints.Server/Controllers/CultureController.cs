@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ViewModels.Culture;
 using WebApplication.Domain.Abstracts.DomainServices;
+using WebApplication.Domain.Entities.Dtos;
 
 namespace WebApplication.EndPoints.Server.Controllers
 {
@@ -34,6 +35,14 @@ namespace WebApplication.EndPoints.Server.Controllers
                 });
 
             return cultures;
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult<CultureDto>> Get(int id)
+        {
+            var culture = await _cultureService.GetById(id);
+            return Ok(culture);
         }
     }
 }

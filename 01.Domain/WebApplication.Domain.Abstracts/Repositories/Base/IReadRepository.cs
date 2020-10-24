@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using WebApplication.Domain.Entities.Base;
 using WebApplication.Domain.Entities.Dtos;
 
@@ -10,7 +9,5 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
         TEntity Find(int id);
         Task<TEntity> FindAsync(int id);
         SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters);
-        IQueryable<TEntity> Get();
-        Task<IQueryable<TEntity>> GetAsync();
     }
 }

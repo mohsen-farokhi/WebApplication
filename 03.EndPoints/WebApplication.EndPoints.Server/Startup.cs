@@ -9,6 +9,8 @@ using WebApplication.Domain.DomainServices;
 using WebApplication.Domain.Abstracts.DomainServices;
 using WebApplication.Domain.Abstracts.Repositories;
 using WebApplication.Infrastructures.DataAccess.Repositories;
+using WebApplication.Domain.Abstracts.UnitOfWork;
+using WebApplication.Infrastructures.DataAccess.UnitOfWork;
 
 namespace WebApplication.EndPoints.Server
 {
@@ -42,6 +44,8 @@ namespace WebApplication.EndPoints.Server
             });
 
             services.AddControllers();
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<ICultureRepository, CultureRepository>();
             services.AddScoped<ICultureService, CultureService>();

@@ -10,52 +10,71 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         IWriteRepository<TEntity> where TEntity : BaseEntity, new()
     {
         private readonly WebApplicationContext _context;
-        private readonly DbSet<TEntity> _dbSet;
         public WriteRepository(WebApplicationContext context)
         {
             _context = context;
-            _dbSet = _context.Set<TEntity>();
+            DbSet = _context.Set<TEntity>();
         }
+
+        internal DbSet<TEntity> DbSet { get; }
+
         public void Delete(int id)
         {
-            var entity = _dbSet.Find(id);
-            _dbSet.Remove(entity);
-            _context.SaveChanges();
+            var entity = DbSet.Find(id);
+            DbSet.Remove(entity);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _dbSet.FindAsync(id);
-            _dbSet.Remove(entity);
-            _context.SaveChanges();
+            var entity = await DbSet.FindAsync(id);
+            DbSet.Remove(entity);
         }
 
         public int Insert(TEntity entity)
         {
-            _dbSet.Add(entity);
-            _context.SaveChanges();
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            DbSet.Add(entity);
 
             return entity.Id;
         }
 
         public async Task<int> InsertAsync(TEntity entity)
         {
-            await _dbSet.AddAsync(entity);
-            _context.SaveChanges();
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            await DbSet.AddAsync(entity);
 
             return entity.Id;
         }
 
         public void Update(TEntity entity)
         {
-            _dbSet.Update(entity);
-            _context.SaveChanges();
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            DbSet.Update(entity);
         }
 
         public async Task UpdateAsync(TEntity entity)
         {
-            _dbSet.Update(entity);
-            await _context.SaveChangesAsync();
+            if (entity == null)
+            {
+                throw new System.ArgumentNullException(paramName: nameof(entity));
+            }
+
+            await Task.Run(() =>
+            {
+                DbSet.Update(entity);
+            });
         }
     }
 }

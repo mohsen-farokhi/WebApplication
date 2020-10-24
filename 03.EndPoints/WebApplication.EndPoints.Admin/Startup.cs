@@ -18,6 +18,9 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Infrastructures;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication.EndPoints.Admin.Resources;
+using WebApplication.Domain.Abstracts.UnitOfWork;
+using WebApplication.Infrastructures.DataAccess.UnitOfWork;
+using WebApplication.Domain.Abstracts.Repositories.Base;
 
 namespace WebApplication.EndPoints.Admin
 {
@@ -92,6 +95,8 @@ namespace WebApplication.EndPoints.Admin
             });
 
             services.AddSingleton<CultureLocalizer>();
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<ICultureRepository, CultureRepository>();
             services.AddScoped<ICultureService, CultureService>();

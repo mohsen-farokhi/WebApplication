@@ -19,6 +19,7 @@ namespace WebApplication.Infrastructures.DataAccess.DbContexts
         #region Privait fields
         private static List<Type> _entityTypeCache;
         #endregion
+
         public DbSet<Group> Groups { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Tag> Tags { get; set; }
@@ -34,6 +35,7 @@ namespace WebApplication.Infrastructures.DataAccess.DbContexts
         {
             base.OnConfiguring(optionsBuilder);
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Seed();
