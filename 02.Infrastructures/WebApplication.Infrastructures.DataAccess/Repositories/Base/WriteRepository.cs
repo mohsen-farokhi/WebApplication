@@ -9,11 +9,11 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
     public class WriteRepository<TEntity> : 
         IWriteRepository<TEntity> where TEntity : BaseEntity, new()
     {
-        private readonly WebApplicationContext _context;
-        public WriteRepository(WebApplicationContext context)
+        private readonly DatabaseContext _databaseContext;
+        internal WriteRepository(DatabaseContext context)
         {
-            _context = context;
-            DbSet = _context.Set<TEntity>();
+            _databaseContext = context;
+            DbSet = _databaseContext.Set<TEntity>();
         }
 
         internal DbSet<TEntity> DbSet { get; }

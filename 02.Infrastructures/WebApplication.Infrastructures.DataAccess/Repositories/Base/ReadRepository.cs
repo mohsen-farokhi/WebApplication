@@ -11,11 +11,11 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
     public class ReadRepository<TEntity> :
         IReadRepository<TEntity> where TEntity : BaseEntity, new()
     {
-        private readonly WebApplicationContext _context;
-        public ReadRepository(WebApplicationContext context)
+        private readonly DatabaseContext _databaseContext;
+        internal ReadRepository(DatabaseContext context)
         {
-            _context = context;
-            DbSet = _context.Set<TEntity>();
+            _databaseContext = context;
+            DbSet = _databaseContext.Set<TEntity>();
         }
 
         internal DbSet<TEntity> DbSet { get; }

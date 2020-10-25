@@ -1,16 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WebApplication.Infrastructures.DataAccess.DbContexts;
 using WebApplication.Domain.DomainServices;
 using WebApplication.Domain.Abstracts.DomainServices;
-using WebApplication.Domain.Abstracts.Repositories;
-using WebApplication.Infrastructures.DataAccess.Repositories;
 using WebApplication.Domain.Abstracts.UnitOfWork;
 using WebApplication.Infrastructures.DataAccess.UnitOfWork;
+using WebApplication.Infrastructures.DataAccess.Tools;
+using WebApplication.Infrastructures.DataAccess.Tools.Enums;
 
 namespace WebApplication.EndPoints.Server
 {
@@ -26,8 +24,8 @@ namespace WebApplication.EndPoints.Server
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<WebApplicationContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<WebApplicationContext>(options =>
+            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddCors(options =>
             {
@@ -45,9 +43,22 @@ namespace WebApplication.EndPoints.Server
 
             services.AddControllers();
 
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>(sp =>
+            {
+                Options options =
+                    new Options
+                    {
+                        Provider =
+                            (Provider)
+                            System.Convert.ToInt32(Configuration.GetSection(key: "databaseProvider").Value),
 
-            services.AddScoped<ICultureRepository, CultureRepository>();
+                        ConnectionString =
+                            Configuration.GetSection(key: "ConnectionStrings").GetSection(key: "MyConnectionString").Value,
+                    };
+
+                return new UnitOfWork(options: options);
+            });
+
             services.AddScoped<ICultureService, CultureService>();
 
         }

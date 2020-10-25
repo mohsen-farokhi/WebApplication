@@ -7,7 +7,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
 {
     public class GroupRepository : Repository<Group>, IGroupRepository
     {
-        public GroupRepository(WebApplicationContext context) : base(context)
+        internal GroupRepository(DatabaseContext context) : base(context)
         {
         }
 

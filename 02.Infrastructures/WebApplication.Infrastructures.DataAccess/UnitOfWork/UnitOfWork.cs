@@ -1,34 +1,14 @@
-﻿using System.Threading.Tasks;
-using WebApplication.Domain.Abstracts.Repositories;
+﻿using WebApplication.Domain.Abstracts.Repositories;
 using WebApplication.Domain.Abstracts.UnitOfWork;
-using WebApplication.Infrastructures.DataAccess.DbContexts;
 using WebApplication.Infrastructures.DataAccess.Repositories;
+using WebApplication.Infrastructures.DataAccess.UnitOfWork.Base;
 
 namespace WebApplication.Infrastructures.DataAccess.UnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : BaseUnitOfWork, IUnitOfWork
     {
-        private WebApplicationContext _context;
-
-        public UnitOfWork(WebApplicationContext context)
+        public UnitOfWork(Tools.Options options) : base(options)
         {
-            _context = context;
-        }
-
-		public void Save()
-        {
-			_context.SaveChanges();
-        }
-
-        public async Task SaveAsync()
-        {
-			await _context.SaveChangesAsync();
-        }
-
-        public void Dispose()
-        {
-            _context.Dispose();
-            _context = null;
         }
 
         // **************************************************
@@ -58,7 +38,7 @@ namespace WebApplication.Infrastructures.DataAccess.UnitOfWork
                 if (_cultureRepository == null)
                 {
                     _cultureRepository =
-                        new CultureRepository(_context);
+                        new CultureRepository(DatabaseContext);
                 }
 
                 return _cultureRepository;

@@ -7,7 +7,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Cms
 {
     public class PostCategoryRepository : Repository<PostCategory>, IPostCategoryRepository
     {
-        public PostCategoryRepository(WebApplicationContext context) : base(context)
+        internal PostCategoryRepository(DatabaseContext context) : base(context)
         {
         }
 

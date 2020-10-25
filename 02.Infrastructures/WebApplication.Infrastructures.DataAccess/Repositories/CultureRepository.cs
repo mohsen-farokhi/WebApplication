@@ -11,11 +11,11 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
 {
     public class CultureRepository : Repository<Culture>, ICultureRepository
     {
-        public CultureRepository(WebApplicationContext context) : base(context)
+        internal CultureRepository(DatabaseContext context) : base(context)
         {
         }
 
-        public async Task<IEnumerable<CultureDto>> GetAll()
+        public async Task<IList<CultureDto>> GetAll()
         {
             var task =
                 await Task.Run(() =>
@@ -29,7 +29,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
                             Name = c.Name,
                             NativeName = c.NativeName,
                             IsActive = c.IsActive,
-                        });
+                        }).ToList();
 
                     return result;
                 });

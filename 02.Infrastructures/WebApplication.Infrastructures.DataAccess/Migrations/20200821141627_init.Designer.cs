@@ -9,7 +9,7 @@ using WebApplication.Infrastructures.DataAccess.DbContexts;
 
 namespace WebApplication.Infrastructures.DataAccess.Migrations
 {
-    [DbContext(typeof(WebApplicationContext))]
+    [DbContext(typeof(DatabaseContext))]
     [Migration("20200821141627_init")]
     partial class init
     {

@@ -7,7 +7,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Cms
 {
     public class PostCommentRepository : Repository<PostComment>, IPostCommentRepository
     {
-        public PostCommentRepository(WebApplicationContext context) : base(context)
+        internal PostCommentRepository(DatabaseContext context) : base(context)
         {
         }
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories.Base;
@@ -11,13 +12,13 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
     public class Repository<TEntity> :
         IRepository<TEntity> where TEntity : BaseEntity, new()
     {
-        private readonly WebApplicationContext _context;
+        private readonly DatabaseContext _databaseContext;
 
-        public Repository
-            (WebApplicationContext context)
+        internal Repository
+            (DatabaseContext context)
         {
-            _context = context;
-            DbSet = _context.Set<TEntity>();
+            _databaseContext = context;
+            DbSet = _databaseContext.Set<TEntity>();
         }
 
         internal DbSet<TEntity> DbSet { get; }
@@ -59,13 +60,13 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
 
         public void Delete(int id)
         {
-            var entity = DbSet.Find(id);
+            var entity = Find(id);
             DbSet.Remove(entity);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await DbSet.FindAsync(id);
+            var entity = await FindAsync(id);
             DbSet.Remove(entity);
         }
 
@@ -73,9 +74,10 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         {
             if (entity == null)
             {
-                throw new System.ArgumentNullException(paramName: nameof(entity));
+                throw new ArgumentNullException(paramName: nameof(entity));
             }
 
+            entity.InsertDateTime = DateTime.Now;
             DbSet.Add(entity);
 
             return entity.Id;
@@ -85,7 +87,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         {
             if (entity == null)
             {
-                throw new System.ArgumentNullException(paramName: nameof(entity));
+                throw new ArgumentNullException(paramName: nameof(entity));
             }
 
             await DbSet.AddAsync(entity);
@@ -97,7 +99,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         {
             if (entity == null)
             {
-                throw new System.ArgumentNullException(paramName: nameof(entity));
+                throw new ArgumentNullException(paramName: nameof(entity));
             }
 
             DbSet.Update(entity);
@@ -107,7 +109,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         {
             if (entity == null)
             {
-                throw new System.ArgumentNullException(paramName: nameof(entity));
+                throw new ArgumentNullException(paramName: nameof(entity));
             }
 
             await Task.Run(() =>

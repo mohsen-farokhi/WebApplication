@@ -7,7 +7,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
 {
     public class TagRepository : Repository<Tag>, ITagRepository
     {
-        public TagRepository(WebApplicationContext context) : base(context)
+        internal TagRepository(DatabaseContext context) : base(context)
         {
         }
 

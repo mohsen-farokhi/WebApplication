@@ -7,7 +7,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(WebApplicationContext context) : base(context)
+        internal UserRepository(DatabaseContext context) : base(context)
         {
         }
 

@@ -9,9 +9,9 @@ using WebApplication.Domain.Entities.Cms;
 
 namespace WebApplication.Infrastructures.DataAccess.DbContexts
 {
-    public class WebApplicationContext : DbContext
+    internal class DatabaseContext : DbContext
     {
-        public WebApplicationContext
+        public DatabaseContext
             (DbContextOptions options): base(options)
         {
         }
@@ -67,7 +67,7 @@ namespace WebApplication.Infrastructures.DataAccess.DbContexts
         }
 
         #region Private Helper Methods
-        static readonly MethodInfo SetGlobalQueryMethod = typeof(WebApplicationContext).GetMethods(BindingFlags.Public | BindingFlags.Instance)
+        static readonly MethodInfo SetGlobalQueryMethod = typeof(DatabaseContext).GetMethods(BindingFlags.Public | BindingFlags.Instance)
                                                          .Single(t => t.IsGenericMethod && t.Name == "SetGlobalQuery");
         public void SetGlobalQuery<T>(ModelBuilder builder) where T : class, IBaseExtendedEntity
         {
