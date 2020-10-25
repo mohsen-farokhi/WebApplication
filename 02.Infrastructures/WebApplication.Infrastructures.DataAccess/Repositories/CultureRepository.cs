@@ -15,7 +15,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
         {
         }
 
-        public async Task<IList<CultureDto>> GetAll()
+        public async Task<IList<CultureDto>> GetAllAsync()
         {
             var task =
                 await Task.Run(() =>

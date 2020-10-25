@@ -8,6 +8,6 @@ namespace WebApplication.Domain.Abstracts.Repositories
 {
     public interface ICultureRepository : IRepository<Culture>
     {
-        Task<IList<CultureDto>> GetAll();
+        Task<IList<CultureDto>> GetAllAsync();
     }
 }

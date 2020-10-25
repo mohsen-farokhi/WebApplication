@@ -41,16 +41,18 @@ namespace WebApplication.Domain.DomainServices
             {
                 DisplayName = dto.DisplayName
             };
+
             culture.SetIsActive(dto.IsActive, userId);
-            var id = await _unitOfWork.CultureRepository.InsertAsync(culture);
+            var id = _unitOfWork.CultureRepository.Insert(culture);
+            await _unitOfWork.SaveAsync();
 
             return id;
         }
 
-        public async Task<IEnumerable<CultureDto>> GetAllAsync()
+        public async Task<IList<CultureDto>> GetAllAsync()
         {
             var cultures =
-                (await _unitOfWork.CultureRepository.GetAll())
+                (await _unitOfWork.CultureRepository.GetAllAsync())
                 .Select(c => new CultureDto
                 {
                     Id = c.Id,
@@ -68,7 +70,8 @@ namespace WebApplication.Domain.DomainServices
         {
             var culture = await _unitOfWork.CultureRepository.FindAsync(id);
             culture.SetIsDeleted(true, userId);
-            await _unitOfWork.CultureRepository.UpdateAsync(culture);
+            _unitOfWork.CultureRepository.Update(culture);
+            await _unitOfWork.SaveAsync();
         }
 
         public async Task UpdateAsync(CultureDto dto, int userId)
@@ -77,7 +80,8 @@ namespace WebApplication.Domain.DomainServices
             culture.DisplayName = dto.DisplayName;
             culture.SetUpdateDateTime(userId);
             culture.SetIsActive(dto.IsActive, userId);
-            await _unitOfWork.CultureRepository.UpdateAsync(culture);
+            _unitOfWork.CultureRepository.Update(culture);
+            await _unitOfWork.SaveAsync();
         }
     }
 }

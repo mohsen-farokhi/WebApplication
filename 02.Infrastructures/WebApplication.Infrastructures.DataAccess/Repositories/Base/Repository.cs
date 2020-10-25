@@ -117,5 +117,6 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
                 DbSet.Update(entity);
             });
         }
+
     }
 }

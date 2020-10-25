@@ -42,7 +42,8 @@ namespace WebApplication.EndPoints.Server.Controllers
         public async Task<ActionResult<CultureDto>> Get(int id)
         {
             var culture = await _cultureService.GetById(id);
-            return Ok(culture);
+
+            return culture;
         }
     }
 }

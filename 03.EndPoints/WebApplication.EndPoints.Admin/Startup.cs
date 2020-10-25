@@ -34,8 +34,8 @@ namespace WebApplication.EndPoints.Admin
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<WebApplicationContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            ////services.AddDbContext<DatabaseContext>(options =>
+            ////    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddCors(options =>
             {

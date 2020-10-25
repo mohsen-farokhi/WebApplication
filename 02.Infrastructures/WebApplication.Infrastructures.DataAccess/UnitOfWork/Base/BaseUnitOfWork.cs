@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.UnitOfWork.Base;
 using WebApplication.Infrastructures.DataAccess.DbContexts;
+using WebApplication.Infrastructures.DataAccess.Repositories.Base;
 
 namespace WebApplication.Infrastructures.DataAccess.UnitOfWork.Base
 {

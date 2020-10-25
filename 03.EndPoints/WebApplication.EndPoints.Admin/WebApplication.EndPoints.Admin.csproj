@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\01.Domain\WebApplication.Domain.Abstracts\WebApplication.Domain.Abstracts.csproj" />
-    <ProjectReference Include="..\..\01.Domain\WebApplication.Domain.ApplicationServices\WebApplication.Domain.ApplicationServices.csproj" />
     <ProjectReference Include="..\..\01.Domain\WebApplication.Domain.DomainServices\WebApplication.Domain.DomainServices.csproj" />
     <ProjectReference Include="..\..\01.Domain\WebApplication.Domain.Entities\WebApplication.Domain.Entities.csproj" />
     <ProjectReference Include="..\..\02.Infrastructures\WebApplication.Infrastructures.DataAccess\WebApplication.Infrastructures.DataAccess.csproj" />
