@@ -43,10 +43,10 @@ namespace WebApplication.Domain.DomainServices
             };
 
             culture.SetIsActive(dto.IsActive, userId);
-            var id = _unitOfWork.CultureRepository.Insert(culture);
+            var entity = _unitOfWork.CultureRepository.Insert(culture);
             await _unitOfWork.SaveAsync();
 
-            return id;
+            return entity.Id;
         }
 
         public async Task<IList<CultureDto>> GetAllAsync()

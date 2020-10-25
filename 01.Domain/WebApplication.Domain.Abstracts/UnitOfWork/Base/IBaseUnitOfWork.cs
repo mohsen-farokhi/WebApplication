@@ -10,5 +10,6 @@ namespace WebApplication.Domain.Abstracts.UnitOfWork.Base
         void Save();
         Task SaveAsync();
         bool IsDisposed { get; }
+        IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity, new();
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using WebApplication.Domain.Abstracts.Repositories.Base;
 using WebApplication.Domain.Abstracts.UnitOfWork.Base;
+using WebApplication.Domain.Entities.Base;
 using WebApplication.Infrastructures.DataAccess.DbContexts;
 using WebApplication.Infrastructures.DataAccess.Repositories.Base;
 
@@ -119,6 +121,11 @@ namespace WebApplication.Infrastructures.DataAccess.UnitOfWork.Base
             }
 
             IsDisposed = true;
+        }
+
+        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity, new()
+        {
+            return new Repository<TEntity>(databaseContext: DatabaseContext);
         }
 
         ~BaseUnitOfWork()

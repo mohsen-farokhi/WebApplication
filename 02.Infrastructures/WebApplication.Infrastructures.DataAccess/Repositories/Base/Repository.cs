@@ -15,9 +15,9 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         private readonly DatabaseContext _databaseContext;
 
         internal Repository
-            (DatabaseContext context)
+            (DatabaseContext databaseContext)
         {
-            _databaseContext = context;
+            _databaseContext = databaseContext;
             DbSet = _databaseContext.Set<TEntity>();
         }
 
@@ -70,20 +70,20 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             DbSet.Remove(entity);
         }
 
-        public int Insert(TEntity entity)
+        public TEntity Insert(TEntity entity)
         {
             if (entity == null)
             {
                 throw new ArgumentNullException(paramName: nameof(entity));
             }
 
-            entity.InsertDateTime = DateTime.Now;
+            //entity.InsertDateTime = DateTime.Now;
             DbSet.Add(entity);
 
-            return entity.Id;
+            return entity;
         }
 
-        public async Task<int> InsertAsync(TEntity entity)
+        public async Task<TEntity> InsertAsync(TEntity entity)
         {
             if (entity == null)
             {
@@ -92,7 +92,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
 
             await DbSet.AddAsync(entity);
 
-            return entity.Id;
+            return entity;
         }
 
         public void Update(TEntity entity)

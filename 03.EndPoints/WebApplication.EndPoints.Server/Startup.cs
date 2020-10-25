@@ -50,7 +50,7 @@ namespace WebApplication.EndPoints.Server
                     {
                         Provider =
                             (Provider)
-                            System.Convert.ToInt32(Configuration.GetSection(key: "databaseProvider").Value),
+                            int.Parse(Configuration.GetSection(key: "databaseProvider").Value),
 
                         ConnectionString =
                             Configuration.GetSection(key: "ConnectionStrings").GetSection(key: "MyConnectionString").Value,
@@ -60,6 +60,7 @@ namespace WebApplication.EndPoints.Server
             });
 
             services.AddScoped<ICultureService, CultureService>();
+            services.AddScoped<IGroupService, GroupService>();
 
         }
 

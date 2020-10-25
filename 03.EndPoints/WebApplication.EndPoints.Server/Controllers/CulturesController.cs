@@ -10,11 +10,11 @@ namespace WebApplication.EndPoints.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CultureController : ControllerBase
+    public class CulturesController : ControllerBase
     {
         private readonly ICultureService _cultureService;
 
-        public CultureController(ICultureService cultureService)
+        public CulturesController(ICultureService cultureService)
         {
             _cultureService = cultureService;
         }

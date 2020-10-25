@@ -6,8 +6,8 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
 {
     public interface IRepository<TEntity> where TEntity : BaseEntity, new()
     {
-        int Insert(TEntity entity);
-        Task<int> InsertAsync(TEntity entity);
+        TEntity Insert(TEntity entity);
+        Task<TEntity> InsertAsync(TEntity entity);
         void Update(TEntity entity);
         Task UpdateAsync(TEntity entity);
         void Delete(int id);
