@@ -10,8 +10,8 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
         Task<TEntity> InsertAsync(TEntity entity);
         void Update(TEntity entity);
         Task UpdateAsync(TEntity entity);
-        void Delete(int id);
-        Task DeleteAsync(int id);
+        void DeleteById(int id);
+        Task DeleteByIdAsync(int id);
         TEntity Find(int id);
         Task<TEntity> FindAsync(int id);
         SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters);

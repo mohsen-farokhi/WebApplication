@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Resources\Resources.csproj" />
-    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

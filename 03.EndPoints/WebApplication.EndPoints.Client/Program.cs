@@ -1,12 +1,14 @@
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.JSInterop;
 using System;
-using System.Globalization;
 using System.Net.Http;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Text;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
-namespace WebApplication.EndPoints.BlazorApp
+namespace WebApplication.EndPoints.Client
 {
     public class Program
     {

@@ -58,13 +58,13 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             return result;
         }
 
-        public void Delete(int id)
+        public void DeleteById(int id)
         {
             var entity = Find(id);
             DbSet.Remove(entity);
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteByIdAsync(int id)
         {
             var entity = await FindAsync(id);
             DbSet.Remove(entity);
@@ -77,7 +77,6 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
                 throw new ArgumentNullException(paramName: nameof(entity));
             }
 
-            //entity.InsertDateTime = DateTime.Now;
             DbSet.Add(entity);
 
             return entity;
