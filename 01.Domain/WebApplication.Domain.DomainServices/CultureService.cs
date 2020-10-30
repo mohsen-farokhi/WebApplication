@@ -35,14 +35,18 @@ namespace WebApplication.Domain.DomainServices
             return result;
         }
 
-        public async Task<int> InsertAsync(CultureDto dto, int userId)
+        public async Task<int> InsertAsync(CultureDto dto)
         {
             var culture = new Culture
             {
-                DisplayName = dto.DisplayName
+                IsActive = dto.IsActive,
+                Name = dto.Name,
+                DisplayName = dto.DisplayName,
+                Lcid = dto.Lcid,
+                NativeName = dto.NativeName,
             };
 
-            culture.SetIsActive(dto.IsActive, userId);
+            //culture.SetIsActive(dto.IsActive, userId);
             var entity = _unitOfWork.CultureRepository.Insert(culture);
             await _unitOfWork.SaveAsync();
 

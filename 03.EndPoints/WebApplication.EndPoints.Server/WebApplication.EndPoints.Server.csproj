@@ -7,7 +7,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\01.Domain\WebApplication.Domain.Abstracts\WebApplication.Domain.Abstracts.csproj" />
     <ProjectReference Include="..\..\01.Domain\WebApplication.Domain.DomainServices\WebApplication.Domain.DomainServices.csproj" />
+    <ProjectReference Include="..\..\02.Infrastructures\WebApplication.Infrastructures.ApplicationServices\WebApplication.Infrastructures.ApplicationServices.csproj" />
     <ProjectReference Include="..\..\02.Infrastructures\WebApplication.Infrastructures.DataAccess\WebApplication.Infrastructures.DataAccess.csproj" />
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
 

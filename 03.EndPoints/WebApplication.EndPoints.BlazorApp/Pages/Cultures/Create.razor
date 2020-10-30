@@ -1,0 +1,50 @@
+﻿@page "/culture/create"
+@*@inject Domain.Abstracts.DomainServices.ICultureService cultureService*@
+@inject NavigationManager navigationManager
+@inject HttpClient client
+
+@{
+    string strTitle =
+        string.Format("{0} {1}",
+        Resources.Actions.CreateOf,
+        Resources.Models.Cultures.Culture);
+}
+
+<div class="col-12 grid-margin">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@strTitle</h4>
+            <FormEditor Model="Model" OnValidSubmit="Submit" />
+        </div>
+    </div>
+</div>
+
+@code {
+
+    int cultureId { get; set; }
+    public ViewModels.Culture.CreateViewModel Model { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Model =
+            new ViewModels.Culture.CreateViewModel();
+    }
+
+    private async Task Submit()
+    {
+        //cultureId = await cultureService.InsertAsync(new Domain.Entities.Dtos.CultureDto
+        //{
+        //    IsActive = Model.IsActive,
+        //    Name = Model.Name,
+        //    DisplayName = Model.DisplayName,
+        //    NativeName = Model.NativeName,
+        //    Lcid = Model.Lcid,
+        //});
+
+        var response = 
+            await client.PostAsJsonAsync("http://localhost:3000/Cultures", Model);
+
+        navigationManager.NavigateTo(uri: "/cultures", forceLoad: false);
+    }
+
+}

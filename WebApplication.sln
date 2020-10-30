@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.EndPoints.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Infrastructures.ApplicationServices", "02.Infrastructures\WebApplication.Infrastructures.ApplicationServices\WebApplication.Infrastructures.ApplicationServices.csproj", "{555F1A45-E830-4556-8D63-DCA8BC1F5C15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "03.EndPoints\Resources\Resources.csproj", "{D9C03B66-D198-49D3-86EE-12D9BA1C6B58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resources", "03.EndPoints\Resources\Resources.csproj", "{D9C03B66-D198-49D3-86EE-12D9BA1C6B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "03.EndPoints\ViewModels\ViewModels.csproj", "{0B11163B-9F07-4A04-9199-29199630766E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "03.EndPoints\ViewModels\ViewModels.csproj", "{0B11163B-9F07-4A04-9199-29199630766E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -45,5 +45,21 @@ namespace WebApplication.EndPoints.Server.Controllers
 
             return culture;
         }
+
+        public async Task<ActionResult<int>> Post(CreateViewModel viewModel)
+        {
+            int cultureId =
+                await _cultureService.InsertAsync(new CultureDto
+                {
+                    IsActive = viewModel.IsActive,
+                    Name = viewModel.Name,
+                    DisplayName = viewModel.DisplayName,
+                    NativeName = viewModel.NativeName,
+                    Lcid = viewModel.Lcid,
+                });
+
+            return cultureId;
+        }
+
     }
 }
