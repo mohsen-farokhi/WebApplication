@@ -9,7 +9,7 @@ namespace WebApplication.Domain.Abstracts.DomainServices
         Task<IList<CultureDto>> GetAllAsync();
         Task<CultureDto> GetById(int id);
         Task<int> InsertAsync(CultureDto culture);
-        Task DeleteAsync(int id, int userId);
+        Task DeleteAsync(int id);
         Task UpdateAsync(CultureDto culture, int userId);
     }
 }

@@ -10,6 +10,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Actions.resx</DependentUpon>
     </Compile>
+    <Compile Update="Buttons.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Buttons.resx</DependentUpon>
+    </Compile>
     <Compile Update="DataDictionary.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -36,6 +41,10 @@
     <EmbeddedResource Update="Actions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Actions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Buttons.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Buttons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="DataDictionary.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

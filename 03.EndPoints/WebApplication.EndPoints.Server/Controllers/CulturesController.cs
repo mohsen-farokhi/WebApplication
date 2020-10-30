@@ -22,7 +22,7 @@ namespace WebApplication.EndPoints.Server.Controllers
         [HttpGet]
         public async Task<IEnumerable<IndexViewModel>> Get()
         {
-            var cultures = 
+            var cultures =
                 (await _cultureService.GetAllAsync())
                 .Select(c => new IndexViewModel
                 {
@@ -46,6 +46,7 @@ namespace WebApplication.EndPoints.Server.Controllers
             return culture;
         }
 
+        [HttpPost]
         public async Task<ActionResult<int>> Post(CreateViewModel viewModel)
         {
             int cultureId =
@@ -59,6 +60,13 @@ namespace WebApplication.EndPoints.Server.Controllers
                 });
 
             return cultureId;
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int cultureId)
+        {
+            await _cultureService.DeleteAsync(cultureId);
+            return Ok();
         }
 
     }

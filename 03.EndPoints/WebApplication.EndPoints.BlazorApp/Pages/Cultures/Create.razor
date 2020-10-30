@@ -1,5 +1,4 @@
 ﻿@page "/culture/create"
-@*@inject Domain.Abstracts.DomainServices.ICultureService cultureService*@
 @inject NavigationManager navigationManager
 @inject HttpClient client
 
@@ -32,17 +31,9 @@
 
     private async Task Submit()
     {
-        //cultureId = await cultureService.InsertAsync(new Domain.Entities.Dtos.CultureDto
-        //{
-        //    IsActive = Model.IsActive,
-        //    Name = Model.Name,
-        //    DisplayName = Model.DisplayName,
-        //    NativeName = Model.NativeName,
-        //    Lcid = Model.Lcid,
-        //});
 
         var response = 
-            await client.PostAsJsonAsync("http://localhost:3000/Cultures", Model);
+            await client.PostAsJsonAsync("Cultures", Model);
 
         navigationManager.NavigateTo(uri: "/cultures", forceLoad: false);
     }

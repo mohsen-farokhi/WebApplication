@@ -70,11 +70,11 @@ namespace WebApplication.Domain.DomainServices
             return cultures;
         }
 
-        public async Task DeleteAsync(int id, int userId)
+        public async Task DeleteAsync(int id)
         {
-            var culture = await _unitOfWork.CultureRepository.FindAsync(id);
-            culture.SetIsDeleted(true, userId);
-            _unitOfWork.CultureRepository.Update(culture);
+            //var culture = await _unitOfWork.CultureRepository.FindAsync(id);
+            //culture.SetIsDeleted(true, userId);
+            await _unitOfWork.CultureRepository.DeleteByIdAsync(id);
             await _unitOfWork.SaveAsync();
         }
 
