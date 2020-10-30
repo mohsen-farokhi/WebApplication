@@ -9,6 +9,5 @@ namespace WebApplication.Domain.Entities.Base
         }
 
         public int Id { get; set; }
-        //public DateTime InsertDateTime { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace WebApplication.Domain.DomainServices
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<CultureDto> GetById(int id)
+        public async Task<CultureDto> GetByIdAsync(int id)
         {
             var culture =
                 await _unitOfWork.CultureRepository.FindAsync(id);
@@ -46,8 +46,9 @@ namespace WebApplication.Domain.DomainServices
                 NativeName = dto.NativeName,
             };
 
-            //culture.SetIsActive(dto.IsActive, userId);
-            var entity = _unitOfWork.CultureRepository.Insert(culture);
+            var entity = 
+                await _unitOfWork.CultureRepository.InsertAsync(culture);
+
             await _unitOfWork.SaveAsync();
 
             return entity.Id;
@@ -72,19 +73,22 @@ namespace WebApplication.Domain.DomainServices
 
         public async Task DeleteAsync(int id)
         {
-            //var culture = await _unitOfWork.CultureRepository.FindAsync(id);
-            //culture.SetIsDeleted(true, userId);
             await _unitOfWork.CultureRepository.DeleteByIdAsync(id);
             await _unitOfWork.SaveAsync();
         }
 
-        public async Task UpdateAsync(CultureDto dto, int userId)
+        public async Task UpdateAsync(CultureDto dto)
         {
-            var culture = await _unitOfWork.CultureRepository.FindAsync(dto.Id);
+            var culture = 
+                await _unitOfWork.CultureRepository.FindAsync(dto.Id);
+
+            culture.IsActive = dto.IsActive;
+            culture.Name = dto.Name;
             culture.DisplayName = dto.DisplayName;
-            culture.SetUpdateDateTime(userId);
-            culture.SetIsActive(dto.IsActive, userId);
-            _unitOfWork.CultureRepository.Update(culture);
+            culture.NativeName = dto.NativeName;
+            culture.Lcid = dto.Lcid;
+
+            await _unitOfWork.CultureRepository.UpdateAsync(culture);
             await _unitOfWork.SaveAsync();
         }
     }

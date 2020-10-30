@@ -22,6 +22,7 @@ namespace WebApplication.Domain.Entities
                 _url = value;
             }
         }
+
         public ICollection<TagsOfPosts> PostTags { get; set; }
     }
 }

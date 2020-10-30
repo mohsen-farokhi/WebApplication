@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories;
@@ -17,24 +18,18 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
 
         public async Task<IList<CultureDto>> GetAllAsync()
         {
-            var task =
-                await Task.Run(() =>
+            var result =
+                await DbSet.Select(c => new CultureDto
                 {
-                    var result =
-                        DbSet.Select(c => new CultureDto
-                        {
-                            Id = c.Id,
-                            DisplayName = c.DisplayName,
-                            Lcid = c.Lcid,
-                            Name = c.Name,
-                            NativeName = c.NativeName,
-                            IsActive = c.IsActive,
-                        }).ToList();
+                    Id = c.Id,
+                    DisplayName = c.DisplayName,
+                    Lcid = c.Lcid,
+                    Name = c.Name,
+                    NativeName = c.NativeName,
+                    IsActive = c.IsActive,
+                }).ToListAsync();
 
-                    return result;
-                });
-
-            return task;
+            return result;
         }
     }
 }
