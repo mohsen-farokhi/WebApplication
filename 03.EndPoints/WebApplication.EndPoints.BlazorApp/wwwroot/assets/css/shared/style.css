@@ -12000,11 +12000,11 @@ textarea.typeahead {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-select.form-control, select.asColorPicker-input, .dataTables_wrapper select,
+/*select.form-control, select.asColorPicker-input, .dataTables_wrapper select,
 .jsgrid .jsgrid-table .jsgrid-filter-row select, .select2-container--default select.select2-selection--single, .select2-container--default .select2-selection--single select.select2-search__field, select.tt-hint,
 select.tt-query,
 select.typeahead {
-  padding: 0.4375rem 0.75rem; }
+  padding: 0.4375rem 0.75rem; }*/
 
 .form-group label {
   font-size: 0.875rem;

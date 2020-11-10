@@ -3,19 +3,21 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication.Infrastructures.DataAccess.DbContexts;
 
 namespace WebApplication.Infrastructures.DataAccess.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class WebApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201103053256_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.7")
+                .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -26,9 +28,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
@@ -38,9 +37,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CreatorUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EditorUserId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("FinishPublishingDateTime")
@@ -68,9 +64,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("bit");
 
                     b.Property<int>("PostCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RemoverUserId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("StartPublishingDateTime")
@@ -107,15 +100,9 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
-
-                    b.Property<int?>("EditorUserId")
-                        .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -134,9 +121,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
 
                     b.Property<bool>("IsSystem")
                         .HasColumnType("bit");
-
-                    b.Property<int?>("RemoverUserId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -158,16 +142,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
-
-                    b.Property<int?>("EditorUserId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("InsertDateTime")
                         .HasColumnType("datetime2");
@@ -188,9 +166,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("bit");
 
                     b.Property<int>("PostId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RemoverUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("Subject")
@@ -248,16 +223,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
-
-                    b.Property<int?>("EditorUserId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("InsertDateTime")
                         .HasColumnType("datetime2");
@@ -283,9 +252,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<int?>("RemoverUserId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdateDateTime")
                         .HasColumnType("datetime2");
 
@@ -298,27 +264,27 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         {
                             Id = 1,
                             DisplayName = "فارسی",
-                            InsertDateTime = new DateTime(2020, 8, 21, 18, 46, 26, 979, DateTimeKind.Local).AddTicks(4950),
+                            InsertDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 215, DateTimeKind.Local).AddTicks(2583),
                             IsActive = true,
                             IsDeleted = false,
-                            IsSystem = false,
+                            IsSystem = true,
                             Lcid = 1065,
                             Name = "fa-IR",
                             NativeName = "فارسی (ایران)",
-                            UpdateDateTime = new DateTime(2020, 8, 21, 18, 46, 26, 982, DateTimeKind.Local).AddTicks(9500)
+                            UpdateDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 219, DateTimeKind.Local).AddTicks(458)
                         },
                         new
                         {
                             Id = 2,
                             DisplayName = "English",
-                            InsertDateTime = new DateTime(2020, 8, 21, 18, 46, 26, 983, DateTimeKind.Local).AddTicks(8203),
+                            InsertDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 219, DateTimeKind.Local).AddTicks(9973),
                             IsActive = true,
                             IsDeleted = false,
-                            IsSystem = false,
+                            IsSystem = true,
                             Lcid = 1033,
                             Name = "en-US",
                             NativeName = "English (United States)",
-                            UpdateDateTime = new DateTime(2020, 8, 21, 18, 46, 26, 983, DateTimeKind.Local).AddTicks(8239)
+                            UpdateDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 220, DateTimeKind.Local).AddTicks(13)
                         });
                 });
 
@@ -353,9 +319,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     b.Property<byte>("AccessType")
                         .HasColumnType("tinyint");
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
@@ -364,9 +327,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
-
-                    b.Property<int?>("EditorUserId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("InsertDateTime")
                         .HasColumnType("datetime2");
@@ -380,9 +340,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     b.Property<bool>("IsSystem")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsVisibleJustForProgrammer")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("varchar(200)")
@@ -392,9 +349,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RemoverUserId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdateDateTime")
                         .HasColumnType("datetime2");
 
@@ -402,7 +356,7 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Operation");
+                    b.ToTable("Operations");
                 });
 
             modelBuilder.Entity("WebApplication.Domain.Entities.OperationsOfGroups", b =>
@@ -427,12 +381,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EditorUserId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("InsertDateTime")
                         .HasColumnType("datetime2");
 
@@ -449,9 +397,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
-
-                    b.Property<int?>("RemoverUserId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdateDateTime")
                         .HasColumnType("datetime2");
@@ -477,9 +422,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActivatorUserId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("BirthDate")
                         .HasColumnType("date");
 
@@ -489,9 +431,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .IsUnicode(false);
 
                     b.Property<int>("CultureLcid")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EditorUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("EmailAddress")
@@ -531,9 +470,6 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
-
-                    b.Property<int?>("RemoverUserId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdateDateTime")
                         .HasColumnType("datetime2");

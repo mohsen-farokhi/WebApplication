@@ -25,6 +25,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Culture.resx</DependentUpon>
     </Compile>
+    <Compile Update="Enums\AccessType.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AccessType.resx</DependentUpon>
+    </Compile>
     <Compile Update="ErrorMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -34,6 +39,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Cultures.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Operation.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Operation.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -54,6 +64,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Culture.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Enums\AccessType.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccessType.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="ErrorMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
@@ -64,6 +78,10 @@
     <EmbeddedResource Update="Models\Cultures.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Cultures.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Models\Operation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Operation.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -1,6 +1,5 @@
 ﻿@page "/cultures"
 @using ViewModels.Culture
-@inject HttpClient client
 
 @{
     string strTitle =
@@ -59,7 +58,7 @@
                                         @item.DisplayName
                                     </td>
                                     <td>
-                                        <a href="javascript:void(0)" @onclick="() => RemoveCulture(item.Id)">
+                                        <a href="javascript:void(0)" @onclick="() => Remove(item.Id)">
                                             <i class="mdi mdi-delete" data-name="mdi-delete"></i>
                                         </a>
                                     </td>
@@ -82,7 +81,7 @@
                 ("Cultures");
     }
 
-    private async Task RemoveCulture(int cultureId)
+    private async Task Remove(int cultureId)
     {
         await client.DeleteAsync($"Cultures?cultureId={cultureId}");
         await OnInitializedAsync();

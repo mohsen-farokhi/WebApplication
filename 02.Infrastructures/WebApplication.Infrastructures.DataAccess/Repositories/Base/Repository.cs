@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories.Base;
 using WebApplication.Domain.Entities.Base;
@@ -23,54 +25,25 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
 
         internal DbSet<TEntity> DbSet { get; }
 
-        public TEntity Find(int id) =>
+        public virtual TEntity Find(int id) =>
             DbSet.Find(id);
 
-        public async Task<TEntity> FindAsync(int id) =>
+        public virtual async Task<TEntity> FindAsync(int id) =>
             await DbSet.FindAsync(id);
 
-        public SearchResult<TEntity, BaseSearchParameter> GetList
-            (BaseSearchParameter searchParameters)
-        {
-            var result = new SearchResult<TEntity, BaseSearchParameter>
-            {
-                SearchParameter = searchParameters
-            };
-
-            var query =
-                DbSet.AsNoTracking()
-                .OrderByDescending(c => c.Id)
-                .AsQueryable();
-
-            if (searchParameters.SearchParameter != default)
-                query = query.Where(c => c.Id <= searchParameters.SearchParameter);
-
-            if (searchParameters.NeedTotalCount)
-                result.TotalCount = query.Count();
-
-            if (searchParameters.LastLoadedId.HasValue)
-                query = query.Where(c => c.Id < searchParameters.LastLoadedId);
-
-            result.Result =
-                query.Take(searchParameters.PageSize)
-                .ToList();
-
-            return result;
-        }
-
-        public void DeleteById(int id)
+        public virtual void DeleteById(int id)
         {
             var entity = Find(id);
             DbSet.Remove(entity);
         }
 
-        public async Task DeleteByIdAsync(int id)
+        public virtual async Task DeleteByIdAsync(int id)
         {
             var entity = await FindAsync(id);
             DbSet.Remove(entity);
         }
 
-        public TEntity Insert(TEntity entity)
+        public virtual TEntity Insert(TEntity entity)
         {
             if (entity == null)
             {
@@ -82,7 +55,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             return entity;
         }
 
-        public async Task<TEntity> InsertAsync(TEntity entity)
+        public virtual async Task<TEntity> InsertAsync(TEntity entity)
         {
             if (entity == null)
             {
@@ -94,7 +67,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             return entity;
         }
 
-        public void Update(TEntity entity)
+        public virtual void Update(TEntity entity)
         {
             if (entity == null)
             {
@@ -104,7 +77,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             DbSet.Update(entity);
         }
 
-        public async Task UpdateAsync(TEntity entity)
+        public virtual async Task UpdateAsync(TEntity entity)
         {
             if (entity == null)
             {
@@ -117,5 +90,68 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             });
         }
 
+        public virtual IList<TEntity> GetAll()
+        {
+            var result =
+                DbSet.ToList();
+
+            return result;
+        }
+
+        public virtual async Task<IList<TEntity>> GetAllAsync()
+        {
+            var result =
+                await DbSet.ToListAsync();
+
+            return result;
+        }
+
+        public virtual DataResult<TEntity> GetWithRequest(DataSourceRequest request)
+        {
+            var query =
+                DbSet.AsNoTracking()
+                .OrderByDescending(c => c.Id);
+
+            //if (request.Predicate != null)
+            //    query = query.Where(request.Predicate);
+
+            var result =
+                query
+                .Skip(request.PageSize * (request.Page - 1))
+                .Take(request.PageSize)
+                .ToList();
+
+            return new DataResult<TEntity>
+            {
+                Page = request.Page,
+                PageSize = request.PageSize,
+                TotalCount = request.TotalCount != 0 ? request.TotalCount : query.Count(),
+                Result = result,
+            };
+        }
+
+        public virtual async Task<DataResult<TEntity>> GetWithRequestAsync(DataSourceRequest request)
+        {
+            var query =
+                DbSet.AsNoTracking()
+                .OrderByDescending(c => c.Id);
+
+            //if (predicate != null)
+            //    query = query.Where(predicate);
+
+            var result =
+                await query
+                .Skip(request.PageSize * (request.Page - 1))
+                .Take(request.PageSize)
+                .ToListAsync();
+
+            return new DataResult<TEntity>
+            {
+                Page = request.Page,
+                PageSize = request.PageSize,
+                TotalCount = request.TotalCount != 0 ? request.TotalCount : query.Count(),
+                Result = result,
+            };
+        }
     }
 }

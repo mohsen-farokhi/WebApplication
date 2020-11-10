@@ -8,6 +8,6 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
     {
         TEntity Find(int id);
         Task<TEntity> FindAsync(int id);
-        SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters);
+        //SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters);
     }
 }

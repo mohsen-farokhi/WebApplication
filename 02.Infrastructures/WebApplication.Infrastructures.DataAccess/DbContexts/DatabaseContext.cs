@@ -12,7 +12,7 @@ namespace WebApplication.Infrastructures.DataAccess.DbContexts
     internal class DatabaseContext : DbContext
     {
         public DatabaseContext
-            (DbContextOptions options): base(options)
+            (DbContextOptions options) : base(options)
         {
         }
 
@@ -20,6 +20,7 @@ namespace WebApplication.Infrastructures.DataAccess.DbContexts
         private static List<Type> _entityTypeCache;
         #endregion
 
+        public DbSet<Operation> Operations { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Tag> Tags { get; set; }

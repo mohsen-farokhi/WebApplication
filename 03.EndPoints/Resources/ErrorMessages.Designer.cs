@@ -61,101 +61,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You did not specify username!.
+        ///   Looks up a localized string similar to You are allowed to use Latin letters.
         /// </summary>
-        public static string ErrorMessage3000 {
+        public static string LatinLetter {
             get {
-                return ResourceManager.GetString("ErrorMessage3000", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You did not specify password!.
-        /// </summary>
-        public static string ErrorMessage3010 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3010", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Username and/or password is not correct!.
-        /// </summary>
-        public static string ErrorMessage3020_3030 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3020_3030", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User is not verified!.
-        /// </summary>
-        public static string ErrorMessage3040 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3040", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User is not active!.
-        /// </summary>
-        public static string ErrorMessage3050 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3050", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The expire time did not specify for this user!.
-        /// </summary>
-        public static string ErrorMessage3060 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3060", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User account expired!.
-        /// </summary>
-        public static string ErrorMessage3070 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3070", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You did not specify user IP!.
-        /// </summary>
-        public static string ErrorMessage3080 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3080", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User IP did not defined!.
-        /// </summary>
-        public static string ErrorMessage3090 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3090", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User IP is not verified!.
-        /// </summary>
-        public static string ErrorMessage3100 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3100", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User IP is not active!.
-        /// </summary>
-        public static string ErrorMessage3110 {
-            get {
-                return ResourceManager.GetString("ErrorMessage3110", resourceCulture);
+                return ResourceManager.GetString("LatinLetter", resourceCulture);
             }
         }
         
@@ -183,15 +93,6 @@ namespace Resources {
         public static string Required {
             get {
                 return ResourceManager.GetString("Required", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unexpected Error!.
-        /// </summary>
-        public static string UnexpectedError {
-            get {
-                return ResourceManager.GetString("UnexpectedError", resourceCulture);
             }
         }
     }

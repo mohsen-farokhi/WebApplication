@@ -1,0 +1,101 @@
+﻿@page "/operations"
+@using ViewModels.Operation
+
+@{
+    string strTitle =
+        string.Format("{0} {1}",
+        Resources.Actions.ListOf,
+        Resources.Models.Operation.EntityName);
+
+    string strCreate =
+        string.Format("{0} {1}",
+        Resources.Actions.CreateOf,
+        Resources.Models.Operation.EntityName);
+}
+
+<div class="col-12">
+    <div class="accordion basic-accordion" id="accordion" role="tablist">
+        <div class="card">
+            <div class="card-header" role="tab" id="headingThree">
+                <h6 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="card-icon mdi mdi-magnify"></i>@Resources.Buttons.Search
+                    </a>
+                </h6>
+            </div>
+            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body"> You can add money to the wallet for any future transaction from your bank account using net-banking, or credit/debit card transaction. The money in the wallet can be used for an easier and faster transaction. </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@strTitle</h4><p class="card-description"></p>
+            @if (Data.Result == null)
+            {
+                <p><em>@Resources.DataDictionary.Loading</em></p>
+            }
+            else
+            {
+                <p class="card-description">
+                    <a class="btn btn-primary btn-fw" href="/Operation/Create">@strCreate</a>
+                </p>
+                <TelerikGrid Data="@Data.Result"
+                             OnRead=@ReadItems
+                             TotalCount="@Data.TotalCount"
+                             Pageable="true"
+                             Class="no-scroll">
+                    <GridColumns>
+                        <GridColumn Title="@Resources.DataDictionary.IsActive" Width="50px">
+                            <Template>
+                                <input type="checkbox" checked="@((context as IndexViewModel).IsActive)" disabled />
+                            </Template>
+                        </GridColumn>
+                        <GridColumn Title="@Resources.DataDictionary.Name" Width="200px">
+                            <Template>
+                                <span class="left">@((context as IndexViewModel).Name)</span>
+                            </Template>
+                        </GridColumn>
+                        <GridColumn Field="@(nameof(IndexViewModel.DisplayName))" Title="@Resources.DataDictionary.DisplayName" />
+                        <GridColumn Field="@(nameof(IndexViewModel.Parent))" Title="@Resources.Models.Operation.Parent" Width="100px" />
+                        <GridColumn Field="@(nameof(IndexViewModel.AccessType))" Title="@Resources.Models.Operation.AccessType" Width="100px" />
+                    </GridColumns>
+                </TelerikGrid>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+
+    public ViewDataResult<IndexViewModel> Data { get; set; }
+    protected override void OnInitialized()
+    {
+        Data = new ViewDataResult<IndexViewModel>();
+    }
+
+    protected async Task ReadItems(GridReadEventArgs args)
+    {
+        var data = new
+        {
+            Page = args.Request.Page,
+            TotalCount = Data.TotalCount,
+        };
+
+        var response =
+            await client.PostAsJsonAsync($"Operations/GetData", data);
+
+        Data = await response.Content.ReadFromJsonAsync<ViewDataResult<IndexViewModel>>();
+    }
+
+    private async Task remove(int operationId)
+    {
+        await client.DeleteAsync($"Operations?operationId={operationId}");
+        await OnInitializedAsync();
+    }
+
+}

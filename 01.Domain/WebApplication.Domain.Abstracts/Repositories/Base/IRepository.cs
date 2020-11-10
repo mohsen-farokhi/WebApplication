@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using WebApplication.Domain.Entities.Base;
 using WebApplication.Domain.Entities.Dtos;
 
@@ -14,6 +17,9 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
         Task DeleteByIdAsync(int id);
         TEntity Find(int id);
         Task<TEntity> FindAsync(int id);
-        SearchResult<TEntity, BaseSearchParameter> GetList(BaseSearchParameter searchParameters);
+        IList<TEntity> GetAll();
+        Task<IList<TEntity>> GetAllAsync();
+        DataResult<TEntity> GetWithRequest(DataSourceRequest request);
+        Task<DataResult<TEntity>> GetWithRequestAsync(DataSourceRequest request);
     }
 }

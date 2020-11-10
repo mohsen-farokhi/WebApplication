@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EntitiesName" xml:space="preserve">
-    <value>Cultures</value>
+    <value>زبان ها</value>
   </data>
   <data name="EntityName" xml:space="preserve">
-    <value>Culture</value>
+    <value>زبان</value>
   </data>
   <data name="NativeName" xml:space="preserve">
-    <value>Native Name</value>
+    <value>نام اصلی</value>
   </data>
 </root>

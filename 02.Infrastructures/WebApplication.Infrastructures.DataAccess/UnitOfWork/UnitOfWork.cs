@@ -30,6 +30,23 @@ namespace WebApplication.Infrastructures.DataAccess.UnitOfWork
         // **************************************************
 
         // **************************************************
+        private IOperationRepository _operationRepository;
+        public IOperationRepository OperationRepository
+        {
+            get
+            {
+                if (_operationRepository == null)
+                {
+                    _operationRepository =
+                        new OperationRepository(DatabaseContext);
+                }
+
+                return _operationRepository;
+            }
+        }
+        // **************************************************
+
+        // **************************************************
         private ICultureRepository _cultureRepository;
         public ICultureRepository CultureRepository
         {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,26 +23,31 @@ namespace WebApplication.EndPoints.Server.Controllers
         [HttpGet]
         public async Task<IEnumerable<IndexViewModel>> Get()
         {
-            var cultures =
-                (await _cultureService.GetAllAsync())
-                .Select(c => new IndexViewModel
-                {
-                    Id = c.Id,
-                    DisplayName = c.DisplayName,
-                    IsActive = c.IsActive,
-                    Lcid = c.Lcid,
-                    Name = c.Name,
-                    NativeName = c.NativeName,
-                });
+            if (ModelState.IsValid)
+            {
+                var cultures =
+                    (await _cultureService.GetAllAsync())
+                    .Select(c => new IndexViewModel
+                    {
+                        Id = c.Id,
+                        DisplayName = c.DisplayName,
+                        IsActive = c.IsActive,
+                        Lcid = c.Lcid,
+                        Name = c.Name,
+                        NativeName = c.NativeName,
+                    });
 
-            return cultures;
+                return cultures;
+            }
+
+            throw new ArgumentException();
         }
 
         [HttpGet]
         [Route("{id}")]
         public async Task<ActionResult<CultureDto>> Get(int id)
         {
-            var culture = await _cultureService.GetById(id);
+            var culture = await _cultureService.GetByIdAsync(id);
 
             return culture;
         }

@@ -9,6 +9,8 @@ using WebApplication.Domain.Abstracts.UnitOfWork;
 using WebApplication.Infrastructures.DataAccess.UnitOfWork;
 using WebApplication.Infrastructures.DataAccess.Tools;
 using WebApplication.Infrastructures.DataAccess.Tools.Enums;
+using Microsoft.EntityFrameworkCore;
+using WebApplication.Infrastructures.DataAccess.DbContexts;
 
 namespace WebApplication.EndPoints.Server
 {
@@ -24,8 +26,8 @@ namespace WebApplication.EndPoints.Server
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<WebApplicationContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<DatabaseContext>(options =>
+            //    options.UseSqlServer(Configuration.GetConnectionString("MyConnectionString")));
 
             services.AddCors(options =>
             {
@@ -59,6 +61,7 @@ namespace WebApplication.EndPoints.Server
                 return new UnitOfWork(options: options);
             });
 
+            services.AddScoped<IOperationService, OperationService>();
             services.AddScoped<ICultureService, CultureService>();
             services.AddScoped<IGroupService, GroupService>();
 

@@ -26,34 +26,34 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         public async Task<TEntity> FindAsync(int id) =>
             await DbSet.FindAsync(id);
 
-        public SearchResult<TEntity, BaseSearchParameter> GetList
-            (BaseSearchParameter searchParameters)
-        {
-            var result = new SearchResult<TEntity, BaseSearchParameter>
-            {
-                SearchParameter = searchParameters
-            };
+        //public SearchResult<TEntity, BaseSearchParameter> GetList
+        //    (BaseSearchParameter searchParameters)
+        //{
+        //    var result = new SearchResult<TEntity, BaseSearchParameter>
+        //    {
+        //        SearchParameter = searchParameters
+        //    };
 
-            var query =
-                DbSet.AsNoTracking()
-                .OrderByDescending(c => c.Id)
-                .AsQueryable();
+        //    var query =
+        //        DbSet.AsNoTracking()
+        //        .OrderByDescending(c => c.Id)
+        //        .AsQueryable();
 
-            if (searchParameters.SearchParameter != default)
-                query = query.Where(c => c.Id <= searchParameters.SearchParameter);
+        //    if (searchParameters.SearchParameter != default)
+        //        query = query.Where(c => c.Id <= searchParameters.SearchParameter);
 
-            if (searchParameters.NeedTotalCount)
-                result.TotalCount = query.Count();
+        //    if (searchParameters.NeedTotalCount)
+        //        result.TotalCount = query.Count();
 
-            if (searchParameters.LastLoadedId.HasValue)
-                query = query.Where(c => c.Id < searchParameters.LastLoadedId);
+        //    if (searchParameters.LastLoadedId.HasValue)
+        //        query = query.Where(c => c.Id < searchParameters.LastLoadedId);
 
-            result.Result =
-                query.Take(searchParameters.PageSize)
-                .ToList();
+        //    result.Result =
+        //        query.Take(searchParameters.PageSize)
+        //        .ToList();
 
-            return result;
-        }
+        //    return result;
+        //}
 
         public IQueryable<TEntity> Get() =>
             DbSet.AsNoTracking();

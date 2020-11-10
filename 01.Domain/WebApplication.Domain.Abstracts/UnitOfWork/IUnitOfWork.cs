@@ -5,6 +5,7 @@ namespace WebApplication.Domain.Abstracts.UnitOfWork
 {
     public interface IUnitOfWork : IBaseUnitOfWork
     {
+        IOperationRepository OperationRepository { get; }
         ICultureRepository CultureRepository { get; }
     }
 }

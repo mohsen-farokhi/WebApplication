@@ -15,21 +15,5 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
         internal CultureRepository(DatabaseContext context) : base(context)
         {
         }
-
-        public async Task<IList<CultureDto>> GetAllAsync()
-        {
-            var result =
-                await DbSet.Select(c => new CultureDto
-                {
-                    Id = c.Id,
-                    DisplayName = c.DisplayName,
-                    Lcid = c.Lcid,
-                    Name = c.Name,
-                    NativeName = c.NativeName,
-                    IsActive = c.IsActive,
-                }).ToListAsync();
-
-            return result;
-        }
     }
 }

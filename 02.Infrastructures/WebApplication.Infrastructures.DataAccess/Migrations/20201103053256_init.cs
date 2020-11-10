@@ -17,13 +17,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     Lcid = table.Column<int>(nullable: true),
                     Name = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
                     NativeName = table.Column<string>(maxLength: 50, nullable: true),
@@ -49,33 +46,29 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Operation",
+                name: "Operations",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     ParentId = table.Column<int>(nullable: true),
                     AccessType = table.Column<byte>(nullable: false),
                     Name = table.Column<string>(unicode: false, maxLength: 200, nullable: false),
-                    IsVisibleJustForProgrammer = table.Column<bool>(nullable: false),
                     DisplayName = table.Column<string>(maxLength: 200, nullable: false),
                     Description = table.Column<string>(maxLength: 500, nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Operation", x => x.Id);
+                    table.PrimaryKey("PK_Operations", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Operation_Operation_ParentId",
+                        name: "FK_Operations_Operations_ParentId",
                         column: x => x.ParentId,
-                        principalTable: "Operation",
+                        principalTable: "Operations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -87,13 +80,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
                     Url = table.Column<string>(unicode: false, maxLength: 200, nullable: false)
                 },
@@ -109,13 +99,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     EmailAddress = table.Column<string>(unicode: false, maxLength: 200, nullable: true),
                     FirstName = table.Column<string>(maxLength: 50, nullable: false),
                     LastName = table.Column<string>(maxLength: 50, nullable: false),
@@ -140,13 +127,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     Title = table.Column<string>(maxLength: 100, nullable: false),
                     ImageUrl = table.Column<string>(unicode: false, maxLength: 200, nullable: false),
                     Description = table.Column<string>(maxLength: 500, nullable: true)
@@ -173,9 +157,9 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_OperationsOfGroups_Operation_OperationId",
+                        name: "FK_OperationsOfGroups_Operations_OperationId",
                         column: x => x.OperationId,
-                        principalTable: "Operation",
+                        principalTable: "Operations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -212,13 +196,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     PostCategoryId = table.Column<int>(nullable: false),
                     Title = table.Column<string>(maxLength: 100, nullable: false),
                     Author = table.Column<string>(maxLength: 100, nullable: true),
@@ -251,13 +232,10 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(nullable: false),
-                    ActivatorUserId = table.Column<int>(nullable: true),
                     IsSystem = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    RemoverUserId = table.Column<int>(nullable: true),
                     InsertDateTime = table.Column<DateTime>(nullable: false),
                     UpdateDateTime = table.Column<DateTime>(nullable: false),
-                    EditorUserId = table.Column<int>(nullable: true),
                     PostId = table.Column<int>(nullable: false),
                     UserId = table.Column<int>(nullable: false),
                     IsRead = table.Column<bool>(nullable: false),
@@ -308,17 +286,17 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "Cultures",
-                columns: new[] { "Id", "ActivatorUserId", "DisplayName", "EditorUserId", "InsertDateTime", "IsActive", "IsDeleted", "IsSystem", "Lcid", "Name", "NativeName", "RemoverUserId", "UpdateDateTime" },
-                values: new object[] { 1, null, "فارسی", null, new DateTime(2020, 8, 21, 18, 46, 26, 979, DateTimeKind.Local).AddTicks(4950), true, false, false, 1065, "fa-IR", "فارسی (ایران)", null, new DateTime(2020, 8, 21, 18, 46, 26, 982, DateTimeKind.Local).AddTicks(9500) });
+                columns: new[] { "Id", "DisplayName", "InsertDateTime", "IsActive", "IsDeleted", "IsSystem", "Lcid", "Name", "NativeName", "UpdateDateTime" },
+                values: new object[] { 1, "فارسی", new DateTime(2020, 11, 3, 9, 2, 56, 215, DateTimeKind.Local).AddTicks(2583), true, false, true, 1065, "fa-IR", "فارسی (ایران)", new DateTime(2020, 11, 3, 9, 2, 56, 219, DateTimeKind.Local).AddTicks(458) });
 
             migrationBuilder.InsertData(
                 table: "Cultures",
-                columns: new[] { "Id", "ActivatorUserId", "DisplayName", "EditorUserId", "InsertDateTime", "IsActive", "IsDeleted", "IsSystem", "Lcid", "Name", "NativeName", "RemoverUserId", "UpdateDateTime" },
-                values: new object[] { 2, null, "English", null, new DateTime(2020, 8, 21, 18, 46, 26, 983, DateTimeKind.Local).AddTicks(8203), true, false, false, 1033, "en-US", "English (United States)", null, new DateTime(2020, 8, 21, 18, 46, 26, 983, DateTimeKind.Local).AddTicks(8239) });
+                columns: new[] { "Id", "DisplayName", "InsertDateTime", "IsActive", "IsDeleted", "IsSystem", "Lcid", "Name", "NativeName", "UpdateDateTime" },
+                values: new object[] { 2, "English", new DateTime(2020, 11, 3, 9, 2, 56, 219, DateTimeKind.Local).AddTicks(9973), true, false, true, 1033, "en-US", "English (United States)", new DateTime(2020, 11, 3, 9, 2, 56, 220, DateTimeKind.Local).AddTicks(13) });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Operation_ParentId",
-                table: "Operation",
+                name: "IX_Operations_ParentId",
+                table: "Operations",
                 column: "ParentId");
 
             migrationBuilder.CreateIndex(
@@ -389,7 +367,7 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                 schema: "Cms");
 
             migrationBuilder.DropTable(
-                name: "Operation");
+                name: "Operations");
 
             migrationBuilder.DropTable(
                 name: "Groups");
