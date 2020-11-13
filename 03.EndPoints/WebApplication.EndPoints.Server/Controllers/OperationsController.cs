@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Threading.Tasks;
 using ViewModels;
 using ViewModels.Operation;
 using WebApplication.Domain.Abstracts.DomainServices;
 using WebApplication.Domain.Entities.Dtos;
+using WebApplication.Domain.Entities.Dtos.Data;
 
 namespace WebApplication.EndPoints.Server.Controllers
 {
@@ -23,7 +26,7 @@ namespace WebApplication.EndPoints.Server.Controllers
         [HttpPost]
         [Route("GetData")]
         public async Task<ActionResult<ViewDataResult<IndexViewModel>>> GetData
-            (DataSourceRequest request)
+            (OperationDataResuqestDto request)
         {
             var data =
                 await _operationService.GetAsync(request);

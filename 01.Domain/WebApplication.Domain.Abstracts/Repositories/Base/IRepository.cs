@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using WebApplication.Domain.Entities.Base;
-using WebApplication.Domain.Entities.Dtos;
+using WebApplication.Domain.Entities.Dtos.Data;
 
 namespace WebApplication.Domain.Abstracts.Repositories.Base
 {
@@ -19,7 +19,11 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
         Task<TEntity> FindAsync(int id);
         IList<TEntity> GetAll();
         Task<IList<TEntity>> GetAllAsync();
-        DataResult<TEntity> GetWithRequest(DataSourceRequest request);
-        Task<DataResult<TEntity>> GetWithRequestAsync(DataSourceRequest request);
+        DataResult<TEntity> GetWithRequest
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null);
+
+        Task<DataResult<TEntity>> GetWithRequestAsync
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null);
+
     }
 }

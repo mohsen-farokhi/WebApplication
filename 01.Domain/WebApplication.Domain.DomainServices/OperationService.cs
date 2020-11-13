@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.DomainServices;
 using WebApplication.Domain.Abstracts.UnitOfWork;
 using WebApplication.Domain.Entities;
 using WebApplication.Domain.Entities.Dtos;
-using WebApplication.Domain.Entities.Enums;
+using WebApplication.Domain.Entities.Dtos.Data;
 
 namespace WebApplication.Domain.DomainServices
 {
@@ -18,12 +18,22 @@ namespace WebApplication.Domain.DomainServices
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<DataResult<OperationDto>> GetAsync
-            (DataSourceRequest request)
+        public async Task<DataResult<OperationDto>> GetAsync(OperationDataResuqestDto request)
         {
+            var predicate = PredicateBuilder.True<Operation>();
+
+            if (request.IsActive.HasValue)
+                predicate = predicate.And(c => c.IsActive == request.IsActive.Value);
+
+            if (!string.IsNullOrEmpty(request.Name))
+                predicate = predicate.And(c => c.Name.Contains(request.Name));
+
+            if (!string.IsNullOrEmpty(request.DisplayName))
+                predicate = predicate.And(c => c.DisplayName.Contains(request.DisplayName));
+
             var data =
                 await _unitOfWork.OperationRepository
-                .GetWithRequestAsync(request);
+                .GetWithRequestAsync(request, predicate);
 
             var result =
                 new DataResult<OperationDto>
@@ -38,7 +48,7 @@ namespace WebApplication.Domain.DomainServices
                         DisplayName = c.DisplayName,
                         AccessType = c.AccessType,
                         IsActive = c.IsActive,
-                        Parent = c.Parent?.Name,
+                        Parent = c.Parent?.DisplayName,
                     }).ToList(),
                 };
 
@@ -53,7 +63,7 @@ namespace WebApplication.Domain.DomainServices
                     Name = dto.Name,
                     IsActive = dto.IsActive,
                     DisplayName = dto.DisplayName,
-                    AccessType = dto.AccessType,
+                    AccessType = dto.AccessType.Value,
                     Description = dto.Description,
                     ParentId = dto.ParentId,
                 });

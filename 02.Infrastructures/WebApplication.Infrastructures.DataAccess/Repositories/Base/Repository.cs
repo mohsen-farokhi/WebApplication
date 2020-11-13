@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories.Base;
 using WebApplication.Domain.Entities.Base;
-using WebApplication.Domain.Entities.Dtos;
+using WebApplication.Domain.Entities.Dtos.Data;
 using WebApplication.Infrastructures.DataAccess.DbContexts;
 
 namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
@@ -106,17 +106,18 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             return result;
         }
 
-        public virtual DataResult<TEntity> GetWithRequest(DataSourceRequest request)
+        public virtual DataResult<TEntity> GetWithRequest
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null)
         {
             var query =
-                DbSet.AsNoTracking()
-                .OrderByDescending(c => c.Id);
+                DbSet.AsNoTracking();
 
-            //if (request.Predicate != null)
-            //    query = query.Where(request.Predicate);
+            if (predicate != null)
+                query = query.Where(predicate);
 
             var result =
                 query
+                .OrderByDescending(c => c.Id)
                 .Skip(request.PageSize * (request.Page - 1))
                 .Take(request.PageSize)
                 .ToList();
@@ -130,17 +131,18 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             };
         }
 
-        public virtual async Task<DataResult<TEntity>> GetWithRequestAsync(DataSourceRequest request)
+        public virtual async Task<DataResult<TEntity>> GetWithRequestAsync
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null)
         {
             var query =
-                DbSet.AsNoTracking()
-                .OrderByDescending(c => c.Id);
+                DbSet.AsNoTracking();
 
-            //if (predicate != null)
-            //    query = query.Where(predicate);
+            if (predicate != null)
+                query = query.Where(predicate);
 
             var result =
                 await query
+                .OrderByDescending(c => c.Id)
                 .Skip(request.PageSize * (request.Page - 1))
                 .Take(request.PageSize)
                 .ToListAsync();

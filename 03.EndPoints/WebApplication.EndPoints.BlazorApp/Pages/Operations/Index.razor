@@ -16,15 +16,56 @@
 <div class="col-12">
     <div class="accordion basic-accordion" id="accordion" role="tablist">
         <div class="card">
-            <div class="card-header" role="tab" id="headingThree">
+            <div class="card-header" role="tab" id="heading">
                 <h6 class="mb-0">
-                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
                         <i class="card-icon mdi mdi-magnify"></i>@Resources.Buttons.Search
                     </a>
                 </h6>
             </div>
-            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body"> You can add money to the wallet for any future transaction from your bank account using net-banking, or credit/debit card transaction. The money in the wallet can be used for an easier and faster transaction. </div>
+            <div id="collapse" class="collapse" role="tabpanel" aria-labelledby="heading" data-parent="#accordion">
+                <div class="card-body">
+                    <EditForm Model="request">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+
+                                    <div class="form-check form-check-flat">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" id="isActive" class="form-check-input" @bind="request.IsActive" />@Resources.DataDictionary.IsActive<i class="input-helper"></i>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label" for="name">@Resources.Models.Operation.Name</label>
+                                    <div class="col-sm-9">
+                                        <InputText id="name" class="form-control" @bind-Value="request.Name"></InputText>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label" for="displayName">@Resources.DataDictionary.DisplayName</label>
+                                    <div class="col-sm-9">
+                                        <InputText id="displayName" class="form-control" @bind-Value="request.DisplayName"></InputText>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-success mr-2" @onclick="search">@Resources.Buttons.Search</button>
+                        <button type="button" class="btn btn-light" @onclick="reset">@Resources.Buttons.Cancel</button>
+
+                    </EditForm>
+                </div>
             </div>
         </div>
     </div>
@@ -35,7 +76,7 @@
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">@strTitle</h4><p class="card-description"></p>
-            @if (Data.Result == null)
+            @if (data.Result == null)
             {
                 <p><em>@Resources.DataDictionary.Loading</em></p>
             }
@@ -44,9 +85,9 @@
                 <p class="card-description">
                     <a class="btn btn-primary btn-fw" href="/Operation/Create">@strCreate</a>
                 </p>
-                <TelerikGrid Data="@Data.Result"
+                <TelerikGrid Data="@data.Result"
                              OnRead=@ReadItems
-                             TotalCount="@Data.TotalCount"
+                             TotalCount="@data.TotalCount"
                              Pageable="true"
                              Class="no-scroll">
                     <GridColumns>
@@ -55,14 +96,16 @@
                                 <input type="checkbox" checked="@((context as IndexViewModel).IsActive)" disabled />
                             </Template>
                         </GridColumn>
-                        <GridColumn Title="@Resources.DataDictionary.Name" Width="200px">
+                        <GridColumn Title="@Resources.Models.Operation.Name" Width="200px">
                             <Template>
-                                <span class="left">@((context as IndexViewModel).Name)</span>
+                                <div class="text-left">
+                                    @((context as IndexViewModel).Name)
+                                </div>
                             </Template>
                         </GridColumn>
-                        <GridColumn Field="@(nameof(IndexViewModel.DisplayName))" Title="@Resources.DataDictionary.DisplayName" />
-                        <GridColumn Field="@(nameof(IndexViewModel.Parent))" Title="@Resources.Models.Operation.Parent" Width="100px" />
-                        <GridColumn Field="@(nameof(IndexViewModel.AccessType))" Title="@Resources.Models.Operation.AccessType" Width="100px" />
+                        <GridColumn Field="@(nameof(IndexViewModel.DisplayName))" Title="@Resources.DataDictionary.DisplayName" Width="300px"/>
+                        <GridColumn Field="@(nameof(IndexViewModel.Parent))" Title="@Resources.Models.Operation.Parent" Width="200px" />
+                        <GridColumn Field="@(nameof(IndexViewModel.AccessTypeValue))" Title="@Resources.Models.Operation.AccessType" Width="200px" />
                     </GridColumns>
                 </TelerikGrid>
             }
@@ -72,24 +115,37 @@
 
 @code {
 
-    public ViewDataResult<IndexViewModel> Data { get; set; }
+    protected ViewDataResult<IndexViewModel> data { get; set; }
+    protected SearchViewModel request { get; set; }
+
     protected override void OnInitialized()
     {
-        Data = new ViewDataResult<IndexViewModel>();
+        data = new ViewDataResult<IndexViewModel>();
+        request = new SearchViewModel();
     }
 
-    protected async Task ReadItems(GridReadEventArgs args)
+    protected async Task ReadItems(GridReadEventArgs args = null)
     {
-        var data = new
-        {
-            Page = args.Request.Page,
-            TotalCount = Data.TotalCount,
-        };
+        request.Page = args.Request.Page;
+        request.TotalCount = data.TotalCount;
 
+        await getData();
+    }
+
+    private async Task reset()
+    {
+        OnInitialized();
+        await getData();
+    }
+
+    private async Task search() => await getData();
+
+    private async Task getData()
+    {
         var response =
-            await client.PostAsJsonAsync($"Operations/GetData", data);
+            await client.PostAsJsonAsync($"Operations/GetData", request);
 
-        Data = await response.Content.ReadFromJsonAsync<ViewDataResult<IndexViewModel>>();
+        data = await response.Content.ReadFromJsonAsync<ViewDataResult<IndexViewModel>>();
     }
 
     private async Task remove(int operationId)
