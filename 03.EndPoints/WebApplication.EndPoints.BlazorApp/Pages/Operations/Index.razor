@@ -61,6 +61,25 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label" for="accessType">@Resources.Models.Operation.AccessType</label>
+                                    <div class="col-sm-9">
+
+                                        <select id="accessType" class="form-control" @bind="request.AccessType">
+                                            <option></option>
+                                            @foreach (var item in request.GetAccessTypes())
+                                            {
+                                                <option value="@item.Value">@item.Text</option>
+                                            }
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <button type="button" class="btn btn-success mr-2" @onclick="search">@Resources.Buttons.Search</button>
                         <button type="button" class="btn btn-light" @onclick="reset">@Resources.Buttons.Cancel</button>
 
@@ -93,19 +112,19 @@
                     <GridColumns>
                         <GridColumn Title="@Resources.DataDictionary.IsActive" Width="50px">
                             <Template>
-                                <input type="checkbox" checked="@((context as IndexViewModel).IsActive)" disabled />
+                                <input type="checkbox" checked="@((context as OperationDataViewModel).IsActive)" disabled />
                             </Template>
                         </GridColumn>
                         <GridColumn Title="@Resources.Models.Operation.Name" Width="200px">
                             <Template>
                                 <div class="text-left">
-                                    @((context as IndexViewModel).Name)
+                                    @((context as OperationDataViewModel).Name)
                                 </div>
                             </Template>
                         </GridColumn>
-                        <GridColumn Field="@(nameof(IndexViewModel.DisplayName))" Title="@Resources.DataDictionary.DisplayName" Width="300px"/>
-                        <GridColumn Field="@(nameof(IndexViewModel.Parent))" Title="@Resources.Models.Operation.Parent" Width="200px" />
-                        <GridColumn Field="@(nameof(IndexViewModel.AccessTypeValue))" Title="@Resources.Models.Operation.AccessType" Width="200px" />
+                        <GridColumn Field="@(nameof(OperationDataViewModel.DisplayName))" Title="@Resources.DataDictionary.DisplayName" Width="300px" />
+                        <GridColumn Field="@(nameof(OperationDataViewModel.Parent))" Title="@Resources.Models.Operation.Parent" Width="200px" />
+                        <GridColumn Field="@(nameof(OperationDataViewModel.AccessTypeValue))" Title="@Resources.Models.Operation.AccessType" Width="200px" />
                     </GridColumns>
                 </TelerikGrid>
             }
@@ -115,12 +134,12 @@
 
 @code {
 
-    protected ViewDataResult<IndexViewModel> data { get; set; }
+    protected ViewDataResult<OperationDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
 
     protected override void OnInitialized()
     {
-        data = new ViewDataResult<IndexViewModel>();
+        data = new ViewDataResult<OperationDataViewModel>();
         request = new SearchViewModel();
     }
 
@@ -134,7 +153,7 @@
 
     private async Task reset()
     {
-        OnInitialized();
+        request = new SearchViewModel();
         await getData();
     }
 
@@ -145,7 +164,7 @@
         var response =
             await client.PostAsJsonAsync($"Operations/GetData", request);
 
-        data = await response.Content.ReadFromJsonAsync<ViewDataResult<IndexViewModel>>();
+        data = await response.Content.ReadFromJsonAsync<ViewDataResult<OperationDataViewModel>>();
     }
 
     private async Task remove(int operationId)

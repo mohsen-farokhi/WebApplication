@@ -88,6 +88,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} is not a valid email address!.
+        /// </summary>
+        public static string RegularExpressionForEmail {
+            get {
+                return ResourceManager.GetString("RegularExpressionForEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} is invalid! {0} must contains 10 digits..
+        /// </summary>
+        public static string RegularExpressionForNationalCode {
+            get {
+                return ResourceManager.GetString("RegularExpressionForNationalCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} is invalid! {0} must contains _ and/or upercase and lowercase English character and/or number between 0 - 9 and its length must be between 8 - 40 characters..
+        /// </summary>
+        public static string RegularExpressionForPassword {
+            get {
+                return ResourceManager.GetString("RegularExpressionForPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} is invalid! {0} must contains _ and/or upercase and lowercase English character and/or number between 0 - 9 and its length must be between 6 - 20 characters..
+        /// </summary>
+        public static string RegularExpressionForUsername {
+            get {
+                return ResourceManager.GetString("RegularExpressionForUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} is required!.
         /// </summary>
         public static string Required {

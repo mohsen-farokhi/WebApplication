@@ -1,0 +1,46 @@
+﻿@if (Dtx.Globalization.CultureInfo.GetCurrentCulture() == Dtx.Globalization.Cultures.Farsi)
+{
+    <input type="text" id="@Name" class="form-control datepicker" readonly @onblur="setValue"/>
+}
+else
+{
+    <InputDate id="@Name" class="form-control" @bind-Value="DateValue" @onblur="setValue" />
+}
+
+@code {
+
+    [Parameter]
+    public EventCallback<DateTime?> OnBlur { get; set; }
+
+    public static string StringValue { get; set; }
+
+    public static DateTime DateValue { get; set; }
+
+    [Parameter]
+    public string Name { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await JSRuntime.InvokeVoidAsync("includeDatePicker");
+    }
+
+    [JSInvokable]
+    public static void SetInputDateValue(string stringValue)
+    {
+        StringValue = stringValue;
+    }
+
+    private async Task setValue()
+    {
+        if (Dtx.Globalization.CultureInfo.GetCurrentCulture() == Dtx.Globalization.Cultures.Farsi &&
+        !string.IsNullOrWhiteSpace(StringValue))
+        {
+            var date = Dtx.Calendar.Convert.PersionToCivil(StringValue);
+            await OnBlur.InvokeAsync(date);
+        }
+        else
+        {
+            await OnBlur.InvokeAsync(DateValue);
+        }
+    }
+}

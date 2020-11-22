@@ -30,6 +30,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AccessType.resx</DependentUpon>
     </Compile>
+    <Compile Update="Enums\UserType.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UserType.resx</DependentUpon>
+    </Compile>
     <Compile Update="ErrorMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -44,6 +49,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Operation.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Models\User.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>User.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -68,6 +78,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AccessType.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Enums\UserType.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserType.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="ErrorMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
@@ -82,6 +96,10 @@
     <EmbeddedResource Update="Models\Operation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Operation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Models\User.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>User.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

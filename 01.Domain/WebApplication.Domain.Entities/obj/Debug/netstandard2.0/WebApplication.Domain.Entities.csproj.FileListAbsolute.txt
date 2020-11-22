@@ -1,0 +1,9 @@
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.deps.json
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\obj\Debug\netstandard2.0\WebApplication.Domain.Entities.AssemblyInfoInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\obj\Debug\netstandard2.0\WebApplication.Domain.Entities.AssemblyInfo.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\obj\Debug\netstandard2.0\WebApplication.Domain.Entities.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\obj\Debug\netstandard2.0\WebApplication.Domain.Entities.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\obj\Debug\netstandard2.0\WebApplication.Domain.Entities.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Entities\obj\Debug\netstandard2.0\WebApplication.Domain.Entities.csprojAssemblyReference.cache

@@ -5,7 +5,7 @@ namespace ViewModels.Extensions
 {
     public static class ResourceManagerExtension
     {
-        public static string GetString
+        public static string GetLocalizedString
             (this Type resource, string name)
         {
             ResourceManager resourceManager =

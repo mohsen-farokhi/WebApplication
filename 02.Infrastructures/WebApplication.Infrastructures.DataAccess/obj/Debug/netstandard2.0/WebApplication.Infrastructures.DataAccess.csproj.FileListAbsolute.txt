@@ -1,0 +1,14 @@
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.deps.json
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Domain.Abstracts.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Domain.Abstracts.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.csprojAssemblyReference.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.AssemblyInfoInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.AssemblyInfo.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.csproj.CopyComplete
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\02.Infrastructures\WebApplication.Infrastructures.DataAccess\obj\Debug\netstandard2.0\WebApplication.Infrastructures.DataAccess.pdb

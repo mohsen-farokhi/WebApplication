@@ -63,5 +63,22 @@ namespace WebApplication.Infrastructures.DataAccess.UnitOfWork
         }
         // **************************************************
 
+        // **************************************************
+        private IUserRepository _userRepository;
+
+        public IUserRepository UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository =
+                        new UserRepository(DatabaseContext);
+                }
+
+                return _userRepository;
+            }
+        }
+        // **************************************************
     }
 }

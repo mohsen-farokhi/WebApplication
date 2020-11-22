@@ -64,6 +64,7 @@ namespace WebApplication.EndPoints.Server
             services.AddScoped<IOperationService, OperationService>();
             services.AddScoped<ICultureService, CultureService>();
             services.AddScoped<IGroupService, GroupService>();
+            services.AddScoped<IUserService, UserService>();
 
         }
 

@@ -31,9 +31,12 @@ namespace WebApplication.Domain.DomainServices
             if (!string.IsNullOrEmpty(request.DisplayName))
                 predicate = predicate.And(c => c.DisplayName.Contains(request.DisplayName));
 
+            if (request.AccessType.HasValue)
+                predicate = predicate.And(c => c.AccessType == request.AccessType);
+
             var data =
                 await _unitOfWork.OperationRepository
-                .GetWithRequestAsync(request, predicate);
+                .GetDataAsync(request, predicate);
 
             var result =
                 new DataResult<OperationDto>
@@ -41,15 +44,7 @@ namespace WebApplication.Domain.DomainServices
                     TotalCount = data.TotalCount,
                     Page = data.Page,
                     PageSize = data.PageSize,
-                    Result = data.Result.Select(c => new OperationDto
-                    {
-                        Id = c.Id,
-                        Name = c.Name,
-                        DisplayName = c.DisplayName,
-                        AccessType = c.AccessType,
-                        IsActive = c.IsActive,
-                        Parent = c.Parent?.DisplayName,
-                    }).ToList(),
+                    Result = data.Result,
                 };
 
             return result;

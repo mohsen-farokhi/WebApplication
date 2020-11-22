@@ -1,7 +1,7 @@
-﻿using Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using WebApplication.Domain.Entities.Base;
+using WebApplication.Domain.Entities.Enums;
 
 namespace WebApplication.Domain.Entities
 {

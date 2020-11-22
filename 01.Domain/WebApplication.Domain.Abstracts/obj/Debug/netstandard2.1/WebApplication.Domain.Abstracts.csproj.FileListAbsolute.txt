@@ -1,0 +1,12 @@
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\bin\Debug\netstandard2.1\WebApplication.Domain.Abstracts.deps.json
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\bin\Debug\netstandard2.1\WebApplication.Domain.Abstracts.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\bin\Debug\netstandard2.1\WebApplication.Domain.Abstracts.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\bin\Debug\netstandard2.1\WebApplication.Domain.Entities.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\bin\Debug\netstandard2.1\WebApplication.Domain.Entities.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.csprojAssemblyReference.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.AssemblyInfoInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.AssemblyInfo.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.csproj.CopyComplete
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.Abstracts\obj\Debug\netstandard2.1\WebApplication.Domain.Abstracts.pdb

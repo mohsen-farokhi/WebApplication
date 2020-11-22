@@ -1,12 +1,4 @@
-﻿
-@{
-    string strTitle =
-        string.Format("{0} {1}",
-        Resources.Actions.ListOf,
-        Resources.Models.Operation.EntityName);
-}
-
-<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+﻿<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator />
 
     <input type="hidden" @bind-value="Model.ParentId"/>

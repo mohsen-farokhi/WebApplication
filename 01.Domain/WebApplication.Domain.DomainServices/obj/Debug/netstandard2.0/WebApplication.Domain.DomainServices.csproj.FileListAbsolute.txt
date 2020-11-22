@@ -1,0 +1,14 @@
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.DomainServices.deps.json
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.DomainServices.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.DomainServices.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.Abstracts.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.Abstracts.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\bin\Debug\netstandard2.0\WebApplication.Domain.Entities.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.csprojAssemblyReference.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.AssemblyInfoInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.AssemblyInfo.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.csproj.CopyComplete
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\01.Domain\WebApplication.Domain.DomainServices\obj\Debug\netstandard2.0\WebApplication.Domain.DomainServices.pdb

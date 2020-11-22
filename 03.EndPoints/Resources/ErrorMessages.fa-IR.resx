@@ -126,6 +126,18 @@
   <data name="MinLength" xml:space="preserve">
     <value>حداقل طول {0} باید {1} کاراکتر باشد!</value>
   </data>
+  <data name="RegularExpressionForEmail" xml:space="preserve">
+    <value>متن {0} معتبر نمی باشد!</value>
+  </data>
+  <data name="RegularExpressionForNationalCode" xml:space="preserve">
+    <value>{0} معتبر نمی‌باشد! برای {0}، شما بايد دقيقا ده رقم (ارقام انگليسی) و بدون خط فاصله، وارد نماييد.</value>
+  </data>
+  <data name="RegularExpressionForPassword" xml:space="preserve">
+    <value>{0} معتبر نمی باشد! متن {0} بايد شامل زيرخط و/يا حروف بزرگ يا کوچک انگليسی و يا اعداد بين صفر تا نه (ارقام انگليسی) بوده و طول آن نيز بين هشت تا چهل کاراکتر باشد.</value>
+  </data>
+  <data name="RegularExpressionForUsername" xml:space="preserve">
+    <value>{0} معتبر نمی باشد! متن {0} بايد شامل زيرخط و/يا حروف بزرگ يا کوچک انگليسی و/يا اعداد بين صفر تا نه (ارقام انگليسی) بوده و طول آن نيز بين شش تا بيست کاراکتر باشد.</value>
+  </data>
   <data name="Required" xml:space="preserve">
     <value>تکميل فيلد {0} الزامی است!</value>
   </data>

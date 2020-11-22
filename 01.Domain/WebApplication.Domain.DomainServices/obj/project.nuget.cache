@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FG+ltbInV5S+ef7fQAtVqTavWCNNqTmKrUngp0hJx9ie4pJn/05p2pbC1jW+YgG1mwR9FQPCTs/f94HWvlIuHA==",
+  "success": true,
+  "projectFilePath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\01.Domain\\WebApplication.Domain.DomainServices\\WebApplication.Domain.DomainServices.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

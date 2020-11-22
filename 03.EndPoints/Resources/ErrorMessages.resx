@@ -126,6 +126,18 @@
   <data name="MinLength" xml:space="preserve">
     <value>The min. length of {0} should be {1}!</value>
   </data>
+  <data name="RegularExpressionForEmail" xml:space="preserve">
+    <value>{0} is not a valid email address!</value>
+  </data>
+  <data name="RegularExpressionForNationalCode" xml:space="preserve">
+    <value>{0} is invalid! {0} must contains 10 digits.</value>
+  </data>
+  <data name="RegularExpressionForPassword" xml:space="preserve">
+    <value>{0} is invalid! {0} must contains _ and/or upercase and lowercase English character and/or number between 0 - 9 and its length must be between 8 - 40 characters.</value>
+  </data>
+  <data name="RegularExpressionForUsername" xml:space="preserve">
+    <value>{0} is invalid! {0} must contains _ and/or upercase and lowercase English character and/or number between 0 - 9 and its length must be between 6 - 20 characters.</value>
+  </data>
   <data name="Required" xml:space="preserve">
     <value>{0} is required!</value>
   </data>
