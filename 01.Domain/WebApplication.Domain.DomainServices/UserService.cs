@@ -53,7 +53,7 @@ namespace WebApplication.Domain.DomainServices
                     FirstName = c.FirstName,
                     LastName = c.LastName,
                     NationalCode = c.NationalCode,
-                    //BirthDate = c.BirthDate,
+                    BirthDate = c.BirthDate,
                     CellPhoneNumber = c.CellPhoneNumber,
                     UserType = c.UserType,
                     EmailAddress = c.EmailAddress,

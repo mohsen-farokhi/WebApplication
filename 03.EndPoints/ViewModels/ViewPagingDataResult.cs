@@ -2,7 +2,7 @@
 
 namespace ViewModels
 {
-    public class ViewDataResult<T>
+    public class ViewPagingDataResult<T>
     {
         public int Page { get; set; }
         public int PageSize { get; set; }

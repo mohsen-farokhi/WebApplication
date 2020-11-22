@@ -22,13 +22,13 @@ namespace WebApplication.EndPoints.Server.Controllers
 
         [HttpPost]
         [Route("GetData")]
-        public async Task<ActionResult<ViewDataResult<OperationDataViewModel>>> GetData
+        public async Task<ActionResult<ViewPagingDataResult<OperationDataViewModel>>> GetData
             (OperationDataResuqestDto request)
         {
             var data =
                 await _operationService.GetAsync(request);
 
-            var result = new ViewDataResult<OperationDataViewModel>
+            var result = new ViewPagingDataResult<OperationDataViewModel>
             {
                 TotalCount = data.TotalCount,
                 PageSize = data.PageSize,
