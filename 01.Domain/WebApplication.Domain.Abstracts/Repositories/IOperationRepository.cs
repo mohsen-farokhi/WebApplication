@@ -11,6 +11,6 @@ namespace WebApplication.Domain.Abstracts.Repositories
     public interface IOperationRepository : IRepository<Operation>
     {
         Task<DataResult<OperationDto>> GetDataAsync
-            (PagingData dataRequest, Expression<Func<Operation, bool>> predicate);
+            (DataRequest dataRequest, Expression<Func<Operation, bool>> predicate);
     }
 }

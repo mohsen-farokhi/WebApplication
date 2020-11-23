@@ -20,10 +20,10 @@ namespace WebApplication.Domain.Abstracts.Repositories.Base
         IList<TEntity> GetAll();
         Task<IList<TEntity>> GetAllAsync();
         DataResult<TEntity> GetWithRequest
-            (PagingData request, Expression<Func<TEntity, bool>> predicate = null);
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null);
 
         Task<DataResult<TEntity>> GetWithRequestAsync
-            (PagingData request, Expression<Func<TEntity, bool>> predicate = null);
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null);
 
     }
 }

@@ -107,7 +107,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         }
 
         public virtual DataResult<TEntity> GetWithRequest
-            (PagingData request, Expression<Func<TEntity, bool>> predicate = null)
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null)
         {
             var query =
                 dbSet.AsNoTracking();
@@ -131,7 +131,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
         }
 
         public virtual async Task<DataResult<TEntity>> GetWithRequestAsync
-            (PagingData request, Expression<Func<TEntity, bool>> predicate = null)
+            (DataRequest request, Expression<Func<TEntity, bool>> predicate = null)
         {
             var query =
                 dbSet.AsNoTracking();

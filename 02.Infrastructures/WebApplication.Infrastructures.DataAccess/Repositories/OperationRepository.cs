@@ -19,7 +19,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
         }
 
         public async Task<DataResult<OperationDto>> GetDataAsync
-            (PagingData request, Expression<Func<Operation, bool>> predicate)
+            (DataRequest request, Expression<Func<Operation, bool>> predicate)
         {
             var query =
                 dbSet.AsNoTracking();

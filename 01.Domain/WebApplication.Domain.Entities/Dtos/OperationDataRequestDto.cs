@@ -3,7 +3,7 @@ using WebApplication.Domain.Entities.Enums;
 
 namespace WebApplication.Domain.Entities.Dtos
 {
-    public class OperationDataResuqestDto : PagingData
+    public class OperationDataResuqestDto : DataRequest
     {
         public bool? IsActive { get; set; }
         public string Name { get; set; }

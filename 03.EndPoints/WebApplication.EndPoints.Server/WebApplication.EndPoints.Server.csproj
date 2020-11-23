@@ -20,5 +20,9 @@
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+
 
 </Project>
