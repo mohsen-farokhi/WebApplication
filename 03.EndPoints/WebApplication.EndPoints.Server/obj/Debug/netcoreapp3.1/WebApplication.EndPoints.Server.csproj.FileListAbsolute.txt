@@ -55,7 +55,6 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\netcoreapp3.1\WebApplication.EndPoints.Server.pdb
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\appsettings.Development.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\appsettings.json
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\WebApplication.EndPoints.Server.deps.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\WebApplication.EndPoints.Server.runtimeconfig.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\WebApplication.EndPoints.Server.runtimeconfig.dev.json
@@ -74,3 +73,4 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\netcoreapp3.1\WebApplication.EndPoints.Server.csproj.CoreCompileInputs.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\netcoreapp3.1\WebApplication.EndPoints.Server.MvcApplicationPartsAssemblyInfo.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebApplication.EndPoints.Server.styles.css

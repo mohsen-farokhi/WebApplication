@@ -122,7 +122,6 @@ using System.Globalization;
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0");
             __builder.AddAttribute(2, "aria-labelledby", "notificationDropdown");
-            __builder.AddMarkupContent(3, "\r\n");
 #nullable restore
 #line 5 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CultureSelector.razor"
      foreach (var culture in supportedCultures)
@@ -131,11 +130,10 @@ using System.Globalization;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(4, "        ");
-            __builder.OpenElement(5, "a");
-            __builder.AddAttribute(6, "class", "dropdown-item preview-item py-3");
-            __builder.AddAttribute(7, "href", "#");
-            __builder.AddAttribute(8, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.OpenElement(3, "a");
+            __builder.AddAttribute(4, "class", "dropdown-item preview-item py-3");
+            __builder.AddAttribute(5, "href", "#");
+            __builder.AddAttribute(6, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 7 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CultureSelector.razor"
                                                                       () => setCulture(culture)
@@ -144,13 +142,11 @@ using System.Globalization;
 #line hidden
 #nullable disable
             ));
-            __builder.AddMarkupContent(9, "\r\n            ");
-            __builder.OpenElement(10, "div");
-            __builder.AddAttribute(11, "class", "preview-item-content");
-            __builder.AddMarkupContent(12, "\r\n                ");
-            __builder.OpenElement(13, "p");
-            __builder.AddAttribute(14, "class", "font-weight-light small-text mb-0");
-            __builder.AddContent(15, 
+            __builder.OpenElement(7, "div");
+            __builder.AddAttribute(8, "class", "preview-item-content");
+            __builder.OpenElement(9, "p");
+            __builder.AddAttribute(10, "class", "font-weight-light small-text mb-0");
+            __builder.AddContent(11, 
 #nullable restore
 #line 9 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CultureSelector.razor"
                                                               culture.DisplayName
@@ -160,11 +156,8 @@ using System.Globalization;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(16, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(17, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(18, "\r\n");
 #nullable restore
 #line 12 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CultureSelector.razor"
     }

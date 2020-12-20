@@ -136,19 +136,15 @@ using ViewModels.Culture;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(0, "\r\n");
-            __builder.OpenElement(1, "div");
-            __builder.AddAttribute(2, "class", "col-12 grid-margin");
-            __builder.AddMarkupContent(3, "\r\n    ");
+            __builder.OpenElement(0, "div");
+            __builder.AddAttribute(1, "class", "col-12 grid-margin");
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "card");
             __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "card");
-            __builder.AddMarkupContent(6, "\r\n        ");
-            __builder.OpenElement(7, "div");
-            __builder.AddAttribute(8, "class", "card-body");
-            __builder.AddMarkupContent(9, "\r\n            ");
-            __builder.OpenElement(10, "h4");
-            __builder.AddAttribute(11, "class", "card-title");
-            __builder.AddContent(12, 
+            __builder.AddAttribute(5, "class", "card-body");
+            __builder.OpenElement(6, "h4");
+            __builder.AddAttribute(7, "class", "card-title");
+            __builder.AddContent(8, 
 #nullable restore
 #line 19 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                     strTitle
@@ -158,7 +154,7 @@ using ViewModels.Culture;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(13, "<p class=\"card-description\"></p>\r\n");
+            __builder.AddMarkupContent(9, "<p class=\"card-description\"></p>");
 #nullable restore
 #line 20 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
              if (cultures == null)
@@ -167,10 +163,9 @@ using ViewModels.Culture;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(14, "                ");
-            __builder.OpenElement(15, "p");
-            __builder.OpenElement(16, "em");
-            __builder.AddContent(17, 
+            __builder.OpenElement(10, "p");
+            __builder.OpenElement(11, "em");
+            __builder.AddContent(12, 
 #nullable restore
 #line 22 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                         Resources.DataDictionary.Loading
@@ -181,7 +176,6 @@ using ViewModels.Culture;
             );
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(18, "\r\n");
 #nullable restore
 #line 23 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
             }
@@ -191,14 +185,12 @@ using ViewModels.Culture;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(19, "                ");
-            __builder.OpenElement(20, "p");
-            __builder.AddAttribute(21, "class", "card-description");
-            __builder.AddMarkupContent(22, "\r\n                    ");
-            __builder.OpenElement(23, "a");
-            __builder.AddAttribute(24, "class", "btn btn-primary btn-fw");
-            __builder.AddAttribute(25, "href", "/Culture/Create");
-            __builder.AddContent(26, 
+            __builder.OpenElement(13, "p");
+            __builder.AddAttribute(14, "class", "card-description");
+            __builder.OpenElement(15, "a");
+            __builder.AddAttribute(16, "class", "btn btn-primary btn-fw");
+            __builder.AddAttribute(17, "href", "/Culture/Create");
+            __builder.AddContent(18, 
 #nullable restore
 #line 27 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                                                               strCreate
@@ -208,22 +200,16 @@ using ViewModels.Culture;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(27, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(28, "\r\n                ");
-            __builder.OpenElement(29, "div");
-            __builder.AddAttribute(30, "class", "table-responsive");
-            __builder.AddMarkupContent(31, "\r\n                    ");
-            __builder.OpenElement(32, "table");
-            __builder.AddAttribute(33, "class", "table table-bordered table-hover");
-            __builder.AddMarkupContent(34, "\r\n                        ");
-            __builder.OpenElement(35, "thead");
-            __builder.AddMarkupContent(36, "\r\n                            ");
-            __builder.OpenElement(37, "tr");
-            __builder.AddMarkupContent(38, "\r\n                                ");
-            __builder.OpenElement(39, "th");
-            __builder.AddContent(40, " ");
-            __builder.AddContent(41, 
+            __builder.AddMarkupContent(19, "\r\n                ");
+            __builder.OpenElement(20, "div");
+            __builder.AddAttribute(21, "class", "table-responsive");
+            __builder.OpenElement(22, "table");
+            __builder.AddAttribute(23, "class", "table table-bordered table-hover");
+            __builder.OpenElement(24, "thead");
+            __builder.OpenElement(25, "tr");
+            __builder.OpenElement(26, "th");
+            __builder.AddContent(27, 
 #nullable restore
 #line 33 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                       Resources.DataDictionary.IsActive
@@ -232,12 +218,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddContent(42, " ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(43, "\r\n                                ");
-            __builder.OpenElement(44, "th");
-            __builder.AddContent(45, " ");
-            __builder.AddContent(46, 
+            __builder.AddMarkupContent(28, "\r\n                                ");
+            __builder.OpenElement(29, "th");
+            __builder.AddContent(30, 
 #nullable restore
 #line 34 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                       Resources.DataDictionary.Lcid
@@ -246,12 +230,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddContent(47, " ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(48, "\r\n                                ");
-            __builder.OpenElement(49, "th");
-            __builder.AddContent(50, " ");
-            __builder.AddContent(51, 
+            __builder.AddMarkupContent(31, "\r\n                                ");
+            __builder.OpenElement(32, "th");
+            __builder.AddContent(33, 
 #nullable restore
 #line 35 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                       Resources.DataDictionary.Name
@@ -260,12 +242,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddContent(52, " ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(53, "\r\n                                ");
-            __builder.OpenElement(54, "th");
-            __builder.AddContent(55, " ");
-            __builder.AddContent(56, 
+            __builder.AddMarkupContent(34, "\r\n                                ");
+            __builder.OpenElement(35, "th");
+            __builder.AddContent(36, 
 #nullable restore
 #line 36 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                       Resources.Models.Cultures.NativeName
@@ -274,12 +254,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddContent(57, " ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(58, "\r\n                                ");
-            __builder.OpenElement(59, "th");
-            __builder.AddContent(60, " ");
-            __builder.AddContent(61, 
+            __builder.AddMarkupContent(37, "\r\n                                ");
+            __builder.OpenElement(38, "th");
+            __builder.AddContent(39, 
 #nullable restore
 #line 37 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                       Resources.DataDictionary.DisplayName
@@ -288,15 +266,12 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddContent(62, " ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(63, "\r\n                                <th></th>\r\n                            ");
+            __builder.AddMarkupContent(40, "\r\n                                <th></th>");
             __builder.CloseElement();
-            __builder.AddMarkupContent(64, "\r\n                        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(65, "\r\n                        ");
-            __builder.OpenElement(66, "tbody");
-            __builder.AddMarkupContent(67, "\r\n");
+            __builder.AddMarkupContent(41, "\r\n                        ");
+            __builder.OpenElement(42, "tbody");
 #nullable restore
 #line 42 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                              foreach (var item in cultures)
@@ -305,12 +280,9 @@ using ViewModels.Culture;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(68, "                                ");
-            __builder.OpenElement(69, "tr");
-            __builder.AddMarkupContent(70, "\r\n                                    ");
-            __builder.OpenElement(71, "td");
-            __builder.AddMarkupContent(72, "\r\n                                        ");
-            __builder.AddContent(73, 
+            __builder.OpenElement(43, "tr");
+            __builder.OpenElement(44, "td");
+            __builder.AddContent(45, 
 #nullable restore
 #line 46 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                          item.IsActive
@@ -319,12 +291,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(74, "\r\n                                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(75, "\r\n                                    ");
-            __builder.OpenElement(76, "td");
-            __builder.AddMarkupContent(77, "\r\n                                        ");
-            __builder.AddContent(78, 
+            __builder.AddMarkupContent(46, "\r\n                                    ");
+            __builder.OpenElement(47, "td");
+            __builder.AddContent(48, 
 #nullable restore
 #line 49 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                          item.Lcid
@@ -333,12 +303,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(79, "\r\n                                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(80, "\r\n                                    ");
-            __builder.OpenElement(81, "td");
-            __builder.AddMarkupContent(82, "\r\n                                        ");
-            __builder.AddContent(83, 
+            __builder.AddMarkupContent(49, "\r\n                                    ");
+            __builder.OpenElement(50, "td");
+            __builder.AddContent(51, 
 #nullable restore
 #line 52 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                          item.Name
@@ -347,12 +315,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(84, "\r\n                                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(85, "\r\n                                    ");
-            __builder.OpenElement(86, "td");
-            __builder.AddMarkupContent(87, "\r\n                                        ");
-            __builder.AddContent(88, 
+            __builder.AddMarkupContent(52, "\r\n                                    ");
+            __builder.OpenElement(53, "td");
+            __builder.AddContent(54, 
 #nullable restore
 #line 55 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                          item.NativeName
@@ -361,12 +327,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(89, "\r\n                                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(90, "\r\n                                    ");
-            __builder.OpenElement(91, "td");
-            __builder.AddMarkupContent(92, "\r\n                                        ");
-            __builder.AddContent(93, 
+            __builder.AddMarkupContent(55, "\r\n                                    ");
+            __builder.OpenElement(56, "td");
+            __builder.AddContent(57, 
 #nullable restore
 #line 58 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                          item.DisplayName
@@ -375,14 +339,12 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(94, "\r\n                                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(95, "\r\n                                    ");
-            __builder.OpenElement(96, "td");
-            __builder.AddMarkupContent(97, "\r\n                                        ");
-            __builder.OpenElement(98, "a");
-            __builder.AddAttribute(99, "href", "javascript:void(0)");
-            __builder.AddAttribute(100, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+            __builder.AddMarkupContent(58, "\r\n                                    ");
+            __builder.OpenElement(59, "td");
+            __builder.OpenElement(60, "a");
+            __builder.AddAttribute(61, "href", "javascript:void(0)");
+            __builder.AddAttribute(62, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 61 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                                                                                () => Remove(item.Id)
@@ -391,13 +353,10 @@ using ViewModels.Culture;
 #line hidden
 #nullable disable
             ));
-            __builder.AddMarkupContent(101, "\r\n                                            <i class=\"mdi mdi-delete\" data-name=\"mdi-delete\"></i>\r\n                                        ");
+            __builder.AddMarkupContent(63, "<i class=\"mdi mdi-delete\" data-name=\"mdi-delete\"></i>");
             __builder.CloseElement();
-            __builder.AddMarkupContent(102, "\r\n                                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(103, "\r\n                                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(104, "\r\n");
 #nullable restore
 #line 66 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
                             }
@@ -405,13 +364,9 @@ using ViewModels.Culture;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(105, "                        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(106, "\r\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(107, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(108, "\r\n");
 #nullable restore
 #line 70 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Cultures\Index.razor"
             }
@@ -419,11 +374,8 @@ using ViewModels.Culture;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(109, "        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(110, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(111, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998

@@ -132,13 +132,12 @@ using Telerik.Blazor.Components;
 #nullable disable
             )));
             __builder.AddAttribute(3, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment<Microsoft.AspNetCore.Components.Forms.EditContext>)((context) => (__builder2) => {
-                __builder2.AddMarkupContent(4, "\r\n    ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator>(5);
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator>(4);
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(6, "\r\n\r\n    ");
-                __builder2.OpenElement(7, "input");
-                __builder2.AddAttribute(8, "type", "hidden");
-                __builder2.AddAttribute(9, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+                __builder2.AddMarkupContent(5, "\r\n\r\n    ");
+                __builder2.OpenElement(6, "input");
+                __builder2.AddAttribute(7, "type", "hidden");
+                __builder2.AddAttribute(8, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 4 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                       Model.ParentId
@@ -147,29 +146,24 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(10, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => Model.ParentId = __value, Model.ParentId));
+                __builder2.AddAttribute(9, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => Model.ParentId = __value, Model.ParentId));
                 __builder2.SetUpdatesAttributeName("value");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(11, "\r\n\r\n    ");
-                __builder2.OpenElement(12, "div");
-                __builder2.AddAttribute(13, "class", "row");
-                __builder2.AddMarkupContent(14, "\r\n        ");
+                __builder2.AddMarkupContent(10, "\r\n\r\n    ");
+                __builder2.OpenElement(11, "div");
+                __builder2.AddAttribute(12, "class", "row");
+                __builder2.OpenElement(13, "div");
+                __builder2.AddAttribute(14, "class", "col-md-6");
                 __builder2.OpenElement(15, "div");
-                __builder2.AddAttribute(16, "class", "col-md-6");
-                __builder2.AddMarkupContent(17, "\r\n            ");
-                __builder2.OpenElement(18, "div");
-                __builder2.AddAttribute(19, "class", "form-group");
-                __builder2.AddMarkupContent(20, "\r\n\r\n                ");
-                __builder2.OpenElement(21, "div");
-                __builder2.AddAttribute(22, "class", "form-check form-check-flat");
-                __builder2.AddMarkupContent(23, "\r\n                    ");
-                __builder2.OpenElement(24, "label");
-                __builder2.AddAttribute(25, "class", "form-check-label");
-                __builder2.AddMarkupContent(26, "\r\n                        ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputCheckbox>(27);
-                __builder2.AddAttribute(28, "id", "isActive");
-                __builder2.AddAttribute(29, "class", "form-check-input");
-                __builder2.AddAttribute(30, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
+                __builder2.AddAttribute(16, "class", "form-group");
+                __builder2.OpenElement(17, "div");
+                __builder2.AddAttribute(18, "class", "form-check form-check-flat");
+                __builder2.OpenElement(19, "label");
+                __builder2.AddAttribute(20, "class", "form-check-label");
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputCheckbox>(21);
+                __builder2.AddAttribute(22, "id", "isActive");
+                __builder2.AddAttribute(23, "class", "form-check-input");
+                __builder2.AddAttribute(24, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Boolean>(
 #nullable restore
 #line 12 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                                            Model.IsActive
@@ -178,10 +172,10 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(31, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.Boolean>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.Boolean>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.IsActive = __value, Model.IsActive))));
-                __builder2.AddAttribute(32, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.Boolean>>>(() => Model.IsActive));
+                __builder2.AddAttribute(25, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.Boolean>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.Boolean>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.IsActive = __value, Model.IsActive))));
+                __builder2.AddAttribute(26, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.Boolean>>>(() => Model.IsActive));
                 __builder2.CloseComponent();
-                __builder2.AddContent(33, 
+                __builder2.AddContent(27, 
 #nullable restore
 #line 12 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                                                                             Resources.DataDictionary.IsActive
@@ -190,30 +184,23 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 );
-                __builder2.AddMarkupContent(34, "<i class=\"input-helper\"></i>\r\n                    ");
+                __builder2.AddMarkupContent(28, "<i class=\"input-helper\"></i>");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(35, "\r\n                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(36, "\r\n\r\n            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(37, "\r\n        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(38, "\r\n    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(39, "\r\n\r\n    ");
-                __builder2.OpenElement(40, "div");
-                __builder2.AddAttribute(41, "class", "row");
-                __builder2.AddMarkupContent(42, "\r\n        ");
-                __builder2.OpenElement(43, "div");
-                __builder2.AddAttribute(44, "class", "col-md-6");
-                __builder2.AddMarkupContent(45, "\r\n            ");
-                __builder2.OpenElement(46, "div");
-                __builder2.AddAttribute(47, "class", "form-group row");
-                __builder2.AddMarkupContent(48, "\r\n                ");
-                __builder2.OpenElement(49, "label");
-                __builder2.AddAttribute(50, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(51, "for", "name");
-                __builder2.AddContent(52, 
+                __builder2.AddMarkupContent(29, "\r\n\r\n    ");
+                __builder2.OpenElement(30, "div");
+                __builder2.AddAttribute(31, "class", "row");
+                __builder2.OpenElement(32, "div");
+                __builder2.AddAttribute(33, "class", "col-md-6");
+                __builder2.OpenElement(34, "div");
+                __builder2.AddAttribute(35, "class", "form-group row");
+                __builder2.OpenElement(36, "label");
+                __builder2.AddAttribute(37, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(38, "for", "name");
+                __builder2.AddContent(39, 
 #nullable restore
 #line 23 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                    Resources.Models.Operation.Name
@@ -223,14 +210,13 @@ using Telerik.Blazor.Components;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(53, "\r\n                ");
-                __builder2.OpenElement(54, "div");
-                __builder2.AddAttribute(55, "class", "col-sm-9");
-                __builder2.AddMarkupContent(56, "\r\n                    ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(57);
-                __builder2.AddAttribute(58, "id", "name");
-                __builder2.AddAttribute(59, "class", "form-control");
-                __builder2.AddAttribute(60, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(40, "\r\n                ");
+                __builder2.OpenElement(41, "div");
+                __builder2.AddAttribute(42, "class", "col-sm-9");
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(43);
+                __builder2.AddAttribute(44, "id", "name");
+                __builder2.AddAttribute(45, "class", "form-control");
+                __builder2.AddAttribute(46, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 25 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                            Model.Name
@@ -239,14 +225,13 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(61, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.Name = __value, Model.Name))));
-                __builder2.AddAttribute(62, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => Model.Name));
+                __builder2.AddAttribute(47, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.Name = __value, Model.Name))));
+                __builder2.AddAttribute(48, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => Model.Name));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(63, "\r\n                    ");
-                __builder2.OpenElement(64, "div");
-                __builder2.AddAttribute(65, "class", "error mt-2 text-danger");
-                __builder2.AddMarkupContent(66, "\r\n                        ");
-                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateValidationMessage_0(__builder2, 67, 68, 
+                __builder2.AddMarkupContent(49, "\r\n                    ");
+                __builder2.OpenElement(50, "div");
+                __builder2.AddAttribute(51, "class", "error mt-2 text-danger");
+                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateValidationMessage_0(__builder2, 52, 53, 
 #nullable restore
 #line 27 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                 () => Model.Name
@@ -255,25 +240,19 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 );
-                __builder2.AddMarkupContent(69, "\r\n                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(70, "\r\n                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(71, "\r\n            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(72, "\r\n        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(73, "\r\n        ");
-                __builder2.OpenElement(74, "div");
-                __builder2.AddAttribute(75, "class", "col-md-6");
-                __builder2.AddMarkupContent(76, "\r\n            ");
-                __builder2.OpenElement(77, "div");
-                __builder2.AddAttribute(78, "class", "form-group row");
-                __builder2.AddMarkupContent(79, "\r\n                ");
-                __builder2.OpenElement(80, "label");
-                __builder2.AddAttribute(81, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(82, "for", "nativeName");
-                __builder2.AddContent(83, 
+                __builder2.AddMarkupContent(54, "\r\n        ");
+                __builder2.OpenElement(55, "div");
+                __builder2.AddAttribute(56, "class", "col-md-6");
+                __builder2.OpenElement(57, "div");
+                __builder2.AddAttribute(58, "class", "form-group row");
+                __builder2.OpenElement(59, "label");
+                __builder2.AddAttribute(60, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(61, "for", "nativeName");
+                __builder2.AddContent(62, 
 #nullable restore
 #line 34 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                          Resources.DataDictionary.DisplayName
@@ -283,14 +262,13 @@ using Telerik.Blazor.Components;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(84, "\r\n                ");
-                __builder2.OpenElement(85, "div");
-                __builder2.AddAttribute(86, "class", "col-sm-9");
-                __builder2.AddMarkupContent(87, "\r\n                    ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(88);
-                __builder2.AddAttribute(89, "id", "nativeName");
-                __builder2.AddAttribute(90, "class", "form-control");
-                __builder2.AddAttribute(91, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(63, "\r\n                ");
+                __builder2.OpenElement(64, "div");
+                __builder2.AddAttribute(65, "class", "col-sm-9");
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(66);
+                __builder2.AddAttribute(67, "id", "nativeName");
+                __builder2.AddAttribute(68, "class", "form-control");
+                __builder2.AddAttribute(69, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 36 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                                  Model.DisplayName
@@ -299,14 +277,13 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(92, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.DisplayName = __value, Model.DisplayName))));
-                __builder2.AddAttribute(93, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => Model.DisplayName));
+                __builder2.AddAttribute(70, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.DisplayName = __value, Model.DisplayName))));
+                __builder2.AddAttribute(71, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => Model.DisplayName));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(94, "\r\n                    ");
-                __builder2.OpenElement(95, "div");
-                __builder2.AddAttribute(96, "class", "error mt-2 text-danger");
-                __builder2.AddMarkupContent(97, "\r\n                        ");
-                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateValidationMessage_1(__builder2, 98, 99, 
+                __builder2.AddMarkupContent(72, "\r\n                    ");
+                __builder2.OpenElement(73, "div");
+                __builder2.AddAttribute(74, "class", "error mt-2 text-danger");
+                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateValidationMessage_1(__builder2, 75, 76, 
 #nullable restore
 #line 38 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                 () => Model.DisplayName
@@ -315,30 +292,22 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 );
-                __builder2.AddMarkupContent(100, "\r\n                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(101, "\r\n                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(102, "\r\n            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(103, "\r\n        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(104, "\r\n    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(105, "\r\n\r\n    ");
-                __builder2.OpenElement(106, "div");
-                __builder2.AddAttribute(107, "class", "row");
-                __builder2.AddMarkupContent(108, "\r\n        ");
-                __builder2.OpenElement(109, "div");
-                __builder2.AddAttribute(110, "class", "col-md-6");
-                __builder2.AddMarkupContent(111, "\r\n            ");
-                __builder2.OpenElement(112, "div");
-                __builder2.AddAttribute(113, "class", "form-group row");
-                __builder2.AddMarkupContent(114, "\r\n                ");
-                __builder2.OpenElement(115, "label");
-                __builder2.AddAttribute(116, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(117, "for", "accessType");
-                __builder2.AddContent(118, 
+                __builder2.AddMarkupContent(77, "\r\n\r\n    ");
+                __builder2.OpenElement(78, "div");
+                __builder2.AddAttribute(79, "class", "row");
+                __builder2.OpenElement(80, "div");
+                __builder2.AddAttribute(81, "class", "col-md-6");
+                __builder2.OpenElement(82, "div");
+                __builder2.AddAttribute(83, "class", "form-group row");
+                __builder2.OpenElement(84, "label");
+                __builder2.AddAttribute(85, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(86, "for", "accessType");
+                __builder2.AddContent(87, 
 #nullable restore
 #line 48 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                          Resources.Models.Operation.AccessType
@@ -348,11 +317,10 @@ using Telerik.Blazor.Components;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(119, "\r\n                ");
-                __builder2.OpenElement(120, "div");
-                __builder2.AddAttribute(121, "class", "col-sm-9");
-                __builder2.AddMarkupContent(122, "\r\n                    ");
-                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateInputSelectEnum_2(__builder2, 123, 124, "accessType", 125, "form-control", 126, 
+                __builder2.AddMarkupContent(88, "\r\n                ");
+                __builder2.OpenElement(89, "div");
+                __builder2.AddAttribute(90, "class", "col-sm-9");
+                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateInputSelectEnum_2(__builder2, 91, 92, "accessType", 93, "form-control", 94, 
 #nullable restore
 #line 50 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                                        Model.AccessType
@@ -360,12 +328,11 @@ using Telerik.Blazor.Components;
 #line default
 #line hidden
 #nullable disable
-                , 127, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.AccessType = __value, Model.AccessType)), 128, () => Model.AccessType);
-                __builder2.AddMarkupContent(129, "\r\n                    ");
-                __builder2.OpenElement(130, "div");
-                __builder2.AddAttribute(131, "class", "error mt-2 text-danger");
-                __builder2.AddMarkupContent(132, "\r\n                        ");
-                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateValidationMessage_3(__builder2, 133, 134, 
+                , 95, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.AccessType = __value, Model.AccessType)), 96, () => Model.AccessType);
+                __builder2.AddMarkupContent(97, "\r\n                    ");
+                __builder2.OpenElement(98, "div");
+                __builder2.AddAttribute(99, "class", "error mt-2 text-danger");
+                __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor.TypeInference.CreateValidationMessage_3(__builder2, 100, 101, 
 #nullable restore
 #line 52 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                 () => Model.AccessType
@@ -374,30 +341,22 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 );
-                __builder2.AddMarkupContent(135, "\r\n                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(136, "\r\n                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(137, "\r\n            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(138, "\r\n        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(139, "\r\n    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(140, "\r\n\r\n    ");
-                __builder2.OpenElement(141, "div");
-                __builder2.AddAttribute(142, "class", "row");
-                __builder2.AddMarkupContent(143, "\r\n        ");
-                __builder2.OpenElement(144, "div");
-                __builder2.AddAttribute(145, "class", "col-md-6");
-                __builder2.AddMarkupContent(146, "\r\n            ");
-                __builder2.OpenElement(147, "div");
-                __builder2.AddAttribute(148, "class", "form-group row");
-                __builder2.AddMarkupContent(149, "\r\n                ");
-                __builder2.OpenElement(150, "label");
-                __builder2.AddAttribute(151, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(152, "for", "description");
-                __builder2.AddContent(153, 
+                __builder2.AddMarkupContent(102, "\r\n\r\n    ");
+                __builder2.OpenElement(103, "div");
+                __builder2.AddAttribute(104, "class", "row");
+                __builder2.OpenElement(105, "div");
+                __builder2.AddAttribute(106, "class", "col-md-6");
+                __builder2.OpenElement(107, "div");
+                __builder2.AddAttribute(108, "class", "form-group row");
+                __builder2.OpenElement(109, "label");
+                __builder2.AddAttribute(110, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(111, "for", "description");
+                __builder2.AddContent(112, 
 #nullable restore
 #line 62 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                           Resources.DataDictionary.Description
@@ -407,15 +366,14 @@ using Telerik.Blazor.Components;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(154, "\r\n                ");
-                __builder2.OpenElement(155, "div");
-                __builder2.AddAttribute(156, "class", "col-sm-9");
-                __builder2.AddMarkupContent(157, "\r\n                    ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputTextArea>(158);
-                __builder2.AddAttribute(159, "id", "description");
-                __builder2.AddAttribute(160, "class", "form-control");
-                __builder2.AddAttribute(161, "rows", "6");
-                __builder2.AddAttribute(162, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(113, "\r\n                ");
+                __builder2.OpenElement(114, "div");
+                __builder2.AddAttribute(115, "class", "col-sm-9");
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputTextArea>(116);
+                __builder2.AddAttribute(117, "id", "description");
+                __builder2.AddAttribute(118, "class", "form-control");
+                __builder2.AddAttribute(119, "rows", "6");
+                __builder2.AddAttribute(120, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 64 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                                                                Model.Description
@@ -424,22 +382,18 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(163, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.Description = __value, Model.Description))));
-                __builder2.AddAttribute(164, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => Model.Description));
+                __builder2.AddAttribute(121, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => Model.Description = __value, Model.Description))));
+                __builder2.AddAttribute(122, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => Model.Description));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(165, "\r\n                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(166, "\r\n            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(167, "\r\n        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(168, "\r\n    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(169, "\r\n\r\n    ");
-                __builder2.OpenElement(170, "button");
-                __builder2.AddAttribute(171, "type", "submit");
-                __builder2.AddAttribute(172, "class", "btn btn-success mr-2");
-                __builder2.AddContent(173, 
+                __builder2.AddMarkupContent(123, "\r\n\r\n    ");
+                __builder2.OpenElement(124, "button");
+                __builder2.AddAttribute(125, "type", "submit");
+                __builder2.AddAttribute(126, "class", "btn btn-success mr-2");
+                __builder2.AddContent(127, 
 #nullable restore
 #line 70 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                         Resources.Buttons.Submit
@@ -449,11 +403,11 @@ using Telerik.Blazor.Components;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(174, "\r\n    ");
-                __builder2.OpenElement(175, "a");
-                __builder2.AddAttribute(176, "class", "btn btn-light");
-                __builder2.AddAttribute(177, "href", "/Operations");
-                __builder2.AddContent(178, 
+                __builder2.AddMarkupContent(128, "\r\n    ");
+                __builder2.OpenElement(129, "a");
+                __builder2.AddAttribute(130, "class", "btn btn-light");
+                __builder2.AddAttribute(131, "href", "/Operations");
+                __builder2.AddContent(132, 
 #nullable restore
 #line 71 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\FormEditor.razor"
                                                  Resources.Buttons.Cancel
@@ -463,7 +417,6 @@ using Telerik.Blazor.Components;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(179, "\r\n\r\n");
             }
             ));
             __builder.CloseComponent();

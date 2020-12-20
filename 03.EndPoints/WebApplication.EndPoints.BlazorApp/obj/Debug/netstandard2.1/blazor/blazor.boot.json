@@ -8,7 +8,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "WebApplication.EndPoints.BlazorApp.dll": "sha256-RcPU020F418fS+h9go23nKgwHVGnuQjDMoMv4\/pgfhU=",
+      "WebApplication.EndPoints.BlazorApp.dll": "sha256-fbt2uztkD0FdnAGeEN5iqnbkIIGIaQAe1YvFIlne4P8=",
       "Telerik.DataSource.dll": "sha256-7bxSyNIHk1KscIx3aHpfUb1s5mcWdgf4wkS1j07ZziU=",
       "Microsoft.CSharp.dll": "sha256-ubyINHXDmWOAugBDEb8CCz+uV68eordXiYDxpUeRBvg=",
       "System.Core.dll": "sha256-Zw2\/5aDWjgMedporhjigwhi\/UCLcfl0tfa0LXUyD9HE=",
@@ -77,7 +77,7 @@
       "Telerik.Recurrence.dll": "sha256-QaAU\/c+BEOhUIVYBzv+Kmcb7tN3oOnCSNBLCFxxdRaE="
     },
     "pdb": {
-      "WebApplication.EndPoints.BlazorApp.pdb": "sha256-9LgPB4pX5\/hLuepG\/JWcwNFpgSayJ+313gkGenDcK6U=",
+      "WebApplication.EndPoints.BlazorApp.pdb": "sha256-hFUPieudKbglSY3jnUGmCA46eE4ykt\/jJF9fknkfIgs=",
       "Resources.pdb": "sha256-jAj6L4kJUsjPu5IOuVZIBoKDIMyDqMkFjfTWyv5xKH8=",
       "Extensions.pdb": "sha256-lETV6IrXtzNpvNsEKMj3pCUGWMQax7zuZ0z4aUXYnec=",
       "ViewModels.pdb": "sha256-2MaEKsXDFY9v8jsWWXcO52v\/9vK4LBjguPkHKe7i2IQ="

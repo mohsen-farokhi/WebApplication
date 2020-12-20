@@ -136,34 +136,28 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(0, "\r\n");
-            __builder.OpenElement(1, "div");
-            __builder.AddAttribute(2, "class", "col-12");
-            __builder.AddMarkupContent(3, "\r\n    ");
-            __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "accordion basic-accordion");
-            __builder.AddAttribute(6, "id", "accordion");
-            __builder.AddAttribute(7, "role", "tablist");
-            __builder.AddMarkupContent(8, "\r\n        ");
-            __builder.OpenElement(9, "div");
-            __builder.AddAttribute(10, "class", "card");
-            __builder.AddMarkupContent(11, "\r\n            ");
-            __builder.OpenElement(12, "div");
-            __builder.AddAttribute(13, "class", "card-header");
-            __builder.AddAttribute(14, "role", "tab");
-            __builder.AddAttribute(15, "id", "heading");
-            __builder.AddMarkupContent(16, "\r\n                ");
-            __builder.OpenElement(17, "h6");
-            __builder.AddAttribute(18, "class", "mb-0");
-            __builder.AddMarkupContent(19, "\r\n                    ");
-            __builder.OpenElement(20, "a");
-            __builder.AddAttribute(21, "class", "collapsed");
-            __builder.AddAttribute(22, "data-toggle", "collapse");
-            __builder.AddAttribute(23, "href", "#collapse");
-            __builder.AddAttribute(24, "aria-expanded", "false");
-            __builder.AddAttribute(25, "aria-controls", "collapse");
-            __builder.AddMarkupContent(26, "\r\n                        <i class=\"card-icon mdi mdi-magnify\"></i>");
-            __builder.AddContent(27, 
+            __builder.OpenElement(0, "div");
+            __builder.AddAttribute(1, "class", "col-12");
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "accordion basic-accordion");
+            __builder.AddAttribute(4, "id", "accordion");
+            __builder.AddAttribute(5, "role", "tablist");
+            __builder.OpenElement(6, "div");
+            __builder.AddAttribute(7, "class", "card");
+            __builder.OpenElement(8, "div");
+            __builder.AddAttribute(9, "class", "card-header");
+            __builder.AddAttribute(10, "role", "tab");
+            __builder.AddAttribute(11, "id", "heading");
+            __builder.OpenElement(12, "h6");
+            __builder.AddAttribute(13, "class", "mb-0");
+            __builder.OpenElement(14, "a");
+            __builder.AddAttribute(15, "class", "collapsed");
+            __builder.AddAttribute(16, "data-toggle", "collapse");
+            __builder.AddAttribute(17, "href", "#collapse");
+            __builder.AddAttribute(18, "aria-expanded", "false");
+            __builder.AddAttribute(19, "aria-controls", "collapse");
+            __builder.AddMarkupContent(20, "<i class=\"card-icon mdi mdi-magnify\"></i>");
+            __builder.AddContent(21, 
 #nullable restore
 #line 22 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                   Resources.Buttons.Search
@@ -172,25 +166,20 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(28, "\r\n                    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(29, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(30, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(31, "\r\n            ");
-            __builder.OpenElement(32, "div");
-            __builder.AddAttribute(33, "id", "collapse");
-            __builder.AddAttribute(34, "class", "collapse");
-            __builder.AddAttribute(35, "role", "tabpanel");
-            __builder.AddAttribute(36, "aria-labelledby", "heading");
-            __builder.AddAttribute(37, "data-parent", "#accordion");
-            __builder.AddMarkupContent(38, "\r\n                ");
-            __builder.OpenElement(39, "div");
-            __builder.AddAttribute(40, "class", "card-body");
-            __builder.AddMarkupContent(41, "\r\n                    ");
-            __builder.OpenComponent<Microsoft.AspNetCore.Components.Forms.EditForm>(42);
-            __builder.AddAttribute(43, "Model", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Object>(
+            __builder.AddMarkupContent(22, "\r\n            ");
+            __builder.OpenElement(23, "div");
+            __builder.AddAttribute(24, "id", "collapse");
+            __builder.AddAttribute(25, "class", "collapse");
+            __builder.AddAttribute(26, "role", "tabpanel");
+            __builder.AddAttribute(27, "aria-labelledby", "heading");
+            __builder.AddAttribute(28, "data-parent", "#accordion");
+            __builder.OpenElement(29, "div");
+            __builder.AddAttribute(30, "class", "card-body");
+            __builder.OpenComponent<Microsoft.AspNetCore.Components.Forms.EditForm>(31);
+            __builder.AddAttribute(32, "Model", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Object>(
 #nullable restore
 #line 28 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                      request
@@ -199,28 +188,22 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(44, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment<Microsoft.AspNetCore.Components.Forms.EditContext>)((context) => (__builder2) => {
-                __builder2.AddMarkupContent(45, "\r\n\r\n                        ");
-                __builder2.OpenElement(46, "div");
-                __builder2.AddAttribute(47, "class", "row");
-                __builder2.AddMarkupContent(48, "\r\n                            ");
-                __builder2.OpenElement(49, "div");
-                __builder2.AddAttribute(50, "class", "col-md-6");
-                __builder2.AddMarkupContent(51, "\r\n                                ");
-                __builder2.OpenElement(52, "div");
-                __builder2.AddAttribute(53, "class", "form-group");
-                __builder2.AddMarkupContent(54, "\r\n\r\n                                    ");
-                __builder2.OpenElement(55, "div");
-                __builder2.AddAttribute(56, "class", "form-check form-check-flat");
-                __builder2.AddMarkupContent(57, "\r\n                                        ");
-                __builder2.OpenElement(58, "label");
-                __builder2.AddAttribute(59, "class", "form-check-label");
-                __builder2.AddMarkupContent(60, "\r\n                                            ");
-                __builder2.OpenElement(61, "input");
-                __builder2.AddAttribute(62, "type", "checkbox");
-                __builder2.AddAttribute(63, "id", "isActive");
-                __builder2.AddAttribute(64, "class", "form-check-input");
-                __builder2.AddAttribute(65, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddAttribute(33, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment<Microsoft.AspNetCore.Components.Forms.EditContext>)((context) => (__builder2) => {
+                __builder2.OpenElement(34, "div");
+                __builder2.AddAttribute(35, "class", "row");
+                __builder2.OpenElement(36, "div");
+                __builder2.AddAttribute(37, "class", "col-md-6");
+                __builder2.OpenElement(38, "div");
+                __builder2.AddAttribute(39, "class", "form-group");
+                __builder2.OpenElement(40, "div");
+                __builder2.AddAttribute(41, "class", "form-check form-check-flat");
+                __builder2.OpenElement(42, "label");
+                __builder2.AddAttribute(43, "class", "form-check-label");
+                __builder2.OpenElement(44, "input");
+                __builder2.AddAttribute(45, "type", "checkbox");
+                __builder2.AddAttribute(46, "id", "isActive");
+                __builder2.AddAttribute(47, "class", "form-check-input");
+                __builder2.AddAttribute(48, "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 36 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                                                  request.IsActive
@@ -229,10 +212,10 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(66, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => request.IsActive = __value, request.IsActive));
+                __builder2.AddAttribute(49, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => request.IsActive = __value, request.IsActive));
                 __builder2.SetUpdatesAttributeName("checked");
                 __builder2.CloseElement();
-                __builder2.AddContent(67, 
+                __builder2.AddContent(50, 
 #nullable restore
 #line 36 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                                                                       Resources.DataDictionary.IsActive
@@ -241,30 +224,23 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 );
-                __builder2.AddMarkupContent(68, "<i class=\"input-helper\"></i>\r\n                                        ");
+                __builder2.AddMarkupContent(51, "<i class=\"input-helper\"></i>");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(69, "\r\n                                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(70, "\r\n\r\n                                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(71, "\r\n                            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(72, "\r\n                        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(73, "\r\n\r\n                        ");
-                __builder2.OpenElement(74, "div");
-                __builder2.AddAttribute(75, "class", "row");
-                __builder2.AddMarkupContent(76, "\r\n                            ");
-                __builder2.OpenElement(77, "div");
-                __builder2.AddAttribute(78, "class", "col-md-6");
-                __builder2.AddMarkupContent(79, "\r\n                                ");
-                __builder2.OpenElement(80, "div");
-                __builder2.AddAttribute(81, "class", "form-group row");
-                __builder2.AddMarkupContent(82, "\r\n                                    ");
-                __builder2.OpenElement(83, "label");
-                __builder2.AddAttribute(84, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(85, "for", "name");
-                __builder2.AddContent(86, 
+                __builder2.AddMarkupContent(52, "\r\n\r\n                        ");
+                __builder2.OpenElement(53, "div");
+                __builder2.AddAttribute(54, "class", "row");
+                __builder2.OpenElement(55, "div");
+                __builder2.AddAttribute(56, "class", "col-md-6");
+                __builder2.OpenElement(57, "div");
+                __builder2.AddAttribute(58, "class", "form-group row");
+                __builder2.OpenElement(59, "label");
+                __builder2.AddAttribute(60, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(61, "for", "name");
+                __builder2.AddContent(62, 
 #nullable restore
 #line 47 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                        Resources.Models.Operation.Name
@@ -274,14 +250,13 @@ using ViewModels.Operation;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(87, "\r\n                                    ");
-                __builder2.OpenElement(88, "div");
-                __builder2.AddAttribute(89, "class", "col-sm-9");
-                __builder2.AddMarkupContent(90, "\r\n                                        ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(91);
-                __builder2.AddAttribute(92, "id", "name");
-                __builder2.AddAttribute(93, "class", "form-control");
-                __builder2.AddAttribute(94, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(63, "\r\n                                    ");
+                __builder2.OpenElement(64, "div");
+                __builder2.AddAttribute(65, "class", "col-sm-9");
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(66);
+                __builder2.AddAttribute(67, "id", "name");
+                __builder2.AddAttribute(68, "class", "form-control");
+                __builder2.AddAttribute(69, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 49 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                                request.Name
@@ -290,26 +265,21 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(95, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => request.Name = __value, request.Name))));
-                __builder2.AddAttribute(96, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => request.Name));
+                __builder2.AddAttribute(70, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => request.Name = __value, request.Name))));
+                __builder2.AddAttribute(71, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => request.Name));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(97, "\r\n                                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(98, "\r\n                                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(99, "\r\n                            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(100, "\r\n\r\n                            ");
-                __builder2.OpenElement(101, "div");
-                __builder2.AddAttribute(102, "class", "col-md-6");
-                __builder2.AddMarkupContent(103, "\r\n                                ");
-                __builder2.OpenElement(104, "div");
-                __builder2.AddAttribute(105, "class", "form-group row");
-                __builder2.AddMarkupContent(106, "\r\n                                    ");
-                __builder2.OpenElement(107, "label");
-                __builder2.AddAttribute(108, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(109, "for", "displayName");
-                __builder2.AddContent(110, 
+                __builder2.AddMarkupContent(72, "\r\n\r\n                            ");
+                __builder2.OpenElement(73, "div");
+                __builder2.AddAttribute(74, "class", "col-md-6");
+                __builder2.OpenElement(75, "div");
+                __builder2.AddAttribute(76, "class", "form-group row");
+                __builder2.OpenElement(77, "label");
+                __builder2.AddAttribute(78, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(79, "for", "displayName");
+                __builder2.AddContent(80, 
 #nullable restore
 #line 56 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                               Resources.DataDictionary.DisplayName
@@ -319,14 +289,13 @@ using ViewModels.Operation;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(111, "\r\n                                    ");
-                __builder2.OpenElement(112, "div");
-                __builder2.AddAttribute(113, "class", "col-sm-9");
-                __builder2.AddMarkupContent(114, "\r\n                                        ");
-                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(115);
-                __builder2.AddAttribute(116, "id", "displayName");
-                __builder2.AddAttribute(117, "class", "form-control");
-                __builder2.AddAttribute(118, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(81, "\r\n                                    ");
+                __builder2.OpenElement(82, "div");
+                __builder2.AddAttribute(83, "class", "col-sm-9");
+                __builder2.OpenComponent<Microsoft.AspNetCore.Components.Forms.InputText>(84);
+                __builder2.AddAttribute(85, "id", "displayName");
+                __builder2.AddAttribute(86, "class", "form-control");
+                __builder2.AddAttribute(87, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 58 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                                       request.DisplayName
@@ -335,31 +304,24 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(119, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => request.DisplayName = __value, request.DisplayName))));
-                __builder2.AddAttribute(120, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => request.DisplayName));
+                __builder2.AddAttribute(88, "ValueChanged", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => request.DisplayName = __value, request.DisplayName))));
+                __builder2.AddAttribute(89, "ValueExpression", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.Linq.Expressions.Expression<System.Func<System.String>>>(() => request.DisplayName));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(121, "\r\n                                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(122, "\r\n                                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(123, "\r\n                            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(124, "\r\n                        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(125, "\r\n\r\n                        ");
-                __builder2.OpenElement(126, "div");
-                __builder2.AddAttribute(127, "class", "row");
-                __builder2.AddMarkupContent(128, "\r\n                            ");
-                __builder2.OpenElement(129, "div");
-                __builder2.AddAttribute(130, "class", "col-md-6");
-                __builder2.AddMarkupContent(131, "\r\n                                ");
-                __builder2.OpenElement(132, "div");
-                __builder2.AddAttribute(133, "class", "form-group row");
-                __builder2.AddMarkupContent(134, "\r\n                                    ");
-                __builder2.OpenElement(135, "label");
-                __builder2.AddAttribute(136, "class", "col-sm-3 col-form-label");
-                __builder2.AddAttribute(137, "for", "accessType");
-                __builder2.AddContent(138, 
+                __builder2.AddMarkupContent(90, "\r\n\r\n                        ");
+                __builder2.OpenElement(91, "div");
+                __builder2.AddAttribute(92, "class", "row");
+                __builder2.OpenElement(93, "div");
+                __builder2.AddAttribute(94, "class", "col-md-6");
+                __builder2.OpenElement(95, "div");
+                __builder2.AddAttribute(96, "class", "form-group row");
+                __builder2.OpenElement(97, "label");
+                __builder2.AddAttribute(98, "class", "col-sm-3 col-form-label");
+                __builder2.AddAttribute(99, "for", "accessType");
+                __builder2.AddContent(100, 
 #nullable restore
 #line 67 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                              Resources.Models.Operation.AccessType
@@ -369,14 +331,13 @@ using ViewModels.Operation;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(139, "\r\n                                    ");
-                __builder2.OpenElement(140, "div");
-                __builder2.AddAttribute(141, "class", "col-sm-9");
-                __builder2.AddMarkupContent(142, "\r\n\r\n                                        ");
-                __builder2.OpenElement(143, "select");
-                __builder2.AddAttribute(144, "id", "accessType");
-                __builder2.AddAttribute(145, "class", "form-control");
-                __builder2.AddAttribute(146, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+                __builder2.AddMarkupContent(101, "\r\n                                    ");
+                __builder2.OpenElement(102, "div");
+                __builder2.AddAttribute(103, "class", "col-sm-9");
+                __builder2.OpenElement(104, "select");
+                __builder2.AddAttribute(105, "id", "accessType");
+                __builder2.AddAttribute(106, "class", "form-control");
+                __builder2.AddAttribute(107, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 70 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                             request.AccessType
@@ -385,12 +346,10 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(147, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => request.AccessType = __value, request.AccessType));
+                __builder2.AddAttribute(108, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => request.AccessType = __value, request.AccessType));
                 __builder2.SetUpdatesAttributeName("value");
-                __builder2.AddMarkupContent(148, "\r\n                                            ");
-                __builder2.OpenElement(149, "option");
+                __builder2.OpenElement(109, "option");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(150, "\r\n");
 #nullable restore
 #line 72 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                              foreach (var item in request.GetAccessTypes())
@@ -399,9 +358,8 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-                __builder2.AddContent(151, "                                                ");
-                __builder2.OpenElement(152, "option");
-                __builder2.AddAttribute(153, "value", 
+                __builder2.OpenElement(110, "option");
+                __builder2.AddAttribute(111, "value", 
 #nullable restore
 #line 74 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                 item.Value
@@ -410,7 +368,7 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 );
-                __builder2.AddContent(154, 
+                __builder2.AddContent(112, 
 #nullable restore
 #line 74 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                              item.Text
@@ -420,7 +378,6 @@ using ViewModels.Operation;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(155, "\r\n");
 #nullable restore
 #line 75 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                             }
@@ -428,21 +385,16 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-                __builder2.AddContent(156, "                                        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(157, "\r\n\r\n                                    ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(158, "\r\n                                ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(159, "\r\n                            ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(160, "\r\n                        ");
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(161, "\r\n\r\n                        ");
-                __builder2.OpenElement(162, "button");
-                __builder2.AddAttribute(163, "type", "button");
-                __builder2.AddAttribute(164, "class", "btn btn-success mr-2");
-                __builder2.AddAttribute(165, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+                __builder2.AddMarkupContent(113, "\r\n\r\n                        ");
+                __builder2.OpenElement(114, "button");
+                __builder2.AddAttribute(115, "type", "button");
+                __builder2.AddAttribute(116, "class", "btn btn-success mr-2");
+                __builder2.AddAttribute(117, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 83 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                      search
@@ -451,7 +403,7 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddContent(166, 
+                __builder2.AddContent(118, 
 #nullable restore
 #line 83 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                               Resources.Buttons.Search
@@ -461,11 +413,11 @@ using ViewModels.Operation;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(167, "\r\n                        ");
-                __builder2.OpenElement(168, "button");
-                __builder2.AddAttribute(169, "type", "button");
-                __builder2.AddAttribute(170, "class", "btn btn-light");
-                __builder2.AddAttribute(171, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
+                __builder2.AddMarkupContent(119, "\r\n                        ");
+                __builder2.OpenElement(120, "button");
+                __builder2.AddAttribute(121, "type", "button");
+                __builder2.AddAttribute(122, "class", "btn btn-light");
+                __builder2.AddAttribute(123, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
 #nullable restore
 #line 84 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                               reset
@@ -474,7 +426,7 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddContent(172, 
+                __builder2.AddContent(124, 
 #nullable restore
 #line 84 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                       Resources.Buttons.Cancel
@@ -484,33 +436,24 @@ using ViewModels.Operation;
 #nullable disable
                 );
                 __builder2.CloseElement();
-                __builder2.AddMarkupContent(173, "\r\n\r\n                    ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(174, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(175, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(176, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(177, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(178, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(179, "\r\n\r\n");
-            __builder.OpenElement(180, "div");
-            __builder.AddAttribute(181, "class", "col-12");
-            __builder.AddMarkupContent(182, "\r\n\r\n    ");
-            __builder.OpenElement(183, "div");
-            __builder.AddAttribute(184, "class", "card");
-            __builder.AddMarkupContent(185, "\r\n        ");
-            __builder.OpenElement(186, "div");
-            __builder.AddAttribute(187, "class", "card-body");
-            __builder.AddMarkupContent(188, "\r\n            ");
-            __builder.OpenElement(189, "h4");
-            __builder.AddAttribute(190, "class", "card-title");
-            __builder.AddContent(191, 
+            __builder.AddMarkupContent(125, "\r\n\r\n");
+            __builder.OpenElement(126, "div");
+            __builder.AddAttribute(127, "class", "col-12");
+            __builder.OpenElement(128, "div");
+            __builder.AddAttribute(129, "class", "card");
+            __builder.OpenElement(130, "div");
+            __builder.AddAttribute(131, "class", "card-body");
+            __builder.OpenElement(132, "h4");
+            __builder.AddAttribute(133, "class", "card-title");
+            __builder.AddContent(134, 
 #nullable restore
 #line 97 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                     strTitle
@@ -520,7 +463,7 @@ using ViewModels.Operation;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(192, "<p class=\"card-description\"></p>\r\n");
+            __builder.AddMarkupContent(135, "<p class=\"card-description\"></p>");
 #nullable restore
 #line 98 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
              if (data.Result == null)
@@ -529,10 +472,9 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(193, "                ");
-            __builder.OpenElement(194, "p");
-            __builder.OpenElement(195, "em");
-            __builder.AddContent(196, 
+            __builder.OpenElement(136, "p");
+            __builder.OpenElement(137, "em");
+            __builder.AddContent(138, 
 #nullable restore
 #line 100 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                         Resources.DataDictionary.Loading
@@ -543,7 +485,6 @@ using ViewModels.Operation;
             );
             __builder.CloseElement();
             __builder.CloseElement();
-            __builder.AddMarkupContent(197, "\r\n");
 #nullable restore
 #line 101 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
             }
@@ -553,14 +494,12 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(198, "                ");
-            __builder.OpenElement(199, "p");
-            __builder.AddAttribute(200, "class", "card-description");
-            __builder.AddMarkupContent(201, "\r\n                    ");
-            __builder.OpenElement(202, "a");
-            __builder.AddAttribute(203, "class", "btn btn-primary btn-fw");
-            __builder.AddAttribute(204, "href", "/Operation/Create");
-            __builder.AddContent(205, 
+            __builder.OpenElement(139, "p");
+            __builder.AddAttribute(140, "class", "card-description");
+            __builder.OpenElement(141, "a");
+            __builder.AddAttribute(142, "class", "btn btn-primary btn-fw");
+            __builder.AddAttribute(143, "href", "/Operation/Create");
+            __builder.AddContent(144, 
 #nullable restore
 #line 105 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                 strCreate
@@ -570,10 +509,9 @@ using ViewModels.Operation;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(206, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(207, "\r\n                ");
-            __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.Index.TypeInference.CreateTelerikGrid_0(__builder, 208, 209, 
+            __builder.AddMarkupContent(145, "\r\n                ");
+            __Blazor.WebApplication.EndPoints.BlazorApp.Pages.Operations.Index.TypeInference.CreateTelerikGrid_0(__builder, 146, 147, 
 #nullable restore
 #line 107 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                     data.Result
@@ -581,7 +519,7 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            , 210, Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Telerik.Blazor.Components.GridReadEventArgs>(this, 
+            , 148, Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Telerik.Blazor.Components.GridReadEventArgs>(this, 
 #nullable restore
 #line 108 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                      ReadItems
@@ -589,7 +527,7 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            ), 211, 
+            ), 149, 
 #nullable restore
 #line 109 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                           data.TotalCount
@@ -597,7 +535,7 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            , 212, 
+            , 150, 
 #nullable restore
 #line 110 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                        true
@@ -605,10 +543,9 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            , 213, "no-scroll", 214, (__builder2) => {
-                __builder2.AddMarkupContent(215, "\r\n                        ");
-                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(216);
-                __builder2.AddAttribute(217, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+            , 151, "no-scroll", 152, (__builder2) => {
+                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(153);
+                __builder2.AddAttribute(154, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 113 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                             Resources.DataDictionary.IsActive
@@ -617,12 +554,11 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(218, "Width", "50px");
-                __builder2.AddAttribute(219, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
-                    __builder3.AddMarkupContent(220, "\r\n                                ");
-                    __builder3.OpenElement(221, "input");
-                    __builder3.AddAttribute(222, "type", "checkbox");
-                    __builder3.AddAttribute(223, "checked", 
+                __builder2.AddAttribute(155, "Width", "50px");
+                __builder2.AddAttribute(156, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
+                    __builder3.OpenElement(157, "input");
+                    __builder3.AddAttribute(158, "type", "checkbox");
+                    __builder3.AddAttribute(159, "checked", 
 #nullable restore
 #line 115 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                   (context as OperationDataViewModel).IsActive
@@ -631,15 +567,14 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                     );
-                    __builder3.AddAttribute(224, "disabled", true);
+                    __builder3.AddAttribute(160, "disabled", true);
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(225, "\r\n                            ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(226, "\r\n                        ");
-                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(227);
-                __builder2.AddAttribute(228, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(161, "\r\n                        ");
+                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(162);
+                __builder2.AddAttribute(163, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 118 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                             Resources.Models.Operation.Name
@@ -648,13 +583,11 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(229, "Width", "200px");
-                __builder2.AddAttribute(230, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
-                    __builder3.AddMarkupContent(231, "\r\n                                ");
-                    __builder3.OpenElement(232, "div");
-                    __builder3.AddAttribute(233, "class", "text-left");
-                    __builder3.AddMarkupContent(234, "\r\n                                    ");
-                    __builder3.AddContent(235, 
+                __builder2.AddAttribute(164, "Width", "200px");
+                __builder2.AddAttribute(165, "Template", (Microsoft.AspNetCore.Components.RenderFragment<System.Object>)((context) => (__builder3) => {
+                    __builder3.OpenElement(166, "div");
+                    __builder3.AddAttribute(167, "class", "text-left");
+                    __builder3.AddContent(168, 
 #nullable restore
 #line 121 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                       (context as OperationDataViewModel).Name
@@ -663,15 +596,13 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                     );
-                    __builder3.AddMarkupContent(236, "\r\n                                ");
                     __builder3.CloseElement();
-                    __builder3.AddMarkupContent(237, "\r\n                            ");
                 }
                 ));
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(238, "\r\n                        ");
-                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(239);
-                __builder2.AddAttribute(240, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(169, "\r\n                        ");
+                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(170);
+                __builder2.AddAttribute(171, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 125 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                              nameof(OperationDataViewModel.DisplayName)
@@ -680,7 +611,7 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(241, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddAttribute(172, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 125 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                                   Resources.DataDictionary.DisplayName
@@ -689,11 +620,11 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(242, "Width", "300px");
+                __builder2.AddAttribute(173, "Width", "300px");
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(243, "\r\n                        ");
-                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(244);
-                __builder2.AddAttribute(245, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(174, "\r\n                        ");
+                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(175);
+                __builder2.AddAttribute(176, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 126 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                              nameof(OperationDataViewModel.Parent)
@@ -702,7 +633,7 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(246, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddAttribute(177, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 126 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                              Resources.Models.Operation.Parent
@@ -711,11 +642,11 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(247, "Width", "200px");
+                __builder2.AddAttribute(178, "Width", "200px");
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(248, "\r\n                        ");
-                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(249);
-                __builder2.AddAttribute(250, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddMarkupContent(179, "\r\n                        ");
+                __builder2.OpenComponent<Telerik.Blazor.Components.GridColumn>(180);
+                __builder2.AddAttribute(181, "Field", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 127 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                              nameof(OperationDataViewModel.AccessTypeValue)
@@ -724,7 +655,7 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(251, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
+                __builder2.AddAttribute(182, "Title", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<System.String>(
 #nullable restore
 #line 127 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
                                                                                                       Resources.Models.Operation.AccessType
@@ -733,12 +664,10 @@ using ViewModels.Operation;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(252, "Width", "200px");
+                __builder2.AddAttribute(183, "Width", "200px");
                 __builder2.CloseComponent();
-                __builder2.AddMarkupContent(253, "\r\n                    ");
             }
             );
-            __builder.AddMarkupContent(254, "\r\n");
 #nullable restore
 #line 130 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Index.razor"
             }
@@ -746,11 +675,8 @@ using ViewModels.Operation;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(255, "        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(256, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(257, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998

@@ -120,10 +120,9 @@ using Telerik.Blazor.Components;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(0, "    ");
-            __builder.OpenElement(1, "input");
-            __builder.AddAttribute(2, "type", "text");
-            __builder.AddAttribute(3, "id", 
+            __builder.OpenElement(0, "input");
+            __builder.AddAttribute(1, "type", "text");
+            __builder.AddAttribute(2, "id", 
 #nullable restore
 #line 3 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
                             Name
@@ -132,9 +131,9 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
             );
-            __builder.AddAttribute(4, "class", "form-control datepicker");
-            __builder.AddAttribute(5, "readonly", true);
-            __builder.AddAttribute(6, "onblur", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.FocusEventArgs>(this, 
+            __builder.AddAttribute(3, "class", "form-control datepicker");
+            __builder.AddAttribute(4, "readonly", true);
+            __builder.AddAttribute(5, "onblur", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.FocusEventArgs>(this, 
 #nullable restore
 #line 3 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
                                                                                     setValue
@@ -144,7 +143,6 @@ using Telerik.Blazor.Components;
 #nullable disable
             ));
             __builder.CloseElement();
-            __builder.AddMarkupContent(7, "\r\n");
 #nullable restore
 #line 4 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
 }
@@ -154,8 +152,7 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(8, "    ");
-            __Blazor.WebApplication.EndPoints.BlazorApp.Shared.CustomInputDate.TypeInference.CreateInputDate_0(__builder, 9, 10, 
+            __Blazor.WebApplication.EndPoints.BlazorApp.Shared.CustomInputDate.TypeInference.CreateInputDate_0(__builder, 6, 7, 
 #nullable restore
 #line 7 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
                     Name
@@ -163,7 +160,7 @@ else
 #line default
 #line hidden
 #nullable disable
-            , 11, "form-control", 12, Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.FocusEventArgs>(this, 
+            , 8, "form-control", 9, Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.FocusEventArgs>(this, 
 #nullable restore
 #line 7 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
                                                                                 setValue
@@ -171,7 +168,7 @@ else
 #line default
 #line hidden
 #nullable disable
-            ), 13, 
+            ), 10, 
 #nullable restore
 #line 7 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
                                                             DateValue
@@ -179,8 +176,7 @@ else
 #line default
 #line hidden
 #nullable disable
-            , 14, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => DateValue = __value, DateValue)), 15, () => DateValue);
-            __builder.AddMarkupContent(16, "\r\n");
+            , 11, Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.CreateInferredEventCallback(this, __value => DateValue = __value, DateValue)), 12, () => DateValue);
 #nullable restore
 #line 8 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Shared\CustomInputDate.razor"
 }

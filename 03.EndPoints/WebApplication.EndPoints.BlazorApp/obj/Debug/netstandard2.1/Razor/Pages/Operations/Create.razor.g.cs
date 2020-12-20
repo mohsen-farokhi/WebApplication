@@ -124,19 +124,15 @@ using Telerik.Blazor.Components;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(0, "\r\n");
-            __builder.OpenElement(1, "div");
-            __builder.AddAttribute(2, "class", "col-12 grid-margin");
-            __builder.AddMarkupContent(3, "\r\n    ");
+            __builder.OpenElement(0, "div");
+            __builder.AddAttribute(1, "class", "col-12 grid-margin");
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "card");
             __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "card");
-            __builder.AddMarkupContent(6, "\r\n        ");
-            __builder.OpenElement(7, "div");
-            __builder.AddAttribute(8, "class", "card-body");
-            __builder.AddMarkupContent(9, "\r\n            ");
-            __builder.OpenElement(10, "h4");
-            __builder.AddAttribute(11, "class", "card-title");
-            __builder.AddContent(12, 
+            __builder.AddAttribute(5, "class", "card-body");
+            __builder.OpenElement(6, "h4");
+            __builder.AddAttribute(7, "class", "card-title");
+            __builder.AddContent(8, 
 #nullable restore
 #line 14 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Create.razor"
                                     strTitle
@@ -146,9 +142,9 @@ using Telerik.Blazor.Components;
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(13, "\r\n            ");
-            __builder.OpenComponent<WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor>(14);
-            __builder.AddAttribute(15, "Model", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<ViewModels.Operation.CreateViewModel>(
+            __builder.AddMarkupContent(9, "\r\n            ");
+            __builder.OpenComponent<WebApplication.EndPoints.BlazorApp.Pages.Operations.FormEditor>(10);
+            __builder.AddAttribute(11, "Model", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<ViewModels.Operation.CreateViewModel>(
 #nullable restore
 #line 15 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Create.razor"
                                Model
@@ -157,7 +153,7 @@ using Telerik.Blazor.Components;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(16, "OnValidSubmit", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, 
+            __builder.AddAttribute(12, "OnValidSubmit", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create(this, 
 #nullable restore
 #line 15 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\Pages\Operations\Create.razor"
                                                      Submit
@@ -167,11 +163,8 @@ using Telerik.Blazor.Components;
 #nullable disable
             )));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(17, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(18, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(19, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998
