@@ -2,15 +2,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using WebApplication.Domain.DomainServices;
 using WebApplication.Domain.Abstracts.DomainServices;
 using WebApplication.Domain.Abstracts.UnitOfWork;
 using WebApplication.Infrastructures.DataAccess.UnitOfWork;
 using WebApplication.Infrastructures.DataAccess.Tools;
 using WebApplication.Infrastructures.DataAccess.Tools.Enums;
-using Microsoft.EntityFrameworkCore;
-using WebApplication.Infrastructures.DataAccess.DbContexts;
 using WebApplication.EndPoints.Server.Middlewares;
 
 namespace WebApplication.EndPoints.Server
