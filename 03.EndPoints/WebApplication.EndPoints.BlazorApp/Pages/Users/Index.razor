@@ -148,12 +148,12 @@
 
 @code {
 
-    protected ViewDataResult<UserDataViewModel> data { get; set; }
+    protected ViewPagingDataResult<UserDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
 
     protected override void OnInitialized()
     {
-        data = new ViewDataResult<UserDataViewModel>();
+        data = new ViewPagingDataResult<UserDataViewModel>();
         request = new SearchViewModel();
     }
 
@@ -178,7 +178,7 @@
         var response =
             await client.PostAsJsonAsync($"Users/GetData", request);
 
-        data = await response.Content.ReadFromJsonAsync<ViewDataResult<UserDataViewModel>>();
+        data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<UserDataViewModel>>();
     }
 
     private async Task remove(int userId)

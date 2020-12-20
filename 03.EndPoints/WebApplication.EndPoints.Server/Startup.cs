@@ -11,6 +11,7 @@ using WebApplication.Infrastructures.DataAccess.Tools;
 using WebApplication.Infrastructures.DataAccess.Tools.Enums;
 using Microsoft.EntityFrameworkCore;
 using WebApplication.Infrastructures.DataAccess.DbContexts;
+using WebApplication.EndPoints.Server.Middlewares;
 
 namespace WebApplication.EndPoints.Server
 {
@@ -70,16 +71,18 @@ namespace WebApplication.EndPoints.Server
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
 
             app.UseCors(policyName: AdminCorsPolicy);
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.RegisterExceptionHandler();
 
             app.UseEndpoints(endpoints =>
             {

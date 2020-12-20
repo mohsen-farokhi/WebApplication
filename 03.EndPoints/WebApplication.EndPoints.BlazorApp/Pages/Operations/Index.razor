@@ -134,12 +134,12 @@
 
 @code {
 
-    protected ViewDataResult<OperationDataViewModel> data { get; set; }
+    protected ViewPagingDataResult<OperationDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
 
     protected override void OnInitialized()
     {
-        data = new ViewDataResult<OperationDataViewModel>();
+        data = new ViewPagingDataResult<OperationDataViewModel>();
         request = new SearchViewModel();
     }
 
@@ -164,7 +164,7 @@
         var response =
             await client.PostAsJsonAsync($"Operations/GetData", request);
 
-        data = await response.Content.ReadFromJsonAsync<ViewDataResult<OperationDataViewModel>>();
+        data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<OperationDataViewModel>>();
     }
 
     private async Task remove(int operationId)

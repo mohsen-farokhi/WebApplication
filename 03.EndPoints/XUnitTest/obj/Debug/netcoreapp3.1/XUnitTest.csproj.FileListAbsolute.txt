@@ -90,3 +90,9 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTes
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.AssemblyInfo.cs
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csproj.CopyComplete
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.genruntimeconfig.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\XUnitTest.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Moq.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.pdb

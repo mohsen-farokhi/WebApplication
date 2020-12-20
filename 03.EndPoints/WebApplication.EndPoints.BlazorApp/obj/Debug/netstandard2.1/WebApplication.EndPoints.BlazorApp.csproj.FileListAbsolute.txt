@@ -490,8 +490,6 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\Rz6mj4wCU6_oiQ3xcoFHAuaP9MGizwnWmpb9PYjKoUA=.hash
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\RazorDeclaration\Shared\CustomInputDate.razor.g.cs
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\Razor\Shared\CustomInputDate.razor.g.cs
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\M-g-OOTD8uIeEuWPYbF3pLZBkYTMh_tTBEjABdhV2XU=.hash
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\CJUuwFmeT72iih5cjKj3NkTeAvOve0SlTYOhXvCIAT4=.hash
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Extensions.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Extensions.pdb
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Extensions.dll.gz
@@ -504,6 +502,8 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\compressed\_framework\_bin\Extensions.pdb.br
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\qwG8On_QBUT5T9EsvpVmdq4aj9mB1hzYrSeiQaifJaM=.hash
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\lETV6IrXtzNpvNsEKMj3pCUGWMQax7zuZ0z4aUXYnec=.hash
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\jdjjx9Pg37u29K1CRe9Uu3Wu-0Ap3sXtcvLN7iw2gYA=.hash
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\HJ480q_aoKR4Jdn5EqNz-PpcB0fmGKEUiTXmDEr4nGw=.hash
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\sZ1pUMco_j0U4Istx3yftmsQFXH7PoHni83s7083QQk=.hash
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\l0eQKTT1D8IasAEdWtmBUDjfH-IyWcCcjyktxKpBJBI=.hash
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\2MaEKsXDFY9v8jsWWXcO52v-9vK4LBjguPkHKe7i2IQ=.hash
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\RcPU020F418fS_h9go23nKgwHVGnuQjDMoMv4-pgfhU=.hash
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\9LgPB4pX5-hLuepG-JWcwNFpgSayJ_313gkGenDcK6U=.hash
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.BlazorApp\obj\Debug\netstandard2.1\integrity\4AeD5P39VTrtrc_DCDV5z4MMtzQFEkgzhGoY9o1OrCA=.hash
