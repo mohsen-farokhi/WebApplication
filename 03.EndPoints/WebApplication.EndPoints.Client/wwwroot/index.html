@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BlazorApp</title>
+    <base href="/" />
+
+    <link rel="stylesheet" href="/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/vendors/typicons/typicons.css">
+    <link rel="stylesheet" href="/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css" />
+    <link rel="stylesheet" href="/assets/css/shared/style.css">
+    <link rel="stylesheet" href="/assets/css/demo_1/style.css">
+    <link href="/datepicker/persian-datepicker.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css" />
+    <script src="/assets/jquery/jquery-3.5.1.min.js"></script>
+
+    <link href="WebApplication.EndPoints.Client.styles.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+</head>
+
+<body>
+
+    <script>
+
+        function loadScript(url) {
+
+            let myScript = document.createElement("script");
+            myScript.src = url;
+            document.body.appendChild(myScript);
+
+        }
+
+        function includeScripts() {
+
+            loadScript('/assets/js/shared/off-canvas.js');
+            loadScript('/assets/js/shared/misc.js');
+            loadScript('/assets/js/demo_1/dashboard.js');
+
+        };
+
+        function includeDatePicker() {
+
+            loadScript('/datepicker/persian-date.min.js');
+            loadScript('/datepicker/persian-datepicker.js');
+
+            $(document).ready(function () {
+                setTimeout(() => {
+                    $(".datepicker").pDatepicker({
+                        initialValue: false,
+                        format: 'YYYY/MM/DD',
+                        onSelect: function (unixDate) {
+
+                            var pdate = new persianDate(unixDate);
+                            pdate.formatPersian = this.persianDigit;
+                            var date = pdate.format('YYYY/MM/DD');
+                            var element = this.model.input.elem;
+                            $(element).focus();
+                            DotNet.invokeMethodAsync("WebApplication.EndPoints.BlazorApp", "SetInputDateValue", date);
+
+
+                        }
+                    });
+
+                }, 1000);
+            });
+
+        }
+
+
+        function includeCss() {
+
+            var element = document.createElement("link");
+            element.setAttribute("rel", "stylesheet");
+            element.setAttribute("type", "text/css");
+            element.setAttribute("href", "/assets/css/Site.css");
+            document.getElementsByTagName("head")[0].appendChild(element);
+
+            $('body').addClass('rtl');
+
+        }
+
+    </script>
+
+    <app>Loading...</app>
+    <script src="/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="/assets/vendors/chart.js/chart.min.js"></script>
+    <script src="/assets/vendors/justgage/raphael-2.1.4.min.js"></script>
+    <script src="/assets/vendors/justgage/justgage.js"></script>
+    <script src="/assets/js/shared/settings.js"></script>
+    <script src="/assets/js/shared/todolist.js"></script>
+    <script src="/assets/js/shared/widgets.js"></script>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js"></script>
+    <script src="/assets/jquery/jquery.validate.min.js"></script>
+    <script src="/assets/jquery/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        window.blazorCulture = {
+            get: () => window.localStorage['BlazorCulture'],
+            set: (value) => window.localStorage['BlazorCulture'] = value
+        };
+    </script>
+
+</body>
+
+</html>

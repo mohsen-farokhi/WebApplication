@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "03.EndPoints\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions", "03.EndPoints\Extensions\Extensions.csproj", "{55C50EEE-7C4C-4F0D-A3CF-09FBB52E2A50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest", "03.EndPoints\XUnitTest\XUnitTest.csproj", "{76844051-4364-448F-B92A-A788308E9077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest", "03.EndPoints\XUnitTest\XUnitTest.csproj", "{76844051-4364-448F-B92A-A788308E9077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication.EndPoints.Client", "03.EndPoints\WebApplication.EndPoints.Client\WebApplication.EndPoints.Client.csproj", "{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{76844051-4364-448F-B92A-A788308E9077}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76844051-4364-448F-B92A-A788308E9077}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76844051-4364-448F-B92A-A788308E9077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{0B11163B-9F07-4A04-9199-29199630766E} = {048959FE-6D3D-453F-B762-AA9D7CE6C6C8}
 		{55C50EEE-7C4C-4F0D-A3CF-09FBB52E2A50} = {048959FE-6D3D-453F-B762-AA9D7CE6C6C8}
 		{76844051-4364-448F-B92A-A788308E9077} = {048959FE-6D3D-453F-B762-AA9D7CE6C6C8}
+		{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E} = {048959FE-6D3D-453F-B762-AA9D7CE6C6C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09E19372-E8B6-420B-B913-C2D77A0BC500}

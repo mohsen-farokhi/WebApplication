@@ -43,4 +43,6 @@ table th {
     direction: ltr;
 }
 
-
+.sidebar {
+    font-family: "webYekan", Tahoma, Arial !important;
+}

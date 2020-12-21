@@ -33,7 +33,8 @@ namespace WebApplication.EndPoints.Server
                     builder =>
                     {
                         builder
-                            .WithOrigins("http://localhost:5000")
+                            //.WithOrigins("http://localhost:5000")
+                            .WithOrigins("https://localhost:5001")
                             .AllowAnyHeader()
                             .AllowAnyMethod()
                             //.AllowCredentials()

@@ -1,0 +1,152 @@
+﻿<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+
+                <div class="form-check form-check-flat">
+                    <label class="form-check-label">
+                        <InputCheckbox id="isActive" class="form-check-input" @bind-Value="Model.IsActive"></InputCheckbox>@Resources.DataDictionary.IsActive<i class="input-helper"></i>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.FirstName)">@Resources.Models.User.FirstName</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.FirstName)" class="form-control" @bind-Value="Model.FirstName"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.FirstName" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.LastName)">@Resources.Models.User.LastName</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.LastName)" class="form-control" @bind-Value="Model.LastName"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.LastName" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.EmailAddress)">@Resources.Models.User.EmailAddress</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.EmailAddress)" class="form-control" @bind-Value="Model.EmailAddress"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.EmailAddress" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.NationalCode)">@Resources.Models.User.NationalCode</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.NationalCode)" class="form-control" @bind-Value="Model.NationalCode"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.NationalCode" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.CellPhoneNumber)">@Resources.Models.User.CellPhoneNumber</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.CellPhoneNumber)" class="form-control" @bind-Value="Model.CellPhoneNumber"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.CellPhoneNumber" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.Username)">@Resources.Models.User.Username</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.Username)" class="form-control" @bind-Value="Model.Username"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.Username" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.Password)">@Resources.Models.User.Password</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.Password)" class="form-control" @bind-Value="Model.Password"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.Password" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.UserType)">@Resources.Models.User.UserType</label>
+                <div class="col-sm-9">
+                    <InputSelectEnum id="@nameof(Model.UserType)" class="form-control" @bind-Value="Model.UserType"></InputSelectEnum>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.UserType" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.BirthDate)">@Resources.Models.User.BirthDate</label>
+                <div class="col-sm-9">
+                    <CustomInputDate Name="@nameof(Model.BirthDate)" OnBlur="setBirthDate" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success mr-2">@Resources.Buttons.Submit</button>
+    <a class="btn btn-light" href="/Users">@Resources.Buttons.Cancel</a>
+
+</EditForm>
+@code
+{
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+    [Parameter]
+    public ViewModels.User.CreateViewModel Model { get; set; }
+
+
+    private void HandleValidSubmit()
+    {
+        OnValidSubmit.InvokeAsync(null);
+    }
+
+    private void setBirthDate(DateTime? value)
+    {
+        Model.BirthDate = value;
+    }
+
+}
