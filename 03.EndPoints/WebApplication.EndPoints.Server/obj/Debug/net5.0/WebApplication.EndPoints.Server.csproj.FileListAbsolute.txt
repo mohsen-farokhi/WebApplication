@@ -1,3 +1,9 @@
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.csprojAssemblyReference.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.GeneratedMSBuildEditorConfig.editorconfig
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.AssemblyInfoInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.AssemblyInfo.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.MvcApplicationPartsAssemblyInfo.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\net5.0\appsettings.Development.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\net5.0\appsettings.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\net5.0\WebApplication.EndPoints.Server.exe
@@ -49,12 +55,6 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\net5.0\Resources.pdb
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\net5.0\WebApplication.Domain.Entities.pdb
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\bin\Debug\net5.0\fa-IR\Resources.resources.dll
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.csprojAssemblyReference.cache
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.GeneratedMSBuildEditorConfig.editorconfig
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.AssemblyInfoInputs.cache
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.AssemblyInfo.cs
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.csproj.CoreCompileInputs.cache
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\WebApplication.EndPoints.Server.MvcApplicationPartsAssemblyInfo.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\staticwebassets\WebApplication.EndPoints.Server.StaticWebAssets.Manifest.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\staticwebassets\WebApplication.EndPoints.Server.StaticWebAssets.xml
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Server\obj\Debug\net5.0\scopedcss\bundle\WebApplication.EndPoints.Server.styles.css

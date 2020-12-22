@@ -1,0 +1,40 @@
+﻿@page "/group/create"
+@inject NavigationManager navigationManager
+
+@{
+    string strTitle =
+        string.Format("{0} {1}",
+        Resources.Actions.CreateOf,
+        Resources.Models.Groups.EntityName);
+}
+
+<div class="col-12 grid-margin">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@strTitle</h4>
+            <FormEditor Model="Model" OnValidSubmit="Submit" />
+        </div>
+    </div>
+</div>
+
+@code {
+
+    int groupId { get; set; }
+    public ViewModels.Group.CreateViewModel Model { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Model =
+            new ViewModels.Group.CreateViewModel();
+    }
+
+    private async Task Submit()
+    {
+
+        var response =
+            await client.PostAsJsonAsync("Groups", Model);
+
+        navigationManager.NavigateTo(uri: "/groups", forceLoad: false);
+    }
+
+}

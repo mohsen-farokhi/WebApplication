@@ -1,0 +1,58 @@
+﻿<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+
+                <div class="form-check form-check-flat">
+                    <label class="form-check-label">
+                        <InputCheckbox id="isActive" class="form-check-input" @bind-Value="Model.IsActive"></InputCheckbox>@Resources.DataDictionary.IsActive<i class="input-helper"></i>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.Name)">@Resources.DataDictionary.Name</label>
+                <div class="col-sm-9">
+                    <InputText id="@nameof(Model.Name)" class="form-control" @bind-Value="Model.Name"></InputText>
+                    <div class="error mt-2 text-danger">
+                        <ValidationMessage For="() => Model.Name" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.Description)">@Resources.DataDictionary.Description</label>
+                <div class="col-sm-9">
+                    <textarea id="@nameof(Model.Description)" class="form-control" @bind="Model.Description" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success mr-2">@Resources.Buttons.Submit</button>
+    <a class="btn btn-light" href="/groups">@Resources.Buttons.Cancel</a>
+
+</EditForm>
+
+@code
+{
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+    [Parameter]
+    public ViewModels.Group.CreateViewModel Model { get; set; }
+
+    private void HandleValidSubmit()
+    {
+        OnValidSubmit.InvokeAsync(null);
+    }
+
+}

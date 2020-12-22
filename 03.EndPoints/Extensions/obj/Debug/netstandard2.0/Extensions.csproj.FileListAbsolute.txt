@@ -1,7 +1,6 @@
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\bin\Debug\netstandard2.0\Extensions.deps.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\bin\Debug\netstandard2.0\Extensions.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\bin\Debug\netstandard2.0\Extensions.pdb
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\obj\Debug\netstandard2.0\Extensions.csprojAssemblyReference.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\obj\Debug\netstandard2.0\Extensions.AssemblyInfoInputs.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\obj\Debug\netstandard2.0\Extensions.AssemblyInfo.cs
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Extensions\obj\Debug\netstandard2.0\Extensions.csproj.CoreCompileInputs.cache

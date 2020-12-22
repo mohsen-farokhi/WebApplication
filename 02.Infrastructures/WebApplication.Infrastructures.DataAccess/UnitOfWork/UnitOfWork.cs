@@ -80,5 +80,23 @@ namespace WebApplication.Infrastructures.DataAccess.UnitOfWork
             }
         }
         // **************************************************
+
+        // **************************************************
+        private IGroupRepository _groupRepository;
+
+        public IGroupRepository GroupRepository
+        {
+            get
+            {
+                if (_groupRepository == null)
+                {
+                    _groupRepository =
+                        new GroupRepository(DatabaseContext);
+                }
+
+                return _groupRepository;
+            }
+        }
+        // **************************************************
     }
 }

@@ -5,6 +5,8 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTes
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\XUnitTest.runtimeconfig.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\XUnitTest.runtimeconfig.dev.json
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\XUnitTest.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\XUnitTest.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -14,6 +16,7 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTes
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\testhost.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Moq.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
@@ -88,11 +91,8 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTes
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csprojAssemblyReference.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.AssemblyInfoInputs.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.AssemblyInfo.cs
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csproj.CopyComplete
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.genruntimeconfig.cache
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\XUnitTest.pdb
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\bin\Debug\netcoreapp3.1\Moq.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csproj.CopyComplete
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.genruntimeconfig.cache

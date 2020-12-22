@@ -48,7 +48,6 @@ namespace WebApplication.EndPoints.Server.Controllers
             };
 
             return result;
-
         }
 
         [HttpPost]

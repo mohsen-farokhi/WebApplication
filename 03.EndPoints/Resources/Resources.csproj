@@ -45,6 +45,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Cultures.resx</DependentUpon>
     </Compile>
+    <Compile Update="Models\Groups.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Groups.resx</DependentUpon>
+    </Compile>
     <Compile Update="Models\Operation.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -92,6 +97,10 @@
     <EmbeddedResource Update="Models\Cultures.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Cultures.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Models\Groups.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Groups.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Models\Operation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

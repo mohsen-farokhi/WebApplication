@@ -1,7 +1,3 @@
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\Resources.deps.json
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\Resources.dll
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\Resources.pdb
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\fa-IR\Resources.resources.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.csprojAssemblyReference.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.Actions.resources
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.Buttons.resources
@@ -25,6 +21,12 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resource
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.AssemblyInfoInputs.cache
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.AssemblyInfo.cs
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.csproj.CoreCompileInputs.cache
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\Resources.deps.json
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\Resources.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\Resources.pdb
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\bin\Debug\netstandard2.0\fa-IR\Resources.resources.dll
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.Models.Groups.resources
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.Models.Groups.fa-IR.resources
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\fa-IR\Resources.resources.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\Resources\obj\Debug\netstandard2.0\Resources.pdb

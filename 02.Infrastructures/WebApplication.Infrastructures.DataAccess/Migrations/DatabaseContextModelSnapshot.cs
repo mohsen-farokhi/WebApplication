@@ -262,27 +262,27 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         {
                             Id = 1,
                             DisplayName = "فارسی",
-                            InsertDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 215, DateTimeKind.Local).AddTicks(2583),
+                            InsertDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 420, DateTimeKind.Local).AddTicks(2083),
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = true,
                             Lcid = 1065,
                             Name = "fa-IR",
                             NativeName = "فارسی (ایران)",
-                            UpdateDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 219, DateTimeKind.Local).AddTicks(458)
+                            UpdateDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 434, DateTimeKind.Local).AddTicks(254)
                         },
                         new
                         {
                             Id = 2,
                             DisplayName = "English",
-                            InsertDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 219, DateTimeKind.Local).AddTicks(9973),
+                            InsertDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 434, DateTimeKind.Local).AddTicks(8169),
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = true,
                             Lcid = 1033,
                             Name = "en-US",
                             NativeName = "English (United States)",
-                            UpdateDateTime = new DateTime(2020, 11, 3, 9, 2, 56, 220, DateTimeKind.Local).AddTicks(13)
+                            UpdateDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 434, DateTimeKind.Local).AddTicks(8190)
                         });
                 });
 
@@ -297,10 +297,25 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         .HasColumnType("nvarchar(1000)")
                         .HasMaxLength(1000);
 
+                    b.Property<DateTime>("InsertDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSystem")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
+
+                    b.Property<DateTime>("UpdateDateTime")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

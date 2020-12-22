@@ -8,5 +8,6 @@ namespace WebApplication.Domain.Abstracts.UnitOfWork
         IOperationRepository OperationRepository { get; }
         ICultureRepository CultureRepository { get; }
         IUserRepository UserRepository { get; }
+        IGroupRepository GroupRepository { get; }
     }
 }

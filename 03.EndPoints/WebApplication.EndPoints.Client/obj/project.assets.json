@@ -4798,7 +4798,6 @@
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.1",
       "Microsoft.AspNetCore.Localization >= 2.2.0",
       "Microsoft.Extensions.Localization >= 5.0.1",
-      "Resources >= 1.0.0",
       "System.Net.Http.Json >= 5.0.0",
       "Telerik.UI.for.Blazor >= 2.17.0",
       "ViewModels >= 1.0.0"
@@ -4837,9 +4836,6 @@
           "projectReferences": {
             "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\Extensions\\Extensions.csproj": {
               "projectPath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\Extensions\\Extensions.csproj"
-            },
-            "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\Resources\\Resources.csproj": {
-              "projectPath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\Resources\\Resources.csproj"
             },
             "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\ViewModels\\ViewModels.csproj": {
               "projectPath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\ViewModels\\ViewModels.csproj"

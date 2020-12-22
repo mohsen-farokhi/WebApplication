@@ -1,0 +1,139 @@
+﻿@page "/groups"
+@using ViewModels.Group
+
+@{
+    string strTitle =
+        string.Format("{0} {1}",
+        Resources.Actions.ListOf,
+        Resources.Models.Groups.EntitiesName);
+
+    string strCreate =
+        string.Format("{0} {1}",
+        Resources.Actions.CreateOf,
+        Resources.Models.Groups.EntityName);
+}
+
+<div class="col-12">
+    <div class="accordion basic-accordion" id="accordion" role="tablist">
+        <div class="card">
+            <div class="card-header" role="tab" id="heading">
+                <h6 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                        <i class="card-icon mdi mdi-magnify"></i>@Resources.Buttons.Search
+                    </a>
+                </h6>
+            </div>
+            <div id="collapse" class="collapse" role="tabpanel" aria-labelledby="heading" data-parent="#accordion">
+                <div class="card-body">
+                    <EditForm Model="request">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+
+                                    <div class="form-check form-check-flat">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" id="@nameof(request.IsActive)" class="form-check-input" @bind="request.IsActive" />@Resources.DataDictionary.IsActive<i class="input-helper"></i>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label" for="@nameof(request.Name)">@Resources.DataDictionary.Name</label>
+                                    <div class="col-sm-9">
+                                        <InputText id="@nameof(request.Name)" class="form-control" @bind-Value="request.Name"></InputText>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-success mr-2" @onclick="search">@Resources.Buttons.Search</button>
+                        <button type="button" class="btn btn-light" @onclick="reset">@Resources.Buttons.Cancel</button>
+
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@strTitle</h4><p class="card-description"></p>
+            @if (data.Result == null)
+            {
+                <p><em>@Resources.DataDictionary.Loading</em></p>
+            }
+            else
+            {
+                <p class="card-description">
+                    <a class="btn btn-primary btn-fw" href="/Group/Create">@strCreate</a>
+                </p>
+                <TelerikGrid Data="@data.Result"
+                             OnRead=@ReadItems
+                             TotalCount="@data.TotalCount"
+                             Pageable="true"
+                             Class="no-scroll">
+                    <GridColumns>
+                        <GridColumn Title="@Resources.DataDictionary.IsActive" Width="80px">
+                            <Template>
+                                <input type="checkbox" checked="@((context as GroupDataViewModel).IsActive)" disabled />
+                            </Template>
+                        </GridColumn>
+                        <GridColumn Title="@Resources.DataDictionary.Name" Width="300px" Field="@(nameof(GroupDataViewModel.Name))"/>
+                    </GridColumns>
+                </TelerikGrid>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+
+    protected ViewPagingDataResult<GroupDataViewModel> data { get; set; }
+    protected SearchViewModel request { get; set; }
+
+    protected override void OnInitialized()
+    {
+        data = new ViewPagingDataResult<GroupDataViewModel>();
+        request = new SearchViewModel();
+    }
+
+    protected async Task ReadItems(GridReadEventArgs args = null)
+    {
+        request.Page = args.Request.Page;
+        request.TotalCount = data.TotalCount;
+
+        await getData();
+    }
+
+    private async Task reset()
+    {
+        request = new SearchViewModel();
+        await getData();
+    }
+
+    private async Task search() => await getData();
+
+    private async Task getData()
+    {
+        var response =
+            await client.PostAsJsonAsync($"Groups/GetData", request);
+
+        data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<GroupDataViewModel>>();
+    }
+
+    private async Task remove(int groupId)
+    {
+        await client.DeleteAsync($"Groups?groupId={groupId}");
+        await OnInitializedAsync();
+    }
+
+}

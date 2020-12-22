@@ -3,7 +3,7 @@ using WebApplication.Domain.Entities.Base;
 
 namespace WebApplication.Domain.Entities
 {
-    public class Group : BaseEntity
+    public class Group : BaseExtendedEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
