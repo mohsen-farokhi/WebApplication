@@ -17,7 +17,7 @@
       "url": "_content\/Telerik.UI.for.Blazor\/js\/telerik-blazor.js"
     },
     {
-      "hash": "sha256-BEqMtvly3KJ71Knr0O9kCcnVJMSK\/KMB5vbLz0NQj8w=",
+      "hash": "sha256-zQVK+oHiuHgTVINeqxq1qArIDR48r5WMWZcf1UOmVd4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -3729,7 +3729,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-WEmHpZ9erQZCu7eHEICKBLkxyG+w2o3p8P5eiO1gc6E=",
+      "hash": "sha256-IQQdcgIiLUGWAbq7+JRqCmJ5\/lNP3de8FFh3Sb3s0aU=",
       "url": "index.html"
     },
     {
@@ -3745,5 +3745,5 @@
       "url": "WebApplication.EndPoints.Client.bundle.scp.css"
     }
   ],
-  "version": "vYSdi0i1"
+  "version": "p+kIhctS"
 };

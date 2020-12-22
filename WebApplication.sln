@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions", "03.EndPoints\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest", "03.EndPoints\XUnitTest\XUnitTest.csproj", "{76844051-4364-448F-B92A-A788308E9077}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication.EndPoints.Client", "03.EndPoints\WebApplication.EndPoints.Client\WebApplication.EndPoints.Client.csproj", "{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.EndPoints.Client", "03.EndPoints\WebApplication.EndPoints.Client\WebApplication.EndPoints.Client.csproj", "{E5BC93A7-DB95-42F6-8E08-C21F4EC1615E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

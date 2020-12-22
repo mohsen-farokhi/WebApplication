@@ -5,7 +5,7 @@
   ],
   "debugBuild": true,
   "entryAssembly": "WebApplication.EndPoints.Client",
-  "icuDataMode": 0,
+  "icuDataMode": 1,
   "linkerEnabled": false,
   "resources": {
     "assembly": {

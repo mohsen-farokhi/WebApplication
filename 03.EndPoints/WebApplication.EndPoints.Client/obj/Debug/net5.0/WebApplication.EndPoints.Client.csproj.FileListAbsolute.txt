@@ -3,7 +3,6 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\WebApplication.EndPoints.Client.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\ref\WebApplication.EndPoints.Client.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\WebApplication.EndPoints.Client.pdb
-H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\wwwroot\service-worker-assets.js
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\wwwroot\service-worker.js
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\wwwroot\_framework\WebApplication.EndPoints.Client.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\wwwroot\_framework\WebApplication.EndPoints.Client.pdb
@@ -715,4 +714,5 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\ref\WebApplication.EndPoints.Client.dll
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\WebApplication.EndPoints.Client.pdb
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\wwwroot\service-worker-assets.js
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\service-worker-assets.js

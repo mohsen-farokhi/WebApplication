@@ -1,12 +1,12 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Rz6mj4wCU6_oiQ3xcoFHAuaP9MGizwnWmpb9PYjKoUA=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\R_8ltpRObwmXUvr3wGldtemZcm9_2hGz5No5fDejEAA=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\Resources\\bin\\Debug\\netstandard2.0\\fa-IR\\Resources.resources.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/fa-IR\/Resources.resources.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\fbt2uztkD0FdnAGeEN5iqnbkIIGIaQAe1YvFIlne4P8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\aVeMVcw0ohjFiUpKbR44l6d8ZifHE0cgjfWmhPgBsQ4=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication.EndPoints.BlazorApp.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication.EndPoints.BlazorApp.dll.br"
     },
@@ -226,12 +226,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Humanizer.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\gv2PazZ6wADSUqs3RqlazDsfsBr9Dkuz0zTCdkRUsQs=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\JTN5LCVDX5us_oGIZk-YSS_LSL8pp00mRB6QFLwnoHQ=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Resources.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Resources.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\qwG8On_QBUT5T9EsvpVmdq4aj9mB1hzYrSeiQaifJaM=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\RBGRjEEcdvy0TEUYMoq0WCYppTxR91_0F7r97OyVSl0=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Extensions.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Extensions.dll.br"
     },
@@ -261,7 +261,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\l0eQKTT1D8IasAEdWtmBUDjfH-IyWcCcjyktxKpBJBI=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\pSMOx4mTNSCo7cxX-xYdZfeVdvblq0XXu0Sql48cXyE=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\ViewModels.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/ViewModels.dll.br"
     },
@@ -341,22 +341,22 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Telerik.Recurrence.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hFUPieudKbglSY3jnUGmCA46eE4ykt-jJF9fknkfIgs=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\wdYeA9qHc_zJjuIRiEnEiCnAKWg0Qm1OuS8Xz3EO1gs=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication.EndPoints.BlazorApp.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication.EndPoints.BlazorApp.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\jAj6L4kJUsjPu5IOuVZIBoKDIMyDqMkFjfTWyv5xKH8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_7LGNgyeZnCYlvo1U1aySYbYOaOyl_HsuhjxIdZhees=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Resources.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Resources.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\lETV6IrXtzNpvNsEKMj3pCUGWMQax7zuZ0z4aUXYnec=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hWS1CQXrHdN9HYCDRWRuyiE7CSYrb9GTHr-ERrKwk5A=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Extensions.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Extensions.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\2MaEKsXDFY9v8jsWWXcO52v-9vK4LBjguPkHKe7i2IQ=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\JE8jOiwozOQHZiNPwvIAgukUtC9lR-DRJutH-kvK_5o=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\ViewModels.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/ViewModels.pdb.br"
     },
@@ -381,7 +381,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\FUy_MzGTXiWCzf42zDLmu8D07PPy9cbDAVExgEoTnVE=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\78zpvry5rBylsuviMt_rGV-rw_r7Ez121aOqomn8U9U=.hash",
       "Source": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\WebApplication.EndPoints.BlazorApp\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }
