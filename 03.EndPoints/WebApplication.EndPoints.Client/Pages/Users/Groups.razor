@@ -1,0 +1,53 @@
+﻿@page "/user/groups/{userid:int}"
+
+    <style>
+        .child-check {
+            margin-left: 15px;
+            margin-right: 15px;
+            display: none;
+        }
+
+            .child-check.active {
+                display: block;
+            }
+    </style>
+
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@Resources.Models.Groups.EntitiesName</h4>
+
+                <div class="parent-check">
+                    <input type="checkbox"><label>Level 1</label>
+                    <div class="child-check">
+                        <input type="checkbox"><label>Level 1.1</label>
+                        <div class="child-check">
+                            <input type="checkbox"><label>Level 1.1.1</label>
+                        </div>
+                    </div>
+                    <div class="child-check">
+                        <input type="checkbox"><label>Level 1.2</label>
+                    </div>
+                </div>
+                <div class="parent-check">
+                    <input type="checkbox"><label>Level 2</label>
+                    <div class="child-check">
+                        <input type="checkbox"><label>Level 2.1</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @code {
+
+        protected override async Task OnInitializedAsync()
+        {
+            await JSRuntime.InvokeVoidAsync("includeTree");
+        }
+
+        [Parameter]
+        public int UserId { get; set; }
+
+    }

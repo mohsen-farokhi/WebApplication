@@ -722,3 +722,5 @@ H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebAppli
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\service-worker-assets.js
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\RazorDeclaration\Pages\Groups\Index.razor.g.cs
 H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\Razor\Pages\Groups\Index.razor.g.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\RazorDeclaration\Pages\Users\Groups.razor.g.cs
+H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\Razor\Pages\Users\Groups.razor.g.cs

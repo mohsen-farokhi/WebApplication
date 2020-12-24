@@ -126,7 +126,7 @@ using ViewModels.User;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 149 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Users\Index.razor"
+#line 156 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Users\Index.razor"
        
 
     protected ViewPagingDataResult<UserDataViewModel> data { get; set; }

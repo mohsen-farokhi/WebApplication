@@ -139,6 +139,13 @@
                             </Template>
                         </GridColumn>
                         <GridColumn Field="@(nameof(UserDataViewModel.UserTypeValue))" Title="@Resources.Models.User.UserType" Width="150px" />
+                        <GridColumn Title="@Resources.Models.Groups.EntitiesName" Width="200px">
+                            <Template>
+                                <div class="text-left">
+                                    @((context as UserDataViewModel).CellPhoneNumber)
+                                </div>
+                            </Template>
+                        </GridColumn>
                     </GridColumns>
                 </TelerikGrid>
             }
