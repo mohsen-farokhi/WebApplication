@@ -104,29 +104,28 @@
                 <p class="card-description">
                     <a class="btn btn-primary btn-fw" href="/Operation/Create">@strCreate</a>
                 </p>
-                <TelerikGrid Data="@data.Result"
-                             OnRead=@ReadItems
-                             TotalCount="@data.TotalCount"
-                             Pageable="true"
-                             Class="no-scroll">
-                    <GridColumns>
-                        <GridColumn Title="@Resources.DataDictionary.IsActive" Width="50px">
-                            <Template>
-                                <input type="checkbox" checked="@((context as OperationDataViewModel).IsActive)" disabled />
-                            </Template>
-                        </GridColumn>
-                        <GridColumn Title="@Resources.Models.Operation.Name" Width="200px">
-                            <Template>
-                                <div class="text-left">
-                                    @((context as OperationDataViewModel).Name)
-                                </div>
-                            </Template>
-                        </GridColumn>
-                        <GridColumn Field="@(nameof(OperationDataViewModel.DisplayName))" Title="@Resources.DataDictionary.DisplayName" Width="300px" />
-                        <GridColumn Field="@(nameof(OperationDataViewModel.Parent))" Title="@Resources.Models.Operation.Parent" Width="200px" />
-                        <GridColumn Field="@(nameof(OperationDataViewModel.AccessTypeValue))" Title="@Resources.Models.Operation.AccessType" Width="200px" />
-                    </GridColumns>
-                </TelerikGrid>
+
+                <MudTable ServerData="@ServerData" Hover="true" @ref="table">
+                    <HeaderContent>
+                        <MudTh Style="width:100px">@Resources.DataDictionary.IsActive</MudTh>
+                        <MudTh>@Resources.DataDictionary.Name</MudTh>
+                        <MudTh>@Resources.DataDictionary.DisplayName</MudTh>
+                        <MudTh>@Resources.Models.Operation.Parent</MudTh>
+                        <MudTh>@Resources.Models.Operation.AccessType</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="@Resources.DataDictionary.IsActive">
+                            <input type="checkbox" checked="@context.IsActive" disabled />
+                        </MudTd>
+                        <MudTd DataLabel="@Resources.DataDictionary.Name">@context.Name</MudTd>
+                        <MudTd DataLabel="@Resources.DataDictionary.DisplayName">@context.DisplayName</MudTd>
+                        <MudTd DataLabel="@Resources.Models.Operation.Parent">@context.Parent</MudTd>
+                        <MudTd DataLabel="@Resources.Models.Operation.AccessType">@context.AccessTypeValue</MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager PageSizeOptions="new int[]{10, 50, 100}" />
+                    </PagerContent>
+                </MudTable>
             }
         </div>
     </div>
@@ -136,6 +135,7 @@
 
     protected ViewPagingDataResult<OperationDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
+    private MudTable<OperationDataViewModel> table;
 
     protected override void OnInitialized()
     {
@@ -143,34 +143,42 @@
         request = new SearchViewModel();
     }
 
-    protected async Task ReadItems(GridReadEventArgs args = null)
+    protected async Task<TableData<OperationDataViewModel>> ServerData(TableState args = null)
     {
-        request.Page = args.Request.Page;
+        request.PageIndex = args.Page;
         request.TotalCount = data.TotalCount;
 
         await getData();
+
+        return new TableData<OperationDataViewModel>() { TotalItems = data.TotalCount, Items = data.Result };
     }
 
-    private async Task reset()
+    async Task reset()
     {
         request = new SearchViewModel();
         await getData();
+        table.ReloadServerData();
     }
 
-    private async Task search() => await getData();
+    async Task search()
+    {
+        await getData();
+        table.ReloadServerData();
+    }
 
-    private async Task getData()
+    async Task remove(int operationId)
+    {
+        await client.DeleteAsync($"Operations?operationId={operationId}");
+        await OnInitializedAsync();
+        table.ReloadServerData();
+    }
+
+    async Task getData()
     {
         var response =
             await client.PostAsJsonAsync($"Operations/GetData", request);
 
         data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<OperationDataViewModel>>();
-    }
-
-    private async Task remove(int operationId)
-    {
-        await client.DeleteAsync($"Operations?operationId={operationId}");
-        await OnInitializedAsync();
     }
 
 }

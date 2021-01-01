@@ -123,4 +123,7 @@
   <data name="EntityName" xml:space="preserve">
     <value>Group</value>
   </data>
+  <data name="Subgroup" xml:space="preserve">
+    <value>Subgroup</value>
+  </data>
 </root>

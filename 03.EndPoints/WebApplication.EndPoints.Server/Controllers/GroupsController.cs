@@ -43,7 +43,7 @@ namespace WebApplication.EndPoints.Server.Controllers
 
             var result = new ViewPagingDataResult<GroupDataViewModel>
             {
-                Page = data.Page,
+                PageIndex = data.PageIndex,
                 PageSize = data.PageSize,
                 TotalCount = data.TotalCount,
                 Result = data.Result.Select(c => new GroupDataViewModel

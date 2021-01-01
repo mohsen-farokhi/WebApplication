@@ -31,7 +31,7 @@ namespace WebApplication.EndPoints.Server.Controllers
 
             var result = new ViewPagingDataResult<UserDataViewModel>
             {
-                Page = data.Page,
+                PageIndex = data.PageIndex,
                 PageSize = data.PageSize,
                 TotalCount = data.TotalCount,
                 Result = data.Result.Select(c => new UserDataViewModel

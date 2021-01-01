@@ -123,4 +123,7 @@
   <data name="EntityName" xml:space="preserve">
     <value>گروه</value>
   </data>
+  <data name="Subgroup" xml:space="preserve">
+    <value>زیرگروه</value>
+  </data>
 </root>

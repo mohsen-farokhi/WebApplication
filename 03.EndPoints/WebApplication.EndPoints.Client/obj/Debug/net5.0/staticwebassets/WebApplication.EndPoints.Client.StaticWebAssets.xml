@@ -1,5 +1,5 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\bin\Debug\net5.0\wwwroot\" />
   <ContentRoot BasePath="/" Path="H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="_content/Telerik.UI.for.Blazor" Path="C:\Users\Mohsen1990\.nuget\packages\telerik.ui.for.blazor\2.17.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\Mohsen1990\.nuget\packages\mudblazor\1.2.4\build\..\staticwebassets\" />
 </StaticWebAssets>

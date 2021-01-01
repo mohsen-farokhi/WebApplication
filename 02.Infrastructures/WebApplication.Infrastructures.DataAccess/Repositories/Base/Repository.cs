@@ -115,19 +115,21 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             if (predicate != null)
                 query = query.Where(predicate);
 
-            return new DataResult<TEntity>
+            var result = new DataResult<TEntity>
             {
-                Page = request.Page,
+                PageIndex = request.PageIndex,
                 PageSize = request.PageSize,
-                TotalCount = 
-                    request.TotalCount != 0 ? 
-                    request.TotalCount : 
+                TotalCount =
+                    request.TotalCount != 0 ?
+                    request.TotalCount :
                     query.Count(),
                 Result =
-                    query.Skip(request.PageSize * (request.Page - 1))
+                    query.Skip(request.PageSize * request.PageIndex)
                     .Take(request.PageSize)
                     .ToList(),
             };
+
+            return result;
         }
 
         public virtual async Task<DataResult<TEntity>> GetWithRequestAsync
@@ -139,19 +141,21 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories.Base
             if (predicate != null)
                 query = query.Where(predicate);
 
-            return new DataResult<TEntity>
+            var result = new DataResult<TEntity>
             {
-                Page = request.Page,
+                PageIndex = request.PageIndex,
                 PageSize = request.PageSize,
-                TotalCount = 
-                    request.TotalCount != 0 ? 
-                    request.TotalCount : 
+                TotalCount =
+                    request.TotalCount != 0 ?
+                    request.TotalCount :
                     await query.CountAsync(),
-                Result = 
-                    await query.Skip(request.PageSize * (request.Page - 1))
+                Result =
+                    await query.Skip(request.PageSize * request.PageIndex)
                     .Take(request.PageSize)
                     .ToListAsync(),
             };
+
+            return result;
         }
     }
 }

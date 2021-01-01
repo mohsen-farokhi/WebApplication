@@ -42,7 +42,7 @@ namespace WebApplication.Domain.DomainServices
                 new DataResult<OperationDto>
                 {
                     TotalCount = data.TotalCount,
-                    Page = data.Page,
+                    PageIndex = data.PageIndex,
                     PageSize = data.PageSize,
                     Result = data.Result,
                 };

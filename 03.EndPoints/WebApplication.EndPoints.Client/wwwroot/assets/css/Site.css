@@ -35,14 +35,14 @@ table th {
     padding-right: 0 !important;
 }
 
-.k-grid [role="gridcell"], .k-grid .k-header {
-    text-align: right;
-}
-
-.k-grid-pager {
-    direction: ltr;
-}
-
 .sidebar {
     font-family: "webYekan", Tahoma, Arial !important;
+}
+
+.mud-table-cell {
+    text-align: right !important;
+}
+
+.mud-table-pagination:last-child {
+    direction: ltr !important;
 }

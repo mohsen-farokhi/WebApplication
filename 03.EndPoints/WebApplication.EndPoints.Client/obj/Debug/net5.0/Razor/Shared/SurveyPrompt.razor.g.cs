@@ -95,14 +95,14 @@ using ViewModels;
 #nullable disable
 #nullable restore
 #line 14 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\_Imports.razor"
-using Telerik.Blazor;
+using MudBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 15 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\_Imports.razor"
-using Telerik.Blazor.Components;
+using MudBlazor.Dialog;
 
 #line default
 #line hidden

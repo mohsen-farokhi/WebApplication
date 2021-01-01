@@ -77,5 +77,14 @@ namespace Resources.Models {
                 return ResourceManager.GetString("EntityName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subgroup.
+        /// </summary>
+        public static string Subgroup {
+            get {
+                return ResourceManager.GetString("Subgroup", resourceCulture);
+            }
+        }
     }
 }

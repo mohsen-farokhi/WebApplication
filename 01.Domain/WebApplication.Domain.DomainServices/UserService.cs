@@ -43,7 +43,7 @@ namespace WebApplication.Domain.DomainServices
 
             var result = new DataResult<UserDto>
             {
-                Page = data.Page,
+                PageIndex = data.PageIndex,
                 PageSize = data.PageSize,
                 TotalCount = data.TotalCount,
                 Result = data.Result.Select(c => new UserDto

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ay2sJud72qX4JfyN7NYVSDewQwWx/+UkiGVKhlqN+dao0c+05afcGyVhAge+7MtnwjWl6yb3dwFGNSFj63Io4w==",
+  "dgSpecHash": "xCxFxkYjlxCuP/2fIDHC7XGjvjvy6fnGs+O3fR+Z6nDOT/O4kqA9kv0m+85HzdQ2DK8nI68MMU+dchzyzyniSg==",
   "success": true,
   "projectFilePath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\02.Infrastructures\\WebApplication.Infrastructures.ApplicationServices\\WebApplication.Infrastructures.ApplicationServices.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Mohsen1990\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Mohsen1990\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

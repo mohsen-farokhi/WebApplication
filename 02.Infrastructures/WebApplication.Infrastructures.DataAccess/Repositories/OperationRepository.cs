@@ -27,7 +27,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
             var result =
                 new DataResult<OperationDto>
                 {
-                    Page = request.Page,
+                    PageIndex = request.PageIndex,
                     PageSize = request.PageSize,
                     TotalCount =
                         request.TotalCount != 0 ?
@@ -45,7 +45,7 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
                         Name = c.Name,
                         Parent = c.Parent.DisplayName,
                     })
-                    .Skip(request.PageSize * (request.Page - 1))
+                    .Skip(request.PageSize * request.PageIndex)
                     .Take(request.PageSize)
                     .ToListAsync(),
                 };

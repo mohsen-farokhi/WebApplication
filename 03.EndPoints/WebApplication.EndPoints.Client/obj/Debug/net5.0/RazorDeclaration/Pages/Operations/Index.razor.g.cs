@@ -98,14 +98,14 @@ using ViewModels;
 #nullable disable
 #nullable restore
 #line 14 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\_Imports.razor"
-using Telerik.Blazor;
+using MudBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 15 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\_Imports.razor"
-using Telerik.Blazor.Components;
+using MudBlazor.Dialog;
 
 #line default
 #line hidden
@@ -126,11 +126,12 @@ using ViewModels.Operation;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 135 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Operations\Index.razor"
+#line 134 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Operations\Index.razor"
        
 
     protected ViewPagingDataResult<OperationDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
+    private MudTable<OperationDataViewModel> table;
 
     protected override void OnInitialized()
     {
@@ -138,34 +139,42 @@ using ViewModels.Operation;
         request = new SearchViewModel();
     }
 
-    protected async Task ReadItems(GridReadEventArgs args = null)
+    protected async Task<TableData<OperationDataViewModel>> ServerData(TableState args = null)
     {
-        request.Page = args.Request.Page;
+        request.PageIndex = args.Page;
         request.TotalCount = data.TotalCount;
 
         await getData();
+
+        return new TableData<OperationDataViewModel>() { TotalItems = data.TotalCount, Items = data.Result };
     }
 
-    private async Task reset()
+    async Task reset()
     {
         request = new SearchViewModel();
         await getData();
+        table.ReloadServerData();
     }
 
-    private async Task search() => await getData();
+    async Task search()
+    {
+        await getData();
+        table.ReloadServerData();
+    }
 
-    private async Task getData()
+    async Task remove(int operationId)
+    {
+        await client.DeleteAsync($"Operations?operationId={operationId}");
+        await OnInitializedAsync();
+        table.ReloadServerData();
+    }
+
+    async Task getData()
     {
         var response =
             await client.PostAsJsonAsync($"Operations/GetData", request);
 
         data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<OperationDataViewModel>>();
-    }
-
-    private async Task remove(int operationId)
-    {
-        await client.DeleteAsync($"Operations?operationId={operationId}");
-        await OnInitializedAsync();
     }
 
 

@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.JSInterop;
+using MudBlazor;
+using MudBlazor.Services;
 using System;
 using System.Globalization;
 using System.Net.Http;
@@ -34,7 +36,9 @@ namespace WebApplication.EndPoints.Client
                 CultureInfo.DefaultThreadCurrentUICulture = culture;
             }
 
-            builder.Services.AddTelerikBlazor();
+            builder.Services.AddMudBlazorDialog();
+            builder.Services.AddMudBlazorSnackbar();
+            builder.Services.AddMudBlazorResizeListener();
 
             await builder.Build().RunAsync();
         }

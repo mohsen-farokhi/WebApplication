@@ -262,27 +262,27 @@ namespace WebApplication.Infrastructures.DataAccess.Migrations
                         {
                             Id = 1,
                             DisplayName = "فارسی",
-                            InsertDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 420, DateTimeKind.Local).AddTicks(2083),
+                            InsertDateTime = new DateTime(2020, 12, 30, 18, 56, 21, 897, DateTimeKind.Local).AddTicks(8208),
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = true,
                             Lcid = 1065,
                             Name = "fa-IR",
                             NativeName = "فارسی (ایران)",
-                            UpdateDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 434, DateTimeKind.Local).AddTicks(254)
+                            UpdateDateTime = new DateTime(2020, 12, 30, 18, 56, 21, 901, DateTimeKind.Local).AddTicks(2261)
                         },
                         new
                         {
                             Id = 2,
                             DisplayName = "English",
-                            InsertDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 434, DateTimeKind.Local).AddTicks(8169),
+                            InsertDateTime = new DateTime(2020, 12, 30, 18, 56, 21, 902, DateTimeKind.Local).AddTicks(386),
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = true,
                             Lcid = 1033,
                             Name = "en-US",
                             NativeName = "English (United States)",
-                            UpdateDateTime = new DateTime(2020, 12, 22, 21, 43, 6, 434, DateTimeKind.Local).AddTicks(8190)
+                            UpdateDateTime = new DateTime(2020, 12, 30, 18, 56, 21, 902, DateTimeKind.Local).AddTicks(406)
                         });
                 });
 

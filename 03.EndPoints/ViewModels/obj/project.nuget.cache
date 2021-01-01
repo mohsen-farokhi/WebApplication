@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bH5NgfgK62hVvKwUrWrrZlLIE2HKIcWQGjnGy1SVKHX7tXQXV1RODgou3eMaY8smWpZgcRjDnFh5549Diwrp0A==",
+  "dgSpecHash": "jj9At6YRN94PccSkwNEFcGGnG8Oa2oe5ZxKdpX7Ziw3PG6xpJEJ45R7xisjLFnjel4HqHy98AcsVSxGezTn+xQ==",
   "success": true,
   "projectFilePath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\ViewModels\\ViewModels.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Mohsen1990\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Mohsen1990\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Mohsen1990\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []

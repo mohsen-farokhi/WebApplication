@@ -76,20 +76,29 @@
                 <p class="card-description">
                     <a class="btn btn-primary btn-fw" href="/Group/Create">@strCreate</a>
                 </p>
-                <TelerikGrid Data="@data.Result"
-                             OnRead=@ReadItems
-                             TotalCount="@data.TotalCount"
-                             Pageable="true"
-                             Class="no-scroll">
-                    <GridColumns>
-                        <GridColumn Title="@Resources.DataDictionary.IsActive" Width="80px">
-                            <Template>
-                                <input type="checkbox" checked="@((context as GroupDataViewModel).IsActive)" disabled />
-                            </Template>
-                        </GridColumn>
-                        <GridColumn Title="@Resources.DataDictionary.Name" Width="300px" Field="@(nameof(GroupDataViewModel.Name))"/>
-                    </GridColumns>
-                </TelerikGrid>
+
+                <MudTable ServerData="@ServerData" Hover="true" @ref="table">
+                    <HeaderContent>
+                        <MudTh Style="width:100px">@Resources.DataDictionary.IsActive</MudTh>
+                        <MudTh>@Resources.DataDictionary.Name</MudTh>
+                        <MudTh Style="width:100px">@Resources.Models.Groups.Subgroup</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="@Resources.DataDictionary.IsActive">
+                            <input type="checkbox" checked="@context.IsActive" disabled />
+                        </MudTd>
+                        <MudTd DataLabel="@Resources.DataDictionary.Name">@context.Name</MudTd>
+                        <MudTd DataLabel="@Resources.Models.Groups.Subgroup">
+                            <a href="#">
+                                <i class="mdi mdi-content-duplicate" b-maz4fduytz="">
+                                </i>
+                            </a>
+                        </MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager PageSizeOptions="new int[]{10, 50, 100}" />
+                    </PagerContent>
+                </MudTable>
             }
         </div>
     </div>
@@ -99,6 +108,7 @@
 
     protected ViewPagingDataResult<GroupDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
+    private MudTable<GroupDataViewModel> table;
 
     protected override void OnInitialized()
     {
@@ -106,34 +116,41 @@
         request = new SearchViewModel();
     }
 
-    protected async Task ReadItems(GridReadEventArgs args = null)
+    async Task<TableData<GroupDataViewModel>> ServerData(TableState args = null)
     {
-        request.Page = args.Request.Page;
+        request.PageIndex = args.Page;
         request.TotalCount = data.TotalCount;
 
         await getData();
+
+        return new TableData<GroupDataViewModel>() { TotalItems = data.TotalCount, Items = data.Result };
     }
 
-    private async Task reset()
+    async Task reset()
     {
         request = new SearchViewModel();
         await getData();
+        table.ReloadServerData();
     }
 
-    private async Task search() => await getData();
+    async Task search()
+    {
+        await getData();
+        table.ReloadServerData();
+    }
 
-    private async Task getData()
+    async Task remove(int groupId)
+    {
+        await client.DeleteAsync($"Groups?groupId={groupId}");
+        table.ReloadServerData();
+    }
+
+    async Task getData()
     {
         var response =
             await client.PostAsJsonAsync($"Groups/GetData", request);
 
         data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<GroupDataViewModel>>();
-    }
-
-    private async Task remove(int groupId)
-    {
-        await client.DeleteAsync($"Groups?groupId={groupId}");
-        await OnInitializedAsync();
     }
 
 }

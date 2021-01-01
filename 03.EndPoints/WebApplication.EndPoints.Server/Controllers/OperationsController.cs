@@ -32,7 +32,7 @@ namespace WebApplication.EndPoints.Server.Controllers
             {
                 TotalCount = data.TotalCount,
                 PageSize = data.PageSize,
-                Page = data.Page,
+                PageIndex = data.PageIndex,
                 Result = data.Result.Select(c => new OperationDataViewModel
                 {
                     Id = c.Id,

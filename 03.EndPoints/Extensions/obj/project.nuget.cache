@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rZ6VstRO9AP0j8Fk2AXKkkYKvuDaB3mcLVMdOXNPZ7IFf+Yq60RO4GAUqEZiO5uwCoN9ZUAWW5wHWsQUTzHfpQ==",
+  "dgSpecHash": "3DD0mS4qS/cqaiqQ9eB5IQAEthtz/3dfgI1VK2di7cmEIXyrIUiID5t/96dOXMN+8PShxUuwXE0Gtr8vhtr/Dw==",
   "success": true,
   "projectFilePath": "H:\\MohsenPrograming\\2020\\CMS_WebApplication\\WebApplication\\03.EndPoints\\Extensions\\Extensions.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Mohsen1990\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Mohsen1990\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

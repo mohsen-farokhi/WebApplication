@@ -135,6 +135,9 @@
   <data name="Search" xml:space="preserve">
     <value>جستجو</value>
   </data>
+  <data name="Select" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
   <data name="Submit" xml:space="preserve">
     <value>ثبت</value>
   </data>

@@ -112,42 +112,37 @@
                 <p class="card-description">
                     <a class="btn btn-primary btn-fw" href="/User/Create">@strCreate</a>
                 </p>
-                <TelerikGrid Data="@data.Result"
-                             OnRead=@ReadItems
-                             TotalCount="@data.TotalCount"
-                             Pageable="true"
-                             Class="no-scroll">
-                    <GridColumns>
-                        <GridColumn Title="@Resources.DataDictionary.IsActive" Width="80px">
-                            <Template>
-                                <input type="checkbox" checked="@((context as UserDataViewModel).IsActive)" disabled />
-                            </Template>
-                        </GridColumn>
-                        <GridColumn Field="@(nameof(UserDataViewModel.FullName))" Title="@Resources.Models.User.FullName" Width="200px" />
-                        <GridColumn Title="@Resources.Models.User.EmailAddress" Width="300px">
-                            <Template>
-                                <div class="text-left">
-                                    @((context as UserDataViewModel).EmailAddress)
-                                </div>
-                            </Template>
-                        </GridColumn>
-                        <GridColumn Title="@Resources.Models.User.CellPhoneNumber" Width="200px">
-                            <Template>
-                                <div class="text-left">
-                                    @((context as UserDataViewModel).CellPhoneNumber)
-                                </div>
-                            </Template>
-                        </GridColumn>
-                        <GridColumn Field="@(nameof(UserDataViewModel.UserTypeValue))" Title="@Resources.Models.User.UserType" Width="150px" />
-                        <GridColumn Title="@Resources.Models.Groups.EntitiesName" Width="200px">
-                            <Template>
-                                <div class="text-left">
-                                    @((context as UserDataViewModel).CellPhoneNumber)
-                                </div>
-                            </Template>
-                        </GridColumn>
-                    </GridColumns>
-                </TelerikGrid>
+
+                <MudTable ServerData="@ServerData" Hover="true" @ref="table">
+                    <HeaderContent>
+                        <MudTh Style="width:100px">@Resources.DataDictionary.IsActive</MudTh>
+                        <MudTh>@Resources.Models.User.FullName</MudTh>
+                        <MudTh>@Resources.Models.User.EmailAddress</MudTh>
+                        <MudTh>@Resources.Models.User.CellPhoneNumber</MudTh>
+                        <MudTh Style="width:150px">@Resources.Models.User.UserType</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="@Resources.DataDictionary.IsActive">
+                            <input type="checkbox" checked="@context.IsActive" disabled />
+                        </MudTd>
+                        <MudTd DataLabel="@Resources.Models.User.FullName">@context.FullName</MudTd>
+                        <MudTd DataLabel="@Resources.Models.User.EmailAddress">
+                            <div class="text-left">
+                                @context.EmailAddress
+                            </div>
+                        </MudTd>
+                        <MudTd DataLabel="@Resources.Models.User.CellPhoneNumber">
+                            <div class="text-left">
+                                @context.CellPhoneNumber
+                            </div>
+                        </MudTd>
+                        <MudTd DataLabel="@Resources.Models.User.UserType">@context.UserTypeValue</MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager PageSizeOptions="new int[]{10, 50, 100}" />
+                    </PagerContent>
+                </MudTable>
+
             }
         </div>
     </div>
@@ -157,6 +152,7 @@
 
     protected ViewPagingDataResult<UserDataViewModel> data { get; set; }
     protected SearchViewModel request { get; set; }
+    private MudTable<UserDataViewModel> table;
 
     protected override void OnInitialized()
     {
@@ -164,34 +160,42 @@
         request = new SearchViewModel();
     }
 
-    protected async Task ReadItems(GridReadEventArgs args = null)
+    async Task<TableData<UserDataViewModel>> ServerData(TableState args = null)
     {
-        request.Page = args.Request.Page;
+        request.PageIndex = args.Page;
         request.TotalCount = data.TotalCount;
 
         await getData();
+
+        return new TableData<UserDataViewModel>() { TotalItems = data.TotalCount, Items = data.Result };
     }
 
-    private async Task reset()
+    async Task reset()
     {
         request = new SearchViewModel();
         await getData();
+        table.ReloadServerData();
     }
 
-    private async Task search() => await getData();
+    async Task search()
+    {
+        await getData();
+        table.ReloadServerData();
+    }
 
-    private async Task getData()
+    async Task remove(int userId)
+    {
+        await client.DeleteAsync($"Users?userId={userId}");
+        table.ReloadServerData();
+    }
+
+    async Task getData()
     {
         var response =
             await client.PostAsJsonAsync($"Users/GetData", request);
 
         data = await response.Content.ReadFromJsonAsync<ViewPagingDataResult<UserDataViewModel>>();
-    }
 
-    private async Task remove(int userId)
-    {
-        await client.DeleteAsync($"Users?userId={userId}");
-        await OnInitializedAsync();
     }
 
 }

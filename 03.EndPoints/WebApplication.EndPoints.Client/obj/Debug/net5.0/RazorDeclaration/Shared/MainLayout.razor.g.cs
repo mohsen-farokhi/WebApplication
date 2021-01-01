@@ -98,14 +98,14 @@ using ViewModels;
 #nullable disable
 #nullable restore
 #line 14 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\_Imports.razor"
-using Telerik.Blazor;
+using MudBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 15 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\_Imports.razor"
-using Telerik.Blazor.Components;
+using MudBlazor.Dialog;
 
 #line default
 #line hidden
@@ -125,7 +125,7 @@ using System.Globalization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 752 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Shared\MainLayout.razor"
+#line 753 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Shared\MainLayout.razor"
       
     protected override async void OnInitialized()
     {
