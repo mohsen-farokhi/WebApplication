@@ -880,6 +880,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Operations.
+        /// </summary>
+        public static string Operations {
+            get {
+                return ResourceManager.GetString("Operations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Participate.
         /// </summary>
         public static string Participate {

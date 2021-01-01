@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.DomainServices;
@@ -73,5 +74,8 @@ namespace WebApplication.Domain.DomainServices
             await _unitOfWork.OperationRepository.DeleteByIdAsync(operationId);
             await _unitOfWork.SaveAsync();
         }
+
+        public async Task<IEnumerable<OperationDto>> GetParentsAsync() =>
+                await _unitOfWork.OperationRepository.GetParentsAsync();
     }
 }

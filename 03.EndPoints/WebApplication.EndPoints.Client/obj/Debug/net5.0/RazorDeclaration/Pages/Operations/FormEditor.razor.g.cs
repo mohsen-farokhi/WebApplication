@@ -118,7 +118,7 @@ using MudBlazor.Dialog;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 76 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Operations\FormEditor.razor"
+#line 90 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Operations\FormEditor.razor"
  
     [Parameter]
     public EventCallback OnValidSubmit { get; set; }
@@ -126,10 +126,22 @@ using MudBlazor.Dialog;
     [Parameter]
     public ViewModels.Operation.CreateViewModel Model { get; set; }
 
+    private IEnumerable<ViewModels.Operation.OperationDataViewModel> parents;
+
+    protected override async Task OnInitializedAsync()
+    {
+        parents = new List<ViewModels.Operation.OperationDataViewModel>();
+
+        parents =
+            await client.GetFromJsonAsync<ViewModels.Operation.OperationDataViewModel[]>
+            ("/Operations/GetParents");
+    }
+
     private void HandleValidSubmit()
     {
         OnValidSubmit.InvokeAsync(null);
     }
+
 
 #line default
 #line hidden

@@ -1,7 +1,7 @@
 ﻿<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator />
 
-    <input type="hidden" @bind-value="Model.ParentId"/>
+    <input type="hidden" @bind-value="Model.ParentId" />
 
     <div class="row">
         <div class="col-md-6">
@@ -9,7 +9,7 @@
 
                 <div class="form-check form-check-flat">
                     <label class="form-check-label">
-                        <InputCheckbox id="isActive" class="form-check-input" @bind-Value="Model.IsActive"></InputCheckbox>@Resources.DataDictionary.IsActive<i class="input-helper"></i>
+                        <InputCheckbox class="form-check-input" @bind-Value="Model.IsActive"></InputCheckbox>@Resources.DataDictionary.IsActive<i class="input-helper"></i>
                     </label>
                 </div>
 
@@ -20,9 +20,9 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="name">@Resources.Models.Operation.Name</label>
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.Name)">@Resources.Models.Operation.Name</label>
                 <div class="col-sm-9">
-                    <InputText id="name" class="form-control" @bind-Value="Model.Name"></InputText>
+                    <InputText id="@nameof(Model.Name)" class="form-control" @bind-Value="Model.Name"></InputText>
                     <div class="error mt-2 text-danger">
                         <ValidationMessage For="() => Model.Name" />
                     </div>
@@ -31,9 +31,9 @@
         </div>
         <div class="col-md-6">
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="nativeName">@Resources.DataDictionary.DisplayName</label>
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.DisplayName)">@Resources.DataDictionary.DisplayName</label>
                 <div class="col-sm-9">
-                    <InputText id="nativeName" class="form-control" @bind-Value="Model.DisplayName"></InputText>
+                    <InputText id="@nameof(Model.DisplayName)" class="form-control" @bind-Value="Model.DisplayName"></InputText>
                     <div class="error mt-2 text-danger">
                         <ValidationMessage For="() => Model.DisplayName" />
                     </div>
@@ -45,12 +45,26 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="accessType">@Resources.Models.Operation.AccessType</label>
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.AccessType)">@Resources.Models.Operation.AccessType</label>
                 <div class="col-sm-9">
-                    <InputSelectEnum id="accessType" class="form-control" @bind-Value="Model.AccessType"></InputSelectEnum>
+                    <InputSelectEnum id="@nameof(Model.AccessType)" class="form-control" @bind-Value="Model.AccessType"></InputSelectEnum>
                     <div class="error mt-2 text-danger">
                         <ValidationMessage For="() => Model.AccessType" />
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.ParentId)">@Resources.Models.Operation.Parent</label>
+                <div class="col-sm-9">
+                    <InputSelect id="@nameof(Model.ParentId)" class="form-control" @bind-Value="Model.ParentId">
+                        <option></option>
+                        @foreach (var item in parents)
+                        {
+                            <option value="@item.Id">@item.DisplayName</option>
+                        }
+                    </InputSelect>
                 </div>
             </div>
         </div>
@@ -59,9 +73,9 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="description">@Resources.DataDictionary.Description</label>
+                <label class="col-sm-3 col-form-label" for="@nameof(Model.Description)">@Resources.DataDictionary.Description</label>
                 <div class="col-sm-9">
-                    <InputTextArea id="description" class="form-control" rows="6" @bind-Value="Model.Description"></InputTextArea>
+                    <InputTextArea id="@nameof(Model.Description)" class="form-control" rows="6" @bind-Value="Model.Description"></InputTextArea>
                 </div>
             </div>
         </div>
@@ -80,8 +94,20 @@
     [Parameter]
     public ViewModels.Operation.CreateViewModel Model { get; set; }
 
+    private IEnumerable<ViewModels.Operation.OperationDataViewModel> parents;
+
+    protected override async Task OnInitializedAsync()
+    {
+        parents = new List<ViewModels.Operation.OperationDataViewModel>();
+
+        parents =
+            await client.GetFromJsonAsync<ViewModels.Operation.OperationDataViewModel[]>
+            ("/Operations/GetParents");
+    }
+
     private void HandleValidSubmit()
     {
         OnValidSubmit.InvokeAsync(null);
     }
+
 }

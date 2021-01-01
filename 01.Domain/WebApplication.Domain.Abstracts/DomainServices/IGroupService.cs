@@ -8,5 +8,6 @@ namespace WebApplication.Domain.Abstracts.DomainServices
     {
         Task<int> InsertAsync(GroupDto dto);
         Task<DataResult<GroupDto>> GetDataAsync(GroupDataRequestDto groupDataRequest);
+        Task DeleteAsync(int groupId);
     }
 }

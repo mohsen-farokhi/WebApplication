@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ViewModels;
@@ -76,5 +77,17 @@ namespace WebApplication.EndPoints.Server.Controllers
             return Ok();
         }
 
+        [HttpGet("GetParents")]
+        public async Task<ActionResult<IEnumerable<OperationDataViewModel>>> GetParents()
+        {
+            var data = await _operationService.GetParentsAsync();
+
+            return
+                data.Select(c => new OperationDataViewModel
+                {
+                    Id = c.Id,
+                    DisplayName = c.DisplayName,
+                }).ToList();
+        }
     }
 }

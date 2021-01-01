@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -52,5 +53,17 @@ namespace WebApplication.Infrastructures.DataAccess.Repositories
 
             return result;
         }
+
+        public async Task<IEnumerable<OperationDto>> GetParentsAsync() =>
+            await dbSet
+            .Where(c => !c.ParentId.HasValue)
+            .Where(c => c.IsActive)
+            .Select(c => new OperationDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                DisplayName = c.DisplayName,
+                AccessType = c.AccessType,
+            }).ToListAsync();
     }
 }

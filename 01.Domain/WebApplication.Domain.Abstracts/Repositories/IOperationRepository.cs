@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using WebApplication.Domain.Abstracts.Repositories.Base;
@@ -12,5 +13,7 @@ namespace WebApplication.Domain.Abstracts.Repositories
     {
         Task<DataResult<OperationDto>> GetDataAsync
             (DataRequest dataRequest, Expression<Func<Operation, bool>> predicate);
+
+        Task<IEnumerable<OperationDto>> GetParentsAsync();
     }
 }

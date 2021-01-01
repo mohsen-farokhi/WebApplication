@@ -126,7 +126,7 @@ using ViewModels.Group;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 107 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Groups\Index.razor"
+#line 106 "H:\MohsenPrograming\2020\CMS_WebApplication\WebApplication\03.EndPoints\WebApplication.EndPoints.Client\Pages\Groups\Index.razor"
        
 
     protected ViewPagingDataResult<GroupDataViewModel> data { get; set; }

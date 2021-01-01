@@ -120,6 +120,7 @@
                         <MudTh>@Resources.Models.User.EmailAddress</MudTh>
                         <MudTh>@Resources.Models.User.CellPhoneNumber</MudTh>
                         <MudTh Style="width:150px">@Resources.Models.User.UserType</MudTh>
+                        <MudTh Style="width:150px">@Resources.Models.Groups.EntitiesName</MudTh>
                     </HeaderContent>
                     <RowTemplate>
                         <MudTd DataLabel="@Resources.DataDictionary.IsActive">
@@ -137,6 +138,12 @@
                             </div>
                         </MudTd>
                         <MudTd DataLabel="@Resources.Models.User.UserType">@context.UserTypeValue</MudTd>
+                        <MudTd DataLabel="@Resources.Models.Groups.EntitiesName">
+                            <a href="user/groups/@context.Id">
+                                <i class="mdi mdi-account-multiple" b-maz4fduytz="">
+                                </i>
+                            </a>
+                        </MudTd>
                     </RowTemplate>
                     <PagerContent>
                         <MudTablePager PageSizeOptions="new int[]{10, 50, 100}" />

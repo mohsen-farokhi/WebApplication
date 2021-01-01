@@ -61,5 +61,11 @@ namespace WebApplication.Domain.DomainServices
 
             return result;
         }
+
+        public async Task DeleteAsync(int groupId)
+        {
+            await _unitOfWork.GroupRepository.DeleteByIdAsync(groupId);
+            await _unitOfWork.SaveAsync();
+        }
     }
 }

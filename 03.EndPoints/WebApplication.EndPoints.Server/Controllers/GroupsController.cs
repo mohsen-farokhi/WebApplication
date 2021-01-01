@@ -56,5 +56,12 @@ namespace WebApplication.EndPoints.Server.Controllers
 
             return result;
         }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int groupId)
+        {
+            await _groupService.DeleteAsync(groupId);
+            return Ok();
+        }
     }
 }

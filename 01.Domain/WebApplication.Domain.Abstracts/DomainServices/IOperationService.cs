@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebApplication.Domain.Entities.Dtos;
 using WebApplication.Domain.Entities.Dtos.Data;
 
@@ -9,5 +10,6 @@ namespace WebApplication.Domain.Abstracts.DomainServices
         Task<DataResult<OperationDto>> GetAsync(OperationDataResuqestDto request);
         Task<int> InsertAsync(OperationDto dto);
         Task DeleteAsync(int operationId);
+        Task<IEnumerable<OperationDto>> GetParentsAsync();
     }
 }

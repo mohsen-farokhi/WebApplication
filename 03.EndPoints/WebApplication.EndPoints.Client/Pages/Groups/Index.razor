@@ -81,17 +81,16 @@
                     <HeaderContent>
                         <MudTh Style="width:100px">@Resources.DataDictionary.IsActive</MudTh>
                         <MudTh>@Resources.DataDictionary.Name</MudTh>
-                        <MudTh Style="width:100px">@Resources.Models.Groups.Subgroup</MudTh>
+                        <MudTh Style="width:100px">@Resources.Actions.Operations</MudTh>
                     </HeaderContent>
                     <RowTemplate>
                         <MudTd DataLabel="@Resources.DataDictionary.IsActive">
                             <input type="checkbox" checked="@context.IsActive" disabled />
                         </MudTd>
                         <MudTd DataLabel="@Resources.DataDictionary.Name">@context.Name</MudTd>
-                        <MudTd DataLabel="@Resources.Models.Groups.Subgroup">
-                            <a href="#">
-                                <i class="mdi mdi-content-duplicate" b-maz4fduytz="">
-                                </i>
+                        <MudTd DataLabel="@Resources.Actions.Operations">
+                            <a href="javascript:void(0)" title="@Resources.Actions.Delete" @onclick="() => remove(context.Id)">
+                                <i class="mdi mdi-delete" data-name="mdi-delete"></i>
                             </a>
                         </MudTd>
                     </RowTemplate>
